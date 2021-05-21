@@ -1,0 +1,20 @@
+body * {
+    text-align: justify;
+}
+
+#mainContent {
+    padding-top: 70px;
+}
+
+._separator {
+    border-bottom: 1px solid lightgray;
+    margin-bottom: 10px;
+}
+h1, h2, h3 {
+    text-align: center;
+}
+
+.container {
+    padding-left: 80px;
+    padding-right: 80px;
+}
