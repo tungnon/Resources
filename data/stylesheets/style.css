@@ -45,3 +45,17 @@ td:first-child {
 th, td {
     padding: 6px;
 }
+
+.table-of-contents {
+    padding: 10px;
+    border: 1px solid black;
+    max-width: 500px;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
