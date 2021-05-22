@@ -10,11 +10,38 @@ body * {
     border-bottom: 1px solid lightgray;
     margin-bottom: 10px;
 }
-h1, h2, h3 {
+
+h1 {
     text-align: center;
+}
+
+h3, h4, h5 {
+    padding-top: 20px;
 }
 
 .container {
     padding-left: 80px;
     padding-right: 80px;
+}
+
+table, th, td {
+    border: 1px solid black;
+    text-align: center;
+}
+
+table {
+    margin: 20px auto;
+}
+
+th {
+    font-weight: bold;
+    color: red;
+}
+
+td:first-child {
+    font-weight: bold;
+}
+
+th, td {
+    padding: 6px;
 }
