@@ -59,3 +59,7 @@ a {
 #mainContent a:hover {
     text-decoration: underline;
 }
+
+.list-spacer {
+    list-style-type: none;
+}
