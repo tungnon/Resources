@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attack Timings</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="../stylesheets/style.css">
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="../top.html">Documents and resources</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Placeholder</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Placeholder</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Placeholder
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <li><a class="dropdown-item" href="#">Placeholder</a></li>
+                        <li><a class="dropdown-item" href="#">Placeholder</a></li>
+                        <li><a class="dropdown-item" href="#">Placeholder</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div class="container" id="mainContent">
+    <h1>Attack Timings</h1>
+    <div class="_separator"></div>
+
+    <h5>Contents</h5>
+    <div class="table-of-contents">
+        <ul>
+            <li><a href="#introduction">Introduction</a></li>
+            <li><a href="#normal-attack-cycle">How Most Units Attack</a></li>
+            <li><a href="#the-rebound-mechanic">The Rebound Mechanic</a></li>
+            <li><a href="#multihit">Multi-hit</a></li>
+            <li><a href="#terminology">Terminology</a>
+                <ul>
+                    <li><a href="#foreswing">Foreswing</a></li>
+                    <li><a href="#attack-cooldown">Attack Cooldown</a></li>
+                    <li><a href="#backswing">Backswing</a></li>
+                    <li><a href="#time-between-attacks">Time Between Attacks (TBA)</a></li>
+                    <li><a href="#attack-rate">Attack Rate</a></li>
+                </ul>
+            </li>
+            <li class="list-spacer">&nbsp;</li>
+            <li><a href="#credits">Credits</a></li>
+        </ul>
+    </div>
+
+
+    <h3 id="introduction">Introduction</h3>
+    <div class="_separator"></div>
+
+    <p>Huge thanks to dkaf for writing the original document on attacks; this condensed version is mostly based on his work. I highly recommend you give it a read if you want to understand everything better, which you can do <a href="almost-everything-about-attacks.html" target="_blank">here</a>.</p>
+    <p>
+        If you look at any cat or enemy unit in battle, you can see them attack. In fact, the process of attacking is a cycle that repeats itself continuously. This cycle is broken up into several key steps, which are:
+    </p>
+    <ul>
+        <li>Foreswing</li>
+        <li>Attack happens</li>
+        <li>Backswing</li>
+        <li>Time between attacks (TBA)</li>
+    </ul>
+    <p>These steps describe how attacking happens visually. However, the system doesn’t work exactly like that.</p>
+    <p>The proper attack cycle is:</p>
+
+    <!-- Will make this scale to device width later, not preoccupied with the fine tuning rn -->
+    <img style="max-width: 500px" src="../images/attack%20cycle.png" alt="attack cycle image (if it doesn't display properly here, try referring to the one in dkaf's original document.)">
+
+    <p>What is <b>Attack Cooldown?</b> It’s the time between the actual attack and the start of the next attack animation. In reality, backswing and TBA don’t dictate the attack cycle. Attack cooldown, on the other hand, is obeyed all the time. Backswing and TBA added together always have a value equal to or greater than the attack cooldown.</p>
+    <p>This might be a bit complicated to understand at first; however, for most cat units, this is very simple. This guide will start by describing how the system works most of the time, then move on to special cases.</p>
+
+
+    <h3 id="normal-attack-cycle">How Most Units Attack</h3>
+    <div class="_separator"></div>
+
+    <p>
+        We’ll use <b>Crazed Bahamut</b> as an example. Here are its stats:
+    </p>
+    <p>
+        <b>Foreswing</b> : 121f (4.03s)<br>
+        <b>Backswing</b> : 30f (1s)<br>
+        <b>Attack cooldown</b> : 479f (15.97s)<br>
+        <b>Attack rate</b> : 600f (20s)
+    </p>
+    <p>
+        You might have noticed that I omitted TBA, and that’s because it does not actually exist as a stat; I’ll come back to it later.
+    </p>
+    <p>
+        Now for the actual steps of the attack cycle:
+    </p>
+    <ul>
+        <li>Crazed Bahamut starts his attack animation, charging his energy ball. This is his foreswing. If Bahamut gets interrupted during his foreswing, his attack is reset.</li>
+        <li>After this, damage is dealt. This marks the end of Bahamut’s foreswing and the start of his backswing. Most importantly, on this frame, attack cooldown begins counting down.</li>
+        <li>Bahamut is now in TBA (which is really just a fancy term to describe the period of the attack cycle where units are idle and / or move ahead on the battlefield) and stays so until the attack cooldown expires.</li>
+    </ul>
+    <p>
+        Attack cooldown functions independently from backswing. This is why if you interrupt Bahamut during his backswing (or on the very frame damage is dealt), he will instantly go into TBA, skipping the rest of his backswing. Attack cooldown cannot be interrupted once it starts counting down, therefore the attack rate is unchanged even if Bahamut’s animation is interrupted early, as long as damage was dealt.
+    </p>
+    <p>
+        This is also apparent when looking at the stats. <code>Foreswing + attack cooldown = attack rate (121f + 479f = 600f)</code>. Backswing is absent from the equation: as stated previously, backswing works independently from other stats and does not affect any in-game calculations.
+    </p>
+    <p>
+        This is how most units in the game attack: Bahamut, Eraser, Dragon, Amaterasu, etc. However, as with anything, there are exceptions.
+    </p>
+
+
+    <h3 id="the-rebound-mechanic">The Rebound Mechanic</h3>
+    <div class="_separator"></div>
+
+    <p><b>Maglev Cat</b> will be our unit example for this next concept.</p>
+    <p>
+        <b>Foreswing</b> : 1f (0.03s)<br>
+        <b>Backswing</b> : 200f (6.67s)<br>
+        <b>Attack cooldown</b> : 0f (0s)<br>
+        <b>Attack rate</b> : 201f (6.7s)
+    </p>
+    <p>
+        Maglev is an easy example of a unit with what is generally referred to as a rebound mechanic. As you can see from its stats, Maglev has instant foreswing, substantial backswing and an attack cooldown of zero. As explained earlier, when a unit’s animation gets interrupted, it skips backswing and goes straight to the idling phase of the attack cycle, or TBA. However, since Maglev has no delay between its attacks, interrupting his backswing will instantly reset the cycle, and he will rush forward to attack again.
+    </p>
+    <p>
+        In other words, Maglev’s backswing is longer than its attack cooldown, meaning that the latter does <u>not</u> dictate his attack rate under normal circumstances (but the former does); this makes it so his actual attack interval is variable.
+    </p>
+
+
+    <h3 id="multihit">Multi-hit</h3>
+    <div class="_separator"></div>
+
+    <p>We’ll use <b>Iron Claw X</b> for this one.</p>
+    <p>
+        <b>Foreswing</b> : 11f / 15f / 35f (0.37s / 0.5s / 1.17s)<br>
+        <b>Backswing</b> : 26f (0.87s)<br>
+        <b>Attack cooldown</b> : 145f (4.83s)<br>
+        <b>Attack rate</b> : 180f (6s)
+    </p>
+    <p>
+        Multi-hit units function a bit differently, but aren’t very complicated to figure out when you know how attacks work generally. As the name implies, multiple hits are spread out over the length of the attack animation. However, attack cooldown only starts counting down on the last hit. Therefore, if Iron Claw X gets interrupted mid-animation without landing his third and final hit, he is still technically in the foreswing phase, and the attack is reset, regardless of whether he landed his first two hits or not.
+    </p>
+    
+    <h5>Bonus: test your knowledge</h5>
+    <p>Explain what is happening in <a href="https://youtu.be/VEYqXcLq_E4&t=56s">this clip</a>.</p>
+
+
+    <h2 id="terminology">Terminology</h2>
+    <div class="_separator"></div>
+
+    <p>
+        <b id="foreswing">Foreswing / Attack Occurrence</b><br>
+        Time between the start of the attack animation and the frame on which damage is dealt.
+    </p>
+    <p>
+        <b id="attack-cooldown">Attack Cooldown</b><br>
+        Time between the frame on which damage is dealt and the start of the next attack animation.
+    </p>
+    <p>
+        <b id="backswing">Backswing</b><br>
+        Time between the frame on which damage is dealt and the end of the attack animation.
+    </p>
+    <p>
+        <b id="time-between-attacks">Time Between Attacks (TBA)</b><br>
+        Time between the end of the attack animation and the start of the next attack animation.
+    </p>
+    <p>
+        <b id="attack-rate">Attack Rate</b><br>
+        Time between the frame on which the attack occurs and the frame on which the next attack occurs. Used to calculate theoretical DPS (Damage Per Second).
+    </p>
+
+
+    <div class="_separator"></div>
+    <h5>Thanks for reading!</h5>
+    <p>For a more complete terminology guide, make sure to check out <a href="https://docs.google.com/document/d/1MXNEMUILTrlqj4-Jl8ScMG0lrW55V40TNUEiKHqUH_g" target="_blank">this document</a> (no web version yet, though it is in the works).</p>
+    <p>You can also read dkaf's original guide on attacks <a href="almost-everything-about-attacks.html" target="_blank">here</a>.</p>
+    <div class="_separator"></div>
+
+
+    <h3 id="credits">Credits</h3>
+    <div class="_separator"></div>
+    <b>Waran-Ess</b>#9801 (original guide redaction and web conversion)
+
+    <br><br><br><br><br><br>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8" crossorigin="anonymous">
+</script>
+</body>
+</html>

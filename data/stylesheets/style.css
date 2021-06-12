@@ -63,3 +63,7 @@ a {
 .list-spacer {
     list-style-type: none;
 }
+
+li:not(:first-child, .table-of-contents *) {
+    padding-top: 5px;
+}
