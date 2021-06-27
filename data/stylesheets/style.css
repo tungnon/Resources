@@ -64,6 +64,6 @@ a {
     list-style-type: none;
 }
 
-li:not(:first-child, .table-of-contents *) {
+li:not(:first-child, .table-of-contents *, nav *) {
     padding-top: 5px;
 }
