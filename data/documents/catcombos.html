@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CatCombo Guide</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="../stylesheets/style.css">
+    <script src="../script/script.js" type="text/javascript"></script>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="../top.html">Documents and resources</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Placeholder</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Placeholder</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Placeholder
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <li><a class="dropdown-item" href="#">Placeholder</a></li>
+                        <li><a class="dropdown-item" href="#">Placeholder</a></li>
+                        <li><a class="dropdown-item" href="#">Placeholder</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div class="container" id="mainContent">
+    <h1>CatCombo Guide</h1>
+    <div class="_separator"></div>
+
+    <h5>Contents</h5>
+    <button class="btn btn-sm btn-primary" onclick="show_hide_contents()">Show / Hide contents</button><br><br>
+    <div class="table-of-contents">
+        <ul>
+            <li>
+                <a href="http://www.cnol.com">Link</a>
+            </li>
+        </ul>
+    </div>
+
+
+
+    <h3 id="introduction">Introduction</h3>
+    <div class="_separator"></div>
+    <p>
+        CatCombos become available after beating EoC chapter 1, and more are unlocked as you complete further chapters. CatCombos only work on the top row of battle lineups and can occupy up to 5 unit slots. There are many different types of CatCombos and levels, ranging from Small (Sm) to Extra Large (XL). This guide covers all cat combo types and how cat combo levels affect a unit's stats/abilities.
+    </p>
+
+
+
+    <h3 id="how-to-read-this-guide">How to Read This Guide</h3>
+    <div class="_separator"></div>
+    <p>
+        Combos are shown in a table, with the first column being the combo level (Sm/M/L/XL) and the second column showing the potency of the effect it causes.
+    </p>
+
+    <table class="combo-table">
+        <tr>
+            <td>X</td>
+            <td>Effect at level X</td>
+        </tr>
+    </table>
+
+    <p>Not all combo levels that exist in theory currently have combos in the game which use them. Such non-accessible combo levels will be grayed out like this:</p>
+
+    <table class="combo-table">
+        <tr class="pale-row">
+            <td>Y</td>
+            <td>This combo doesn't exist in the game, but here's what it would do if it did.</td>
+        </tr>
+    </table>
+
+    <p>
+        Each type of combo will be accompanied by an example showing how they affect something, to be clear about what the number in the table means.
+    </p>
+
+    <div class="combo-note row">
+        <div class="col-sm-1">
+            <b>Ex:</b>
+        </div>
+        <div class="col">
+            A Level Z combo will increase [something] from AAA to BBB.
+        </div>
+    </div>
+
+    <p>
+        Those examples may include additional information about how the Cat Combo works, or its limitations. For example:
+    </p>
+
+    <div class="combo-note row">
+        <div class="col-sm-1">
+            <b>P.S:</b>
+        </div>
+        <div class="col">
+            With full treasures, the Damage multiplier for a trait can be increased to 4.<br>
+            In this instance, the Massive Damage Sm combo increases the multiplier to 4.4.<br><br>
+            This does not affect the Insane Damage ability, only Massive Damage.
+        </div>
+    </div>
+    
+    <p>See also the <a href="#other-information">Other Information</a> section at the end of this guide for miscellaneous information about combos in general.</p>
+
+
+
+    <h2 id="unit-stats">Unit Stats</h2>
+    <div class="_separator"></div>
+
+
+    <h4 id="attack-power">Attack Power</h4>
+    <table class="combo-table">
+        <tr>
+            <td>Sm</td>
+            <td>+10% Damage (×1.1)</td>
+        </tr>
+        <tr>
+            <td>M</td>
+            <td>+15% Damage (×1.15)</td>
+        </tr>
+        <tr class="pale-row">
+            <td>L</td>
+            <td>+20% Damage (×1.2)</td>
+        </tr>
+        <tr class="pale-row">
+            <td>XL</td>
+            <td>+30% Damage (×1.3)</td>
+        </tr>
+    </table>
+
+    <div class="combo-note row">
+        <div class="col-sm-1">
+            <b>Ex:</b>
+        </div>
+        <div class="col">
+            Kasa Jizo at Level 46 does 10,000 Damage per hit.<br>
+            With Attack Power UP M, this increases by 15% to 11,500 Damage per hit.
+        </div>
+    </div>
+
+
+    <h4 id="defense">Defense</h4>
+    <table class="combo-table">
+        <tr>
+            <td>Sm</td>
+            <td>+10% HP Increase (×1.1)</td>
+        </tr>
+        <tr>
+            <td>M</td>
+            <td>+20% HP Increase (×1.2)</td>
+        </tr>
+        <tr class="pale-row">
+            <td>L</td>
+            <td>+30% HP Increase (×1.3)</td>
+        </tr>
+        <tr class="pale-row">
+            <td>XL</td>
+            <td>+50% HP Increase (×1.5)</td>
+        </tr>
+    </table>
+
+    <div class="combo-note row">
+        <div class="col-sm-1">
+            <b>Ex:</b>
+        </div>
+        <div class="col">
+            Manic Eraser Cat at level 30 has 18,995 HP.<br>
+            With Defense UP Sm, this is increased by 10% to 20,894 HP.
+        </div>
+    </div>
+
+
+    <h4 id="movement-speed">Movement Speed</h4>
+    <table class="combo-table">
+        <tr>
+            <td>Sm</td>
+            <td>+10% Movement Speed (×1.1)</td>
+        </tr>
+        <tr>
+            <td>M</td>
+            <td>+15% Movement Speed (×1.15)</td>
+        </tr>
+        <tr class="pale-row">
+            <td>L</td>
+            <td>+20% Movement Speed (×1.2)</td>
+        </tr>
+        <tr class="pale-row">
+            <td>XL</td>
+            <td>+30% Movement Speed (×1.3)</td>
+        </tr>
+    </table>
+
+    <div class="combo-note row">
+        <div class="col-sm-1">
+            <b>Ex:</b>
+        </div>
+        <div class="col">
+            Ganglion has a Movement Speed of 40.<br>
+            With Move Speed UP M, this is increased by 15% to 46.
+        </div>
+    </div>
+
+
+
+    <h2 id="unit-abilities">Unit Abilities</h2>
+    <div class="_separator"></div>
+
+    <h4 id="strong-against">Strong Against</h4>
+    <table class="combo-table">
+        <tr>
+            <td>Sm</td>
+            <td>+10% Attack Multiplier (×1.1) / -10% Damage Taken (×0.9)</td>
+        </tr>
+        <tr>
+            <td>M</td>
+            <td>+20% Attack Multiplier (×1.2) / -20% Damage Taken (×0.8)</td>
+        </tr>
+        <tr class="pale-row">
+            <td>L</td>
+            <td>+30% Attack Multiplier (×1.3) / -30% Damage Taken (×0.7)</td>
+        </tr>
+        <tr class="pale-row">
+            <td>XL</td>
+            <td>+50% Attack Multiplier (×1.5) / -50% Damage Taken (×0.5)</td>
+        </tr>
+    </table>
+
+    <div class="combo-note row">
+        <div class="col-sm-1">
+            <b>Ex:</b>
+        </div>
+        <div class="col">
+            Baby Gao at Level 46 does 10m000 Damage normally.<br>
+            Strong multiplies this by 1.5 for 15,000 Damage vs Traited.<br>
+            With Strong UP Sm, this multiplier increases by 10% to 1.65.<br>
+            Baby Gao will then do 16,500 Damage with the combo.<br><br>
+
+            Zroco at 200% magnification does 10,000 Damage.<br>
+            Baby Gao has the Strong ability, so takes 0.5 times this (5,000) from Traited.<br>
+            With Strong UP Sm, this multiplier decreases by 10% to 0.45.<br>
+            Baby Gao therefore takes 4.500 damage from Zroco with the combo active.
+        </div>
+    </div>
+    <div class="combo-note row">
+        <div class="col-sm-1">
+            <b>P.S:</b>
+        </div>
+        <div class="col">
+            With full treasures, the default Attack Multiplier can be increased to 1.8 and the default Damage Taken multiplier to 0.4.<br>
+            In this instance, the Strong UP Sm combo increases the multipliers to 1.98 and 0.36, respectively.
+        </div>
+    </div>
+
+
+    <h4 id="massive-damage">Massive Damage</h4>
+    <table class="combo-table">
+        <tr>
+            <td>Sm</td>
+            <td>+10% Massive Damage Multiplier (×1.1)</td>
+        </tr>
+        <tr>
+            <td>M</td>
+            <td>+20% Massive Damage Multiplier (×1.2)</td>
+        </tr>
+        <tr class="pale-row">
+            <td>L</td>
+            <td>+30% Massive Damage Multiplier (×1.3)</td>
+        </tr>
+        <tr class="pale-row">
+            <td>XL</td>
+            <td>+50% Massive Damage Multiplier (×1.5)</td>
+        </tr>
+    </table>
+
+    <div class="combo-note row">
+        <div class="col-sm-1">
+            <b>Ex:</b>
+        </div>
+        <div class="col">
+            Kasa Jizo at Level 46 does 10,000 Damage normally.<br>
+            Massive Damage multiplies this by 3 for 30,000 Damage vs Black/Angel.<br>
+            With Massive Damage UP Sm, this multiplier increases by 10% to 3.3.<br>
+            Kasa Jizo will then do 33,000 Damage with the combo.
+        </div>
+    </div>
+    <div class="combo-note row">
+        <div class="col-sm-1">
+            <b>P.S:</b>
+        </div>
+        <div class="col">
+            With full treasures, the default Massive Damage multiplier for a trait can be increased to 4.<br>
+            In this instance, the Massive Damage UP Sm combo would increase the multiplier to 4.4.<br><br>
+            <i>This does <b>not</b> affect the Insane Damage ability, only Massive Damage.</i>
+        </div>
+    </div>
+
+
+    <h4 id="resistant">Resistant</h4>
+    <table class="combo-table">
+        <tr>
+            <td>Sm</td>
+            <td>-10% Resistant Multiplier (×0.9)</td>
+        </tr>
+        <tr>
+            <td>M</td>
+            <td>-20% Resistant Multiplier (×0.8)</td>
+        </tr>
+        <tr>
+            <td>L</td>
+            <td>-30% Resistant Multiplier (×0.7)</td>
+        </tr>
+        <tr class="pale-row">
+            <td>XL</td>
+            <td>-50% Resistant Multiplier (×0.5)</td>
+        </tr>
+    </table>
+
+    <div class="combo-note row">
+        <div class="col-sm-1">
+            <b>Ex:</b>
+        </div>
+        <div class="col">
+            Zroco at 200% magnification does 10,000 Damage.<br>
+            Sifu Cat has the Resistant to Zombie ability, so takes 0.25 times this (2,500).<br>
+            With Resistant UP L, this multiplier is reduced by 30% to 0.175.<br>
+            Sifu therefore takes 1,750 damage with the combo active.
+        </div>
+    </div>
+    <div class="combo-note row">
+        <div class="col-sm-1">
+            <b>P.S:</b>
+        </div>
+        <div class="col">
+            With full treasures, the default Resistant multiplier for a trait can be reduced to 0.2.<br>
+            In this instance, the Resistant UP L combo decreases the multiplier to 0.14.<br><br>
+            <i>This does <b>not</b> affect the Insanely Tough ability, only Resistant.</i>
+        </div>
+    </div>
+
+
+    <h4 id="knockback">Knockback</h4>
+    <table class="combo-table">
+        <tr>
+            <td>Sm</td>
+            <td>+10% Knockback Distance (×1.1)</td>
+        </tr>
+        <tr>
+            <td>M</td>
+            <td>+20% Knockback Distance (×1.2)</td>
+        </tr>
+        <tr class="pale-row">
+            <td>L</td>
+            <td>+30% Knockback Distance (×1.3)</td>
+        </tr>
+        <tr class="pale-row">
+            <td>XL</td>
+            <td>+50% Knockback Distance (×1.5)</td>
+        </tr>
+    </table>
+
+    <div class="combo-note row">
+        <div class="col-sm-1">
+            <b>Ex:</b>
+        </div>
+        <div class="col">
+            Pirate Cat knocks back Red enemies by 165 range.<br>
+            With Knockback UP M, this increases by 20% to 198 range.
+        </div>
+    </div>
+
+
+    <h4 id="slow">Slow</h4>
+    <table class="combo-table">
+        <tr>
+            <td>Sm</td>
+            <td>+10% Slow Duration (×1.1)</td>
+        </tr>
+        <tr>
+            <td>M</td>
+            <td>+20% Slow Duration (×1.2)</td>
+        </tr>
+        <tr class="pale-row">
+            <td>L</td>
+            <td>+30% Slow Duration (×1.3)</td>
+        </tr>
+        <tr class="pale-row">
+            <td>XL</td>
+            <td>+50% Slow Duration (×1.5)</td>
+        </tr>
+    </table>
+
+    <div class="combo-note row">
+        <div class="col-sm-1">
+            <b>Ex:</b>
+        </div>
+        <div class="col">
+            Can Can Cat slows Red enemies for 120f (4s).<br>
+            With Slow UP M, this increases by 20% to 144f (4.8s).
+        </div>
+    </div>
+
+
+    <h4 id="freeze">Freeze</h4>
+    <table class="combo-table">
+        <tr>
+            <td>Sm</td>
+            <td>+10% Freeze Duration (×1.1)</td>
+        </tr>
+        <tr>
+            <td>M</td>
+            <td>+20% Freeze Duration (×1.2)</td>
+        </tr>
+        <tr class="pale-row">
+            <td>L</td>
+            <td>+30% Freeze Duration (×1.3)</td>
+        </tr>
+        <tr class="pale-row">
+            <td>XL</td>
+            <td>+50% Freeze Duration (×1.5)</td>
+        </tr>
+    </table>
+
+    <div class="combo-note row">
+        <div class="col-sm-1">
+            <b>Ex:</b>
+        </div>
+        <div class="col">
+            iCat freezes Red enemies for 60f (2s).<br>
+            With Freeze UP M, this increases by 20% to 72f (2.4s).
+        </div>
+    </div>
+
+
+    <h4 id="weaken">Weaken</h4>
+    <table class="combo-table">
+        <tr>
+            <td>Sm</td>
+            <td>+10% Weaken Duration (×1.1)</td>
+        </tr>
+        <tr>
+            <td>M</td>
+            <td>+20% Weaken Duration (×1.2)</td>
+        </tr>
+        <tr class="pale-row">
+            <td>L</td>
+            <td>+30% Weaken Duration (×1.3)</td>
+        </tr>
+        <tr class="pale-row">
+            <td>XL</td>
+            <td>+50% Weaken Duration (×1.5)</td>
+        </tr>
+    </table>
+
+    <div class="combo-note row">
+        <div class="col-sm-1">
+            <b>Ex:</b>
+        </div>
+        <div class="col">
+            Thaumaturge weakens non-Metal enemies for 200f (6.67s).<br>
+            With Weaken UP Sm, this increases by 10% to 220f (7.34s).
+        </div>
+    </div>
+
+    <h4 id="strengthen">Strengthen</h4>
+    <table class="combo-table">
+        <tr>
+            <td>Sm</td>
+            <td>+20% Strengthen Multiplier (absolute)</td>
+        </tr>
+        <tr>
+            <td>M</td>
+            <td>+30% Strengthen Multiplier (absolute)</td>
+        </tr>
+        <tr class="pale-row">
+            <td>L</td>
+            <td>+50% Strengthen Multiplier (absolute)</td>
+        </tr>
+        <tr class="pale-row">
+            <td>XL</td>
+            <td>+100% Strengthen Multiplier (absolute)</td>
+        </tr>
+    </table>
+
+    <div class="combo-note row">
+        <div class="col-sm-1">
+            <b>Ex:</b>
+        </div>
+        <div class="col">
+            Balrog at Level 12 does 30,000 Damage normally.
+            With max Strengthen talent, he gains +200% damage (90000) at 33% HP
+
+            With Strengthen M, this is increased by 30% to +230% (99000 Damage)
+            He still does 30000 damage (unboosted) when not Strengthened
+
+        </div>
+    </div>
+    <div class="combo-note row">
+        <div class="col-sm-1">
+            <b>P.S:</b>
+        </div>
+        <div class="col">
+            With full treasures, the default Resistant multiplier for a trait can be reduced to 0.2.<br>
+            In this instance, the Resistant UP L combo decreases the multiplier to 0.14.<br><br>
+            <i>This does <b>not</b> affect the Insanely Tough ability, only Resistant.</i>
+        </div>
+    </div>
+
+
+    <br><br><br><br><br>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8" crossorigin="anonymous">
+</script>
+</body>
+</html>

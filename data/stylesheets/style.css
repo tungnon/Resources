@@ -29,7 +29,7 @@ table, th, td {
     text-align: center;
 }
 
-table {
+table:not(.combo-table) {
     margin: 20px auto;
 }
 
@@ -66,4 +66,25 @@ a {
 
 li:not(:first-child, .table-of-contents *, nav *) {
     padding-top: 5px;
+}
+
+.combo-table {
+    margin: 20px 0 20px 0;
+}
+
+.combo-table td {
+    background: #A4C2F4;
+}
+
+.pale-row td {
+    background: #C9DAF8;
+    color: #AFAFAF;
+}
+
+.combo-note {
+    border: 3px solid #BF9000;
+    background: #FFF2CC;
+    padding: 4px;
+    margin-bottom: 15px;
+    margin-left: 0;
 }
