@@ -85,7 +85,8 @@
                     <li><a href="#trait">Trait</a></li>
                     <li><a href="#abilities-sub">Abilities</a>
                         <ul>
-                            <li><a href="#passive-abilities">Passive Abilities</a></li>
+                            <li><a href="#passive-targeting-abilities">Passive Targeting Abilities</a></li>
+                            <li><a href="#passive-universal-abilities">Passive Universal Abilities</a></li>
                             <li><a href="#active-targeting-abilities">Active Targeting Abilities</a></li>
                             <li><a href="#active-universal-abilities">Active Universal Abilities</a></li>
                         </ul>
@@ -295,8 +296,12 @@
     <div class="_separator"></div>
     <p>Read the section on actual abilities <a href="#abilities">here</a>.</p>
 
-    <h5 id="passive-abilities">Passive Abilities</h5>
-    <p>Abilities the unit applies when it is affected by an attack (e.g. <a href="#resistant">Resistant Against</a>, any
+    <h5 id="passive-targeting-abilities">Passive Targeting Abilities</h5>
+    <p>Abilities the unit applies when it is affected by an attack from a certain enemy trait (e.g. <a href="#resistant">Resistant Against</a>, <a
+            href="#strong-against">Strong Against</a>), merely by existing. Exclusive to cat units.</p>
+
+    <h5 id="passive-universal-abilities">Passive Universal Abilities</h5>
+    <p>Abilities the unit applies when it is affected by an attack from any type of unit (e.g. any
         <a href="#immunity">immunities</a>, <a href="#metal">Metal trait</a>), merely by existing.</p>
 
     <h5 id="active-targeting-abilities">Active Targeting Abilities</h5>
@@ -385,7 +390,7 @@
     <h5 id="minimum-range">Minimum Range</h5>
     <p>Minimum distance at which an attack can hit. Usually -320, accounting for the hitbox of the unit. If the unit
         has LD, it can be above that (in some cases above even the standing range, e.g. Golfer Cat) creating a blind
-        spot. If the unit has Omni-strike it is always lower than -320, hitting behind it.</p>
+        spot. If the unit has Omni-strike, it is usually (<a href="https://cdn.discordapp.com/attachments/678400499522732051/790010475998871562/video0.mov" target="_blank">but not always</a>) lower than -320, hitting behind it.</p>
     <p>See also <a href="#inner-range">inner range</a>.</p>
 
     <h5 id="blind-spot">Blind Spot</h5>
@@ -412,7 +417,7 @@
 
     <h5 id="piercing-attack">Piercing Attack</h5>
     <p>Used to refer to units that can hit farther than their standing range, through the use of either Long Range
-        attacks or Wave attacks.</p>
+        attacks, Omni-strike, Wave attacks, or Surge attacks.</p>
     <p>Not to be confused with <a href="#piercing-range">piercing range</a>.</p>
 
     <h5 id="stepping-stone">Stepping Stone</h5>
@@ -442,7 +447,7 @@
     <p> The part of the animation that comes after the hit. Can be very short or extremely long (e.g. Awakened Bahamut,
         Bullet Train, Green Shell).
     </p>
-    <p><b>Also known as:</b> rebound</p>
+    <p><b>Note:</b> while this is sometimes referred to as "rebound", the word rebound itself is also used to designate something else, that being a full-backswing unit (such as Maglev or Yukimura) being interrupted during its backswing and attacking again immediately.</p>
 
     <h5 id="attack-cooldown">Attack Cooldown</h5>
     <p>Time between finishing a foreswing animation (= landing an attack) and starting the next one. Immediately starts
@@ -531,7 +536,7 @@
         all event traits. Exclusive to cat units.</p>
 
     <h5 id="insanely-tough">Insanely Tough</h5>
-    <p>Takes 1/4th or 1/5th damage from target type depending on treasures. Treasures don't exist for White, Relic and
+    <p>Takes 1/6th or 1/7th damage from target type depending on treasures. Treasures don't exist for White, Relic and
         all event traits. Exclusive to cat units.</p>
 
     <h5 id="slow">Slow</h5>
@@ -573,7 +578,7 @@
     <p>Burrowing can be interrupted if the zombie is knocked back during its pre-burrowing animation.</p>
 
     <h5 id="revive">Revive</h5>
-    <p>An ability exclusive to (all) zombies. Once these enemies lose all their health, they leave a corpse behind and
+    <p>An ability exclusive to (almost) all zombies. Once these enemies lose all their health, they leave a corpse behind and
         revive with a certain percentage of their original HP after a given duration (those two numbers are different
         for every zombie enemy). Zombie enemies can revive either once or infinitely.</p>
 
