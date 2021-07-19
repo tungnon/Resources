@@ -5,8 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ItF + Early SoL Guide</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet"
-                            integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
+          integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="../stylesheets/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" type="text/javascript"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8" crossorigin="anonymous">
+    </script>
     <script src="../script/script.js" type="text/javascript"></script>
 </head>
 <body>
@@ -17,6 +21,14 @@
     $(function(){
         $("#nav-placeholder").load("../static/nav.html");
     });
+
+    $(function () {
+        $('[data-toggle="popover"]').popover()
+    })
+
+    var popover = new bootstrap.Popover(document.querySelector('.popover-dismiss'), {
+        trigger: 'focus'
+    })
 </script>
 
 <div class="container" id="mainContent">
@@ -29,6 +41,7 @@
         <ul>
             <li><a href="#disclaimers">Disclaimers</a></li>
             <li class="list-spacer">&nbsp;</li>
+
             <li><a href="#treasures">Treasures and why they matter</a></li>
             <li><a href="#when-to-start-itf">When to start ItF?</a></li>
             <li><a href="#map-layout">Map layout, timed score rewards and outbreaks</a></li>
@@ -48,37 +61,59 @@
             <li><a href="#user-rank">User rank, Catfruit and Gacha True Forms</a></li>
             <li><a href="#sol-and-ururun">Stories of Legend, Ururun and Event Stages</a></li>
             <li class="list-spacer">&nbsp;</li>
+
             <li><a href="#useful-links">Useful links</a></li>
             <li><a href="#credits">Credits</a></li>
         </ul>
     </div>
 
+
+
     <h5 id="disclaimers">Disclaimers</h5>
     <ul>
-        <li>This guide primarily focuses on Into the Future, but most of what is here can also be applied to early-mid game in general.</li>
-        <li>This guide is an unofficial sequel to <a href="https://youtu.be/9ATc_PTYVzA" target="_blank">Lucas' Beginner's guide</a>. If you haven't watched it, it is recommended you do, as multiple aspects Lucas talked about in his video will be brought up here as well.
+        <li>
+            This guide primarily focuses on Into the Future, but most of what is here can also be applied to early-mid
+            game in general.
         </li>
-        <li>While this guide provides multiple in-game tips and pieces of advice, it does not go in depth on game mechanics.
+        <li>
+            This guide is an unofficial sequel to <a href="https://youtu.be/9ATc_PTYVzA" target="_blank">Lucas'
+            Beginner's guide</a>. If you haven't watched it, it is recommended you do, as multiple aspects Lucas talked
+            about in his video will be brought up here as well.
+        </li>
+        <li>
+            While this guide provides multiple in-game tips and pieces of advice, it does not go in depth on game
+            mechanics.
         </li>
     </ul>
     <hr>
     <p>
-        If you've just finished Empire of Cats chapter one, you might have seen the new section of stages called "Into the Future" (or ItF for short). You might even have played a few levels. If you have, you've seen a new enemy trait: Aliens. As you probably noticed, alien enemies are very strong this early in the game. For this reason, it is heavily recommended that you only start playing ItF after you've completed all 3 Empire of Cats (EoC) chapters and gathered all superior treasures. Not only for more treasures and higher levels on your units, but also for the EoC 3 drop reward: Bahamut Cat.
+        If you've just finished Empire of Cats chapter one, you might have seen the new section of stages called "Into
+        the Future" (or ItF for short). You might even have played a few levels. If you have, you've seen a new enemy
+        trait: Aliens. As you probably noticed, alien enemies are very strong this early in the game. For this reason,
+        it is heavily recommended that you only start playing ItF after you've completed all 3 Empire of Cats (EoC)
+        chapters and gathered all superior treasures. Not only for more treasures and higher levels on your units, but
+        also for the EoC 3 drop reward: Bahamut Cat.
     </p>
+
+
 
     <h3 id="treasures">Treasures available in ItF, and why they matter</h3>
     <hr>
     <p>
-        Speaking of treasures, they are <i>extremely important</i>. This guide will not spend too much time talking about them since Lucas already covered them in detail, but know this: it's tedious farming treasures, but it's even more tedious trying to beat levels with a lack of treasures.
+        Speaking of treasures, they are <i>extremely important</i>. This guide will not spend too much time talking
+        about them since Lucas already covered them in detail, but know this: it's tedious farming treasures, but it's
+        even more tedious trying to beat levels with a lack of treasures.
     </p>
     <p>
-        What's more, the treasure sets you get in ItF are different from those you find in EoC. The most notable difference is the presence of fruit and crystal treasure sets.
-        Fruits increase the quality of anti-trait abilities, such as status effect duration and massive damage multipliers. The specific sets are Void Fruit (for black enemies), Blood Fruit (red), Sky Fruit (floating) and Heaven’s Fruit (angel).
+        What's more, the treasure sets you get in ItF are different from those you find in EoC. The most notable
+        difference is the presence of fruit and crystal treasure sets.
+        Fruits increase the quality of anti-trait abilities, such as status effect duration and massive damage
+        multipliers. The specific sets are Void Fruit (for black enemies), Blood Fruit (red), Sky Fruit (floating) and
+        Heaven’s Fruit (angel).
     </p>
     <p>
         Here are the exact changes in multipliers once all treasures are collected :
     </p>
-
     <table>
         <thead>
             <tr>
@@ -126,23 +161,43 @@
         </tbody>
     </table>
 
-    <p class="text-info">ItF does not include any fruits for Zombies and Aliens as those can be found in Cats of the Cosmos (CotC), the next set of story mode chapters. As of BCEN 10.5, there are no fruit treasures for Traitless or Relic in any chapter.</p>
+    <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+        <symbol id="info-fill" fill="currentColor" viewBox="0 0 16 16">
+            <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm.93-9.412-1 4.705c-.07.34.029.533.304.533.194 0 .487-.07.686-.246l-.088.416c-.287.346-.92.598-1.465.598-.703 0-1.002-.422-.808-1.319l.738-3.468c.064-.293.006-.399-.287-.47l-.451-.081.082-.381 2.29-.287zM8 5.5a1 1 0 1 1 0-2 1 1 0 0 1 0 2z"/>
+        </symbol>
+    </svg>
+    <div class="alert alert-primary d-flex align-items-center" role="alert">
+        <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Info:"><use xlink:href="#info-fill"/></svg>
+        <div style="padding-left: 10px">
+            ItF does not include any fruits for Zombies and Aliens as those can be found in Cats of the Cosmos (CotC), the next set of story mode chapters. As of BCEN 10.5, there are no fruit treasures for Traitless or Relic in any chapter.
+        </div>
+    </div>
 
     <p>
-        The other treasures you should worry about are Crystals. There are two crystal treasure sets in each chapter. Alien enemies have a base magnification of 700%, and every treasure set you complete reduces it by 100% (eventually bringing the default Alien magnification down to 100%). The magnification is multiplicative, not additive: this means that a 200% Alien enemy would have a default magnification of 1400% (200% × 700%).
+        The other treasures you should worry about are Crystals. There are two crystal treasure sets in each chapter.
+        Alien enemies have a base magnification of 700%, and every treasure set you complete reduces it by 100%
+        (eventually bringing the default Alien magnification down to 100%). The magnification is multiplicative, not
+        additive: this means that a 200% Alien enemy would have a default magnification of 1400% (200% × 700%).
     </p>
     <p>
-        Crystals are the most important treasures in ItF as they make gigantic differences in enemy stats: collect them as soon as possible, especially if you get stuck on Alien-heavy stages.
+        Crystals are the most important treasures in ItF as they make gigantic differences in enemy stats: collect them
+        as soon as possible, especially if you get stuck on Alien-heavy stages.
     </p>
+
 
 
     <h3 id="when-to-start-itf">When should I start ItF?</h3>
     <hr>
     <p>
-        Most players tend to repeatedly get stuck when playing through ItF, and a lot of the time, it’s because their unit levels are very lackluster. Why? Because playing through ItF gives you very little XP, and no leaderships at all. For that reason, it’s actually better to start playing through Stories of Legend (also known as the Legend Stages, or SoL) before even starting ItF, as they give you a lot more experience to upgrade your cats, with leaderships as an added bonus.
+        Most players tend to repeatedly get stuck when playing through ItF, and a lot of the time, it’s because their
+        unit levels are very lackluster. Why? Because playing through ItF gives you very little XP, and no leaderships
+        at all. For that reason, it’s actually better to start playing through Stories of Legend (also known as the
+        Legend Stages, or SoL) before even starting ItF, as they give you a lot more experience to upgrade your cats,
+        with leaderships as an added bonus.
     </p>
     <p>
-        This is more of an opinion than something you should follow very precisely, but here’s an example of progression:
+        This is more of an opinion than something you should follow very precisely, but here’s an example of
+        progression:
     </p>
     <ul>
         <li>EoC 1 - 3</li>
@@ -154,97 +209,190 @@
         <li>ItF Ch. III</li>
     </ul>
     <p>
-        It’s also a good idea to play some of the earlier SoL chapters in higher star difficulties, as you’ll have to do it eventually anyways: might as well clear them while the chapters are still somewhat challenging/enjoyable.
+        It’s also a good idea to play some of the earlier SoL chapters in higher star difficulties, as you’ll have to do
+        it eventually anyways: might as well clear them while the chapters are still somewhat challenging/enjoyable.
     </p>
+
 
 
     <h3 id="map-layout">Map layout, timed score rewards and outbreaks</h3>
     <hr>
     <p>
-        The map layout in ItF also differs; the stages, or countries, aren’t in the same order, Hawaii and the Maldives are absent, and there are two new stages: The Great Abyss and Floating Continent. This doesn’t really impact gameplay though.
+        The map layout in ItF also differs; the stages, or countries, aren’t in the same order, Hawaii and the Maldives
+        are absent, and there are two new stages: The Great Abyss and Floating Continent. This doesn’t really impact
+        gameplay though.
     </p>
     <p>
-        Something new you'll encounter in ItF are timed score rewards. After clearing any given ItF stage, you're provided with a score depending on how fast you cleared the level. A high enough score nets you a reward, such as a battle item, XP or Cat Food. Rewards and score thresholds vary from one stage to the next. While all this free stuff is certainly very nice, you shouldn't worry about it too much at first, especially since some of those rewards can be very hard to obtain early on.
+        Something new you'll encounter in ItF are timed score rewards. After clearing any given ItF stage, you're
+        provided with a score depending on how fast you cleared the level. A high enough score nets you a reward, such
+        as a battle item, XP or Cat Food. Rewards and score thresholds vary from one stage to the next. While all this
+        free stuff is certainly very nice, you shouldn't worry about it too much at first, especially since some of
+        those rewards can be very hard to obtain early on.
     </p>
     <p>
-        The same thing goes for ItF outbreaks: don’t bother trying to beat these until after completing all three chapters.
+        The same thing goes for ItF outbreaks: don’t bother trying to beat these until after completing all three
+        chapters.
     </p>
+
 
 
     <h3 id="difficulty-and-strategy">Difficulty and Strategy</h3>
     <hr>
     <p>
-        Compared to EoC levels, ItF levels tend to be somewhat more complicated, and also significantly more difficult. Losing to harder stages on your first try is to be expected, especially if you go in blind. Even though a few defeats now and then are perfectly normal, it is important to understand <u>why</u> they occur. There are 3 main possible causes:
+        Compared to EoC levels, ItF levels tend to be somewhat more complicated, and also significantly more difficult.
+        Losing to harder stages on your first try is to be expected, especially if you go in blind. Even though a few
+        defeats now and then are perfectly normal, it is important to understand <u>why</u> they occur. There are 3 main
+        possible causes:
     </p>
     <ol>
         <li>You are lacking treasures. Go back and collect them to have an easier time.</li>
         <li>Your cats are underleveled. Take a while to level them before trying again.</li>
         <li>You are using the wrong lineup or the wrong strategy.</li>
     </ol>
-    <p>Every time you lose, try to rethink what you did and what went wrong. <span style="color: red">(Disclaimer: the following is an oversimplification)</span></p>
+    <p>
+        Every time you lose, try to rethink what you did and what went wrong.
+        <i class="text-danger">(Disclaimer: the following is an oversimplification)</i>
+    </p>
     <ul>
         <li>Were the enemies pushing through your meatshields like there weren't any? Try using more meatshields.</li>
         <li>Did you run out of money? Try stalling for longer before starting the fight if the stage lets you do so.</li>
         <li>Were all your units getting outranged? Try bringing a longer ranged cat, etc.</li>
     </ul>
-    <p>Essentially, don’t give up after a single failed run.</p>
+    <p>
+        Essentially, don’t give up after a single failed run.
+    </p>
+
 
 
     <h3 id="finding-reliable-help">Finding reliable help</h3>
     <hr>
     <p>
-        There are times where you might not understand why you lost, and need to seek outside help. There are several places you can look for this: most of them will be covered here, starting with the battle cats wiki.
+        There are times where you might not understand why you lost, and need to seek outside help. There are several
+        places you can look for this: most of them will be covered here, starting with the battle cats wiki.
     </p>
     <p>
-        Since anyone can edit the wiki, a lot of the strats include Ubers, sometimes even continues, and many of them are unreliable. Many of the more reliable strats are copied from YouTube tutorials. If you want to quickly look up enemy or cat stats, the wiki is generally good, but stage information and strategic insight are a mixed bag.
+        Since anyone can edit the wiki, a lot of the strats include Ubers, sometimes even continues, and many of them
+        are unreliable. Many of the more reliable strats are copied from YouTube tutorials. If you want to quickly look
+        up enemy or cat stats, the wiki is generally good, but stage information and strategic insight are a mixed bag.
         <br>Simply put, don’t use the wiki to look up strategies.
     </p>
     <p>
-        The more reliable sources for this are <a role="button" class="btn-link" data-bs-toggle="modal" data-bs-target="#catbot-modal">CatBot</a>, mygamatoto and the japanese battle cats database, which was formerly known as the Spica.
+        The more reliable sources for this are
+        <a role="button" class="btn-link" tabindex="0"
+           data-toggle="popover" data-bs-trigger="focus" title="CatBot"
+           data-bs-content="If you're in the r/battlecats or Fandom Discord server, you have access to CatBot, which
+           allows you to look up unit stats, on top of a lot more.
+           If you're not already a member of either server, you can find the links to them at the bottom of this
+           page.">
+            CatBot</a>,
+        mygamatoto and the japanese battle cats database, which was formerly known as the Spica.
     </p>
     <p>
-        <a href="http://mygamatoto.com" target="_blank">Mygamatoto</a> is a handy english site you can use to look up cat stats. You can also easily compare different units and adjust the levels. However, if you want the most detailed and accurate information, it’s best to use spica.
+        <a href="https://mygamatoto.com" target="_blank">Mygamatoto</a> is a handy english site you can use to look up
+        cat stats. You can also easily compare different units and adjust the levels. However, if you want the most
+        detailed and accurate information, it’s best to use spica.
     </p>
     <p>
-        While you can browse <a href="http://battlecats-db.com" target="_blank">spica</a> and look for information on your own, it can be confusing if you don’t know the site well, especially since the website is fully in japanese. You can use a translation plugin to help, but keep in mind they’re not always 100% accurate. In general, though, it’s good enough to understand everything.
+        While you can browse <a href="https://battlecats-db.com" target="_blank">spica</a> and look for information on
+        your own, it can be confusing if you don’t know the site well, especially since the website is fully in
+        japanese. You can use a translation plugin to help, but keep in mind they’re not always 100% accurate. In
+        general, though, it’s good enough to understand everything.
     </p>
     <p>
-        An easy way to find stats for a level/enemy/cat on spica is to go on the wiki page for that enemy/etc. and scroll down to the <code>Reference</code> section, which contains a link to the database.
+        An easy way to find stats for a level/enemy/cat on spica is to go on the wiki page for that enemy/etc. and
+        scroll down to the <code>Reference</code> section, which contains a link to the database.
     </p>
     <p>
-        On the other hand, if you're looking for reliable guides and strategies, you should look to YouTube guidemakers. The recommended ones are <a href="https://www.youtube.com/user/nurseluka" target="_blank">Nurse Wuffa</a>, <a href="https://www.youtube.com/user/gameandwatch97" target="_blank">LucasTheFourth/Lucas IV</a>, <a href="https://www.youtube.com/user/SilumanTomcat" target="_blank">JonesHtog/SilumanTomcat</a>, <a href="https://www.youtube.com/user/misterhappy444" target="_blank">yohane</a> and <a href="https://www.youtube.com/channel/UCtNXKH6K6wHCAHbZS4tq-RQ" target="_blank">Anthony89810</a>. Most guidemakers don’t have a lot of reliable guides for ItF specifically though, with the notable exception of <a href="https://www.youtube.com/channel/UCa-cgCixEojzsWvzWhtYbpQ" target="_blank">Waran-Ess</a>.
+        On the other hand, if you're looking for reliable guides and strategies, you should look to YouTube guidemakers.
+        The recommended ones are <a href="https://www.youtube.com/user/nurseluka" target="_blank">Nurse Wuffa</a>,
+        <a href="https://www.youtube.com/user/gameandwatch97" target="_blank">LucasTheFourth/Lucas IV</a>,
+        <a href="https://www.youtube.com/user/SilumanTomcat" target="_blank">JonesHtog/SilumanTomcat</a>,
+        <a href="https://www.youtube.com/user/misterhappy444" target="_blank">yohane</a>
+        and
+        <a href="https://www.youtube.com/channel/UCtNXKH6K6wHCAHbZS4tq-RQ" target="_blank">Anthony89810</a>.
+        Most guidemakers don’t have a lot of reliable guides for ItF specifically though, with the notable exception of
+        <a href="https://www.youtube.com/channel/UCa-cgCixEojzsWvzWhtYbpQ" target="_blank">Waran-Ess</a>.
     </p>
     <p>
-        If you can't find a reliable guide for your needs, another option is joining a battle cats Discord server <i>(if you’re reading this, there’s a good chance you’re in one of them right now)</i>. There are a good number of them, but the recommended one is the subreddit's Discord. There are tons of people over there who are glad to give helpful advice to anyone who may need it.
+        If you can't find a reliable guide for your needs, another option is joining a battle cats Discord server
+        <i>(if you’re reading this, there’s a good chance you’re in one of them right now)</i>. There are a good number
+        of them, but the recommended one is the subreddit's Discord. There are tons of people over there who are glad to
+        give helpful advice to anyone who may need it.
     </p>
+
 
 
     <h3 id="normal-cat-true-forms">Normal Cat True Forms</h3>
     <hr>
-    <p>While you're progressing through ItF, ideally you'd want to obtain some of your Normal Cats' True Forms. Of course this is RNG dependent, but you can farm tickets and log in every day to try and speed up the process. Here are some details on each of them:</p>
-
+    <p>
+        While you're progressing through ItF, ideally you'd want to obtain some of your Normal Cats' True Forms. Of
+        course, this is RNG dependent, but you can farm tickets and log in every day to try and speed up the process.
+        Here are some details on each of them:
+    </p>
     <ul>
-        <li><b>Mohawk</b>, the true form of the basic cat. Nothing much to say about this one: it's just Cat with better stats, sometimes allowing him to take more hits and kill weak peons faster.</li>
-        <li><b>Eraser</b>, the true form of Tank cat. A staple meatshield, absolute must-have throughout the game. You can do without it for quite a while, but the earlier you get it, the better.</li>
-        <li><b>Dark</b>, the true form of Axe cat. While it grants better stats, Axe cat's TF doesn't solve its main problems, that being its high cost for a meatshield and low range for an “attacker”.</li>
-        <li><b>Macho Legs</b>, the true form of Gross cat. Not only does Macho Legs get significantly stronger, it also gains a new ability: strong against Alien enemies. As with Eraser, you don't absolutely need Macho Legs for ItF, but it's a great and cost effective ranged attacker, even outside of Aliens.</li>
-        <li><b>Lion</b>, the true form of Cow cat. Lion is a decent enough unit, but its usage remains very limited. Decently useful for early speedrunning, but that's about it.</li>
-        <li><b>Flying</b>, the true form of Bird cat. A very powerful Aoe (Area of effect) attacker, though its low range remains a problem. It's still good to use against some shorter ranged enemies like Cyberhorn, or against single target enemies like LeMurr.</li>
-        <li><b>Island</b>, the true form of Fish cat. Despite Island gaining better stats, enemies also get stronger in ItF, mostly limiting its usage to red enemies.</li>
-        <li><b>King Dragon</b>, the true form of Lizard cat. Lizard was already very good, his TF mostly makes him more cost efficient (better stats but longer cooldown). Do note that the improvements in stats are minor enough that using the second form is still better most of the time.</li>
-        <li><b>Jamiera</b>, the true form of Titan cat. This one is a very powerful unit, a tanker. Pretty niche, but very nice to have.</li>
+        <li>
+            <b>Mohawk</b>, the true form of the basic cat. Nothing much to say about this one: it's just Cat with better
+            stats, sometimes allowing him to take more hits and kill weak peons faster.
+        </li>
+        <li>
+            <b>Eraser</b>, the true form of Tank cat. A staple meatshield, absolute must-have throughout the game. You
+            can do without it for quite a while, but the earlier you get it, the better.
+        </li>
+        <li>
+            <b>Dark</b>, the true form of Axe cat. While it grants better stats, Axe cat's TF doesn't solve its main
+            problems, that being its high cost for a meatshield and low range for an “attacker”.
+        </li>
+        <li>
+            <b>Macho Legs</b>, the true form of Gross cat. Not only does Macho Legs get significantly stronger, it also
+            gains a new ability: strong against Alien enemies. As with Eraser, you don't absolutely need Macho Legs for
+            ItF, but it's a great and cost effective ranged attacker, even outside of Aliens.
+        </li>
+        <li>
+            <b>Lion</b>, the true form of Cow cat. Lion is a decent enough unit, but its usage remains very limited.
+            Decently useful for early speedrunning, but that's about it.
+        </li>
+        <li>
+            <b>Flying</b>, the true form of Bird cat. A very powerful Aoe (Area of effect) attacker, though its low
+            range remains a problem. It's still good to use against some shorter ranged enemies like Cyberhorn, or
+            against single target enemies like LeMurr.
+        </li>
+        <li>
+            <b>Island</b>, the true form of Fish cat. Despite Island gaining better stats, enemies also get stronger in
+            ItF, mostly limiting its usage to red enemies.
+        </li>
+        <li>
+            <b>King Dragon</b>, the true form of Lizard cat. Lizard was already very good, his TF mostly makes him more
+            cost efficient (better stats but longer cooldown). Do note that the improvements in stats are minor enough
+            that using the second form is still better most of the time.
+        </li>
+        <li>
+            <b>Jamiera</b>, the true form of Titan cat. This one is a very powerful unit, a tanker. Pretty niche, but
+            very nice to have.
+        </li>
     </ul>
+
 
 
     <h3 id="bahamut-cat">Bahamut Cat</h3>
     <hr>
     <p>
-        In general you can progress without Normal TFs until about late chapter 2, especially if you have good gacha units, which will be covered a bit later. However, there are still units you'll want to level up, mainly Bahamut Cat. Bahamut is the only free (as in, not from the gacha) powerful Aoe ranged attacker you'll get for a while, so you might as well get to know him. Bahamut's main characteristics are: good range, high damage per hit, but a staggeringly long attack rate (20 seconds), combined with low health and a long cooldown. Despite these flaws, Bahamut is a vital unit for the early-mid game. An Aoe attacker with good range is a must.
+        In general you can progress without Normal TFs until about late chapter 2, especially if you have good gacha
+        units, which will be covered a bit later. However, there are still units you'll want to level up, mainly Bahamut
+        Cat. Bahamut is the only free (as in, not from the gacha) powerful Aoe ranged attacker you'll get for a while,
+        so you might as well get to know him. Bahamut's main characteristics are: good range, high damage per hit, but a
+        staggeringly long attack rate (20 seconds), combined with low health and a long cooldown. Despite these flaws,
+        Bahamut is a vital unit for the early-mid game. An Aoe attacker with good range is a must.
     </p>
+
+
 
     <h3 id="gacha">Gacha</h3>
     <hr>
-    <p>At this point in the game, you've most certainly obtained at least a few gacha units. This guide won't go over every single one of them in detail, but here's a list of those worth upgrading (in no particular order, and without taking true forms into account):</p>
+    <p>
+        At this point in the game, you've most certainly obtained at least a few gacha units. This guide won't go over
+        every single one of them in detail, but here's a list of those worth upgrading (in no particular order, and
+        without taking true forms into account):
+    </p>
     <ul>
         <li>Surfer/Castaway</li>
         <li>Salon/Paris</li>
@@ -259,13 +407,17 @@
         The top three recommended gacha banners at this point in the game are Almighties, Dark Heroes and Ultra Souls.
     </p>
     <p>
-       This guide does not cover specific ubers: if you want to learn more about them, you can refer to the Fandom and r/bc Discord servers, either through #gacha_advice or the help channels.
+       This guide does not cover specific ubers: if you want to learn more about them, you can refer to the Fandom and
+        r/bc Discord servers, either through #gacha_advice or the help channels.
     </p>
+
 
 
     <h3 id="crazed-cats">Crazed Cats</h3>
     <hr>
-    <p>Even with good gacha units on your side, there are still some no gacha units worth getting. By far the most notable ones are Crazed Cats— essentially stronger variants of your Normal Cats.
+    <p>
+        Even with good gacha units on your side, there are still some no gacha units worth getting. By far the most
+        notable ones are Crazed Cats— essentially stronger variants of your Normal Cats.
     </p>
     <p>
         Here’s a quick description of each of their stages:
@@ -274,7 +426,8 @@
         <li><b>Cat:</b> pretty straightforward, stacking Bahamut does the trick</li>
         <li><b>Tank:</b> an endurance stage, definitely annoying but far from the hardest</li>
         <li><b>Axe:</b> arguably the hardest. Features the annoying boss and endless waves of red enemies.</li>
-        <li><b>Gross:</b> pretty difficult, unless you have Awakened Bahamut or Octopus Cat/any other wave blocker. Either of these makes the stage completely free.</li>
+        <li><b>Gross:</b> pretty difficult, unless you have Awakened Bahamut or Octopus Cat/any other wave blocker.
+            Either of these makes the stage completely free.</li>
         <li><b>Cow:</b> damage spam</li>
         <li><b>Bird:</b> another endurance level, though not too difficult with the right units</li>
         <li><b>Fish:</b> Ranged damage dealers + a critical hitter, usually Space Cat</li>
@@ -282,19 +435,29 @@
         <li><b>Titan:</b> stack dragons and get lucky</li>
     </ul>
     <p>
-        You don’t need to get all of these right away, but the most important ones are Cat and Tank. The other ones are also very good (for the most part), but they’re not quite as vital for ItF.<br>
+        You don’t need to get all of these right away, but the most important ones are Cat and Tank. The other ones are
+        also very good (for the most part), but they’re not quite as vital for ItF.<br>
         Apart from <b>better overall stats</b>, here are the main differences between Normals and Crazed:
     </p>
     <ul>
         <li><b>Cat:</b> the basic cat, except it’s faster.</li>
         <li><b>Tank:</b> Wall Cat, except it’s… faster…</li>
         <li><b>Axe:</b> really just a better Axe, though it still has the same problems (low range and high cost)</li>
-        <li><b>Gross:</b> able to produce wave attacks, though this comes at the cost of a significantly longer cooldown.</li>
+        <li>
+            <b>Gross:</b> able to produce wave attacks, though this comes at the cost of a significantly longer cooldown.
+        </li>
         <li><b>Cow:</b> like Lion, but a lot faster and has Aoe.</li>
-        <li><b>Bird:</b> has longer range than normal Flying, which allows it to counter many enemies his basic counterpart cannot. Still has short range for spammable Aoe, but a very powerful unit overall.</li>
+        <li>
+            <b>Bird:</b> has longer range than normal Flying, which allows it to counter many enemies his basic
+            counterpart cannot. Still has short range for spammable Aoe, but a very powerful unit overall.
+        </li>
         <li><b>Fish:</b> really just a better Island, while also being faster and cheaper.</li>
         <li><b>Dragon:</b> better dragon.</li>
-        <li><b>Titan:</b> compared to Jamiera, loses the knockback for a 10% wave chance (and higher speed). Can be better in some situations, but Normal Jamiera is overall more reliable (except at low levels) due to the shorter attack animation.</li>
+        <li>
+            <b>Titan:</b> compared to Jamiera, loses the knockback for a 10% wave chance (and higher speed). Can be
+            better in some situations, but Normal Jamiera is overall more reliable (except at low levels) due to the
+            shorter attack animation.
+        </li>
     </ul>
 
     <h5 id="crazed-cats-upgrading-priority">Crazed Cats upgrading priority</h5>
@@ -348,13 +511,18 @@
     </p>
 
 
+
     <h3 id="farming-and-managing-xp">Farming and managing XP</h3>
     <hr>
     <p>
-        Simply progressing through ItF and grinding treasures grants you a decent amount of XP, but if you want to farm some more, the best place for it is the XP stage. It appears twice every day and is available all day during weekends. There’s also XP Megablitz, but it’s probably too hard for you this early in the game. Another option is playing Legend Stages for XP (refer to the <a href="#when-to-start-itf">When should I start ItF?</a> section).
+        Simply progressing through ItF and grinding treasures grants you a decent amount of XP, but if you want to farm
+        some more, the best place for it is the XP stage. It appears twice every day and is available all day during
+        weekends. There’s also XP Megablitz, but it’s probably too hard for you this early in the game. Another option
+        is playing Legend Stages for XP (refer to the <a href="#when-to-start-itf">When should I start ItF?</a> section).
     </p>
     <p>
-        Lucas made an entire video on the topic and it is highly recommended to check it out, but here are some of the important points:
+        Lucas made an entire video on the topic and it is highly recommended to check it out, but here are some of the
+        important points:
     </p>
     <ul>
         <li>Upgrade units to their max level… or don’t upgrade <b>at all.</b></li>
@@ -366,18 +534,20 @@
     </p>
 
 
+
     <h3 id="user-rank">
         User Rank, Catfruit and gacha True Forms
     </h3>
     <hr>
     <p>
-        While upgrading your units, you might have noticed how you can only upgrade them up to a certain point. Higher level caps are unlocked from User Rank.
+        While upgrading your units, you might have noticed how you can only upgrade them up to a certain point. Higher
+        level caps are unlocked from User Rank.
     </p>
     <table>
         <thead>
             <tr>
                 <th>User Rank</th>
-                <th>Rarity</th>
+                <th>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Rarity&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
                 <th>Level cap</th>
             </tr>
         </thead>
@@ -414,7 +584,7 @@
             </tr>
             <tr>
                 <td>1410</td>
-                <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Legend Rare&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+                <td>Legend Rare</td>
             </tr>
             <tr>
                 <td>1600</td>
@@ -423,10 +593,15 @@
         </tbody>
     </table>
     <p>
-        With higher levels unlocked, you will get the opportunity to upgrade gacha units to their third form, or True Form. Evolving a unit to its true form (referred to as “true forming”) requires XP and Catfruit, the amount of which varies from unit to unit and between different rarities.
+        With higher levels unlocked, you will get the opportunity to upgrade gacha units to their third form, or True
+        Form. Evolving a unit to its true form (referred to as “true forming”) requires XP and Catfruit, the amount of
+        which varies from unit to unit and between different rarities.
     </p>
     <p>
-        Catfruit can be obtained from stages that appear from Monday to Friday: the specific color changes depending on what day it is. All of them have 3 individual levels, each with a different difficulty rating: Hard, Expert, and Insane. The Hard and Expert stages are beatable without much trouble, but the Insane ones can often prove to be harder, though keep in mind they give better rewards.
+        Catfruit can be obtained from stages that appear from Monday to Friday: the specific color changes depending on
+        what day it is. All of them have 3 individual levels, each with a different difficulty rating: Hard, Expert, and
+        Insane. The Hard and Expert stages are beatable without much trouble, but the Insane ones can often prove to be
+        harder, though keep in mind they give better rewards.
     </p>
     <p>
         Here are some good gacha units to True Form early:
@@ -444,23 +619,43 @@
         <li><b>Pizza</b> (Weightlifter)</li>
     </ul>
     <p>
-        There are many other good ones, but those listed here are the ones you should worry about at first. <u>Underlined</u> True Forms are those that do great in ItF specifically, while the others are just good early TFs that aren’t necessary for ItF, and are therefore at a lower priority.
+        There are many other good ones, but those listed here are the ones you should worry about at first.
+        <u>Underlined</u> True Forms are those that do great in ItF specifically, while the others are just good early
+        TFs that aren’t necessary for ItF, and are therefore at a lower priority.
     </p>
+
 
 
     <h3 id="sol-and-ururun">Stories of Legend, Ururun and Event Stages</h3>
     <hr>
-    <p>Focusing on ItF is good, but you might also want to try your hand at Stories of Legend (see <a href="#when-to-start-itf">When should I start ItF?</a>) and some event stages.</p>
-    <p>If you’re in ItF and find that Bahamut isn’t enough for you, you should know that SoL subchapter 18, Jail Break Tunnel, has a cat unit drop: Ururun Wolf. She’s similar to Bahamut, but trades raw damage per hit for much better attack frequency, giving her higher DPS (damage per second) than Bahamut. She can be good to get for ItF if you’re struggling, though she definitely isn’t necessary, especially if you have at least one good uber that can replace her.</p>
     <p>
-        There are also event stages. This is the recommended course of action: every time you see a new stage, look at the difficulty rating, and if it’s low enough that you think you might be able to beat it, <u>give it a try</u>. Some of these stages are only available for a few days a year and drop very important units/true forms, so it’s a good idea to try and get as many of them as possible.
+        Focusing on ItF is not a bad idea, but you might also want to try your hand at Stories of Legend
+        (see <a href="#when-to-start-itf">When should I start ItF?</a>) and some event stages.
+    </p>
+    <p>
+        If you’re in ItF and find that Bahamut isn’t enough for you, you should know that SoL subchapter 18, Jail Break
+        Tunnel, has a cat unit drop: Ururun Wolf. She’s similar to Bahamut, but trades raw damage per hit for much
+        better attack frequency, giving her higher DPS (damage per second) than Bahamut. She can be good to get for ItF
+        if you’re struggling, though she definitely isn’t necessary, especially if you have at least one good uber that
+        can replace her.
+    </p>
+    <p>
+        There are also event stages. This is the recommended course of action: every time you see a new stage, look at
+        the difficulty rating, and if it’s low enough that you think you might be able to beat it, <u>give it a try</u>.
+        Some of these stages are only available for a few days a year and drop very important units/true forms, so it’s
+        a good idea to try and get as many of them as possible.
     </p>
     <hr>
 
 
+
     <h5>Thanks for reading!</h5>
-    <p>Lucas made a lot of specific videos on some of the topics covered here, which are all linked below in addition to his original beginner’s guide, some guidemakers, the link to the subreddit’s Discord server and more.</p>
+    <p>
+        Lucas made a lot of specific videos on some of the topics covered here, which are all linked below in addition to
+        his original beginner’s guide, some guidemakers, the link to the subreddit’s Discord server and more.
+    </p>
     <hr>
+
 
 
     <h3 id="useful-links">Useful links</h3>
@@ -506,25 +701,5 @@
     <br><br><br><br><br><br>
 </div>
 
-<!-- Modal -->
-<div class="modal fade" id="catbot-modal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="false">
-    <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="staticBackdropLabel">CatBot</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-                If you're in the r/battlecats or Fandom Discord server, you have access to CatBot, which allows you to look up unit stats, on top of a lot more.<br>
-                If you're not already a member of either server, you can find the links to them at the bottom of this page.
-            </div>
-        </div>
-    </div>
-</div>
-
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8" crossorigin="anonymous">
-</script>
 </body>
 </html>
