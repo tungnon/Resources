@@ -23,6 +23,7 @@
     <h1>Mechanics of Stats and Levelling in Battle Cats</h1>
     <hr>
 
+
     <h5>Contents</h5>
     <button class="btn btn-sm btn-primary" onclick="show_hide_contents()">Show / Hide contents</button><br><br>
     <div class="table-of-contents">
@@ -126,10 +127,15 @@
         shield.
     </p>
 
-    <div class="alert alert-primary align-items-center" role="alert">
-        A level 1, basic cat has base stats of <i>H</i> = 100 and <i>D</i> = 8. <b>What are its stats with full EoC 1
-        treasures, full EoC 2 Legendary Cat Shield, but unactivated EoC 2 Legendary Cat Sword?</b>
-        (Assume no EoC 3 treasure and remaining at level 1)
+    <div class="callout callout-primary">
+        <h5>Example: Basic Cat</h5>
+        <p>
+            A level 1, basic cat has base stats of <i>H</i> = 100 and <i>D</i> = 8. <b>What are its stats with full EoC
+            1
+            treasures, full EoC 2 Legendary Cat Shield, but unactivated EoC 2 Legendary Cat Sword?</b>
+            (Assume no EoC 3 treasure and remaining at level 1)
+        </p>
+        <button class="btn btn-outline-success" data-bs-toggle="modal" data-bs-target="#answer-basic-cat">Show answer</button>
     </div>
     <p>
         ...which leads into the next question. How much does levelling up improve your cats?
@@ -188,14 +194,27 @@
         by one as usual.
     </p>
 
-    <div class="alert alert-primary align-items-center" role="alert">
-        Kasa Jizo has <i>D</i> = 400 and <i>H</i> = 900. <b>What are its stats at Level 20 with full treasures?</b>
-        Check your answer with CatBot.
+    <div class="callout callout-primary">
+        <h5>Example: Kasa Jizo</h5>
+        <p>
+            Kasa Jizo has <i>D</i> = 400 and <i>H</i> = 900. <b>What are its stats at Level 20 with full treasures?</b>
+            Check your answer with CatBot.
+        </p>
+        <button class="btn btn-outline-success" data-bs-toggle="modal" data-bs-target="#answer-jizo">
+            Show answer
+        </button>
     </div>
 
-    <div class="alert alert-primary align-items-center" role="alert">
-        My Level 23 Express Cat hit the enemy base. From looking at the remaining HP, I can see it did 13,500 damage.
-        <b>What is its base <i>D</i> value?</b>
+    <div class="callout callout-primary">
+        <h5>Example: Express Cat</h5>
+        <p>
+            My Level 23 Express Cat hit the enemy base. From looking at the remaining HP, I can see it did 13,500
+            damage.
+            <b>What is its base <i>D</i> value?</b>
+        </p>
+        <button class="btn btn-outline-success" data-bs-toggle="modal" data-bs-target="#answer-express-cat">
+            Show answer
+        </button>
     </div>
 
 
@@ -221,8 +240,8 @@
         You may notice that the increase between 60-70 is half the size of the increase from 30-40, or 40-50, or 50-60.
         Yes, after a certain point, if you are lucky enough to have a +20 uber, Amaterasu starts to get less benefit
         from levels. However, this doesn’t just affect ubers, and can affect almost all cats to some extent, including
-        many that you will realistically get to such levels. This is called a Levelling Curve.
-        <br>There are three main types of Levelling Curves in the game:
+        many that you will realistically get to such levels. This is called a Levelling Curve.<br>
+        There are three main types of Levelling Curves in the game:
     </p>
 
     <h5 id="type-a">Type A : Normal and Special Cats</h5>
@@ -339,10 +358,15 @@
         Level <i>L</i> → <code>([2 + <i>L</i> / 2] <i>M</i> + <i>O</i>) × <i>D</i></code> damage.
     </p>
 
-
-    <div class="alert alert-primary align-items-center" role="alert">
-        Aphrodite with maximum CotC treasure (<i>M</i> = 4) and <i>D</i> = 2400 at Level 50 does 259,200 damage to aliens. This is not
-        enough to break UltraBaaBaa’s 266,000 hp barrier. <b>What level of attack orb is needed to break this barrier?</b>
+    <div class="callout callout-primary">
+        <h5>Example: Aphrodite</h5>
+        <p>
+            Aphrodite with maximum CotC treasure (<i>M</i> = 4) and <i>D</i> = 2400 at Level 50 does 259,200 damage to aliens. This is not
+            enough to break UltraBaaBaa’s 266,000 hp barrier. <b>What level of attack orb is needed to break this barrier?</b>
+        </p>
+        <button class="btn btn-outline-success" data-bs-toggle="modal" data-bs-target="#answer-aphro">
+            Show answer
+        </button>
     </div>
 
 
@@ -437,7 +461,7 @@
         In a previous section we derived the base stat multiplier of a low level (before the curve) cat at level
         <i>L</i> with full treasures:
         We found the damage of a cat with full treasure at low Level <i>L</i>. We can also show that without
-        any treasures, a cat at low level (before the curve) <i>K</i>, this is (prove this)<span class="text-danger"> what is this last bit supposed to mean, Fëanor?</span>
+        any treasures, a cat at low level (before the curve) <i>K</i>, this is:
     </p>
 
     <p style="text-align: center">
@@ -529,11 +553,11 @@
         are better than double level normals, and for a brief moment around Lv 30 manics/Lv 60 normals, you might even
         see the normals pull ahead a tiny bit.
     </p>
-    <p>
+    <div class="callout callout-info">
         The exact shape of this curve varies slightly for each normal-manic pair. If you are interested, try to recreate
         this for Manic Eraser vs Eraser HP, or some other pair of your liking. Do all manics get slightly worse than
         double-level normals around x = 30, or are some of them always better?
-    </p>
+    </div>
 
 
 
@@ -550,34 +574,94 @@
         (@ThanksFëanor#3087) at any time, or he can be found on
         <a href="https://discord.gg/battlecats" target="_blank">the r/battlecats discord server</a>.
     </p>
-
-
-    <h4>Answers to Problems</h4>
     <hr>
-    <h5>Basic Cat</h5>
-    <p>
-        x = 200 for Shield, and x = 100 for Sword. So the stats are 1.5<i>D</i> damage and 2<i>H</i> HP. Hence the answer is 200 HP
-        and 12 damage.
-    </p>
 
-    <h5>Kasa Jizo</h5>
-    <p>
-        <i>L</i> = 20, so (2 + 20/2) = 12. The stats are twelve times the base stats. 4800 damage and 10,800 HP.
-    </p>
 
-    <h5>Express Cat</h5>
-    <p>At level 23, (2 + 23/2) = 13.5, so the damage is 13.5<i>D</i>. If 13.5 × <i>D</i> = 13500, <i>D</i> = 1000.</p>
-
-    <h5>Aphrodite</h5>
-    <p><i>O</i> = 1 (D) and <i>O</i> = 2 (C) still do below 266,000 damage, but <i>O</i> = 3 (B) and above exceed it. The orb needed is
-        therefore B rank or higher.</p>
-    <hr>
 
     <h3 id="credits">Credits</h3>
     <span><b>ThanksFëanor</b>#3087 (original document redaction)</span><br>
     <span><b>Waran-Ess</b>#9801 (minor edits and web conversion)</span><br>
 
     <br><br><br><br><br>
+</div>
+
+<div class="modal fade" id="answer-basic-cat" data-bs-backdrop="static" tabindex="-1" aria-labelledby="answer-cat-title" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="answer-cat-title">Basic Cat</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>
+                    x = 200 for Shield, and x = 100 for Sword. So the stats are 1.5<i>D</i> damage and 2<i>H</i> HP. Hence the answer is 200 HP
+                    and 12 damage.
+                </p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="answer-jizo" data-bs-backdrop="static" tabindex="-1" aria-labelledby="answer-jizo-title" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="answer-jizo-title">Kasa Jizo</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>
+                    <i>L</i> = 20, so (2 + 20/2) = 12. The stats are twelve times the base stats. 4800 damage and 10,800 HP.
+                </p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="answer-express-cat" data-bs-backdrop="static" tabindex="-1" aria-labelledby="answer-express-title" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="answer-express-title">Express Cat</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>
+                    At level 23, (2 + 23/2) = 13.5, so the damage is 13.5<i>D</i>. If 13.5 × <i>D</i> = 13500,
+                    <i>D</i> = 1000.
+                </p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="answer-aphro" data-bs-backdrop="static" tabindex="-1" aria-labelledby="answer-aphro-title" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="answer-aphro-title">Aphrodite</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>
+                    <i>O</i> = 1 (D) and <i>O</i> = 2 (C) still do below 266,000 damage, but <i>O</i> = 3 (B) and above exceed it. The orb needed is
+                    therefore B rank or higher.
+                </p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
 </div>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"
