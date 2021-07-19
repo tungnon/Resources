@@ -6,9 +6,11 @@ body * {
     padding-top: 70px;
 }
 
-._separator {
-    border-bottom: 1px solid lightgray;
-    margin-bottom: 10px;
+@media screen and (max-width: 1200px) {
+    .container {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
 }
 
 h1 {
@@ -87,4 +89,44 @@ li:not(:first-child, .table-of-contents *, nav *) {
     padding: 4px;
     margin-bottom: 15px;
     margin-left: 0;
+}
+
+.callout {
+    padding: 1.25rem;
+    margin-top: 1.25rem;
+    margin-bottom: 1.25rem;
+    border: 1px solid #e9ecef;
+    border-left-width: .25rem;
+    border-radius: .25rem;
+}
+
+.callout-primary {
+    border-left-color: #0d6efd;
+}
+
+.callout-success {
+    border-left-color: #198754;
+}
+
+.callout-warning {
+    border-left-color: #ffc107;
+}
+
+.callout-danger {
+    border-left-color: #dc3545;
+}
+
+.callout-info {
+    border-left-color: #0dcaf0;
+}
+
+.callout h2,
+.callout h3,
+.callout h4,
+.callout h5,
+.alert h2,
+.alert h3,
+.alert h4,
+.alert h5 {
+    padding-top: 0;
 }
