@@ -6,6 +6,7 @@ You can find most of them online [here](https://thanksfeanor.pythonanywhere.com/
 
 ### Current roadmap
 The project is already well under way, with plans to convert the following documents in the next few weeks:
+- Gamatoto Mechanics (credit: ThanksFëanor)
 - Legend Quest info & details (credit: JonesHtog)
 - Improving your Legend Quest winrate (credit: Waran-Ess)
 
