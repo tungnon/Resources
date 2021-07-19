@@ -83,14 +83,6 @@ li:not(:first-child, .table-of-contents *, nav *) {
     color: #AFAFAF;
 }
 
-.combo-note {
-    border: 3px solid #BF9000;
-    background: #FFF2CC;
-    padding: 4px;
-    margin-bottom: 15px;
-    margin-left: 0;
-}
-
 .callout {
     padding: 1.25rem;
     margin-top: 1.25rem;
