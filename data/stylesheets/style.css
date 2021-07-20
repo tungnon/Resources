@@ -131,13 +131,6 @@ li:not(:first-child, .table-of-contents *, nav *) {
     border-left-color: #0dcaf0;
 }
 
-.callout h2,
-.callout h3,
-.callout h4,
-.callout h5,
-.alert h2,
-.alert h3,
-.alert h4,
-.alert h5 {
+:is(.callout, .alert) :is(h2, h3, h4, h5) {
     padding-top: 0;
 }
