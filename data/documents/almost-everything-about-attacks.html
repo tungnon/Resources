@@ -83,10 +83,6 @@
     <h3 id="introduction">Introduction</h3>
     <hr>
     <p>
-        A condensed version of this document exists. It has no web version yet, but you can find the current version
-        <a href="https://docs.google.com/document/d/1rheb6SV0xRm3EdTPd7_oUYJVg9Q9uR13cDy0sJH94aM" target="_blank">here</a>.
-    </p>
-    <p>
         In the game, everything either attacks, or gets attacked, it's pretty much the whole gameplay. It may seem very
         straightforward, but to completely understand things like phenomena, or how cats are rated, it is very important
         to understand the fundamentals of attacking.
@@ -159,7 +155,7 @@
         value just needs to be equal to or more than the attack cooldown.
     </p>
     <p>
-        The stat that Spica records is actually an "attack interval" stat, not time between attack. Attack cooldown is
+        The stat that Spica records is actually an "attack interval" stat, not time between attacks. Attack cooldown is
         derived from <code>(2 × attack interval – 1f)</code>.
     </p>
     <p>
@@ -184,14 +180,14 @@
         interrupted before the last attack, the cat will attack again, regardless of whether it has done the first,
         second or no attack. Attack cooldown starts from the last attack as well.
     </p>
-    <p>
+    <div class="callout callout-info">
         People have other names for each part of the attack cycle, It was initially thought it was best to standardise
         the terms used, but as long as people know what you're talking about, there's no issue. All these parts of the
         attack cycle can be observed, so using what you've seen in battle is a good way to guess what people are talking
         about.
-    </p>
+    </div>
     <p>
-        Now, these parts of the attack cycle all last for some duration, and is an innate stat in all cats and enemies.
+        Now, these parts of the attack cycle all last for some duration, and are innate stats in all cats and enemies.
         There are some desirable standards in these stats depending on the cat being analysed. The desirable standard
         also changes depending on the enemies or stages that the cat is used against.
     </p>
@@ -305,10 +301,12 @@
         specified negative range i.e. behind the attacker, and hits up to some specified range in front of the cat.
         Unlike LD attackers, attackers with Omnistrike stop when the opposing base is at their farthest range. This is
         probably why they made the distinction between LD and Omnistrike, which didn't exist before even though there
-        were units that had negative LD range, notably Daboo.<br>
+        were units that had negative LD range, notably Daboo.
+    </p>
+    <div class="callout callout-info">
         Omnistrike will always be Area Attack, but LD can be single target, and it will apply the rules of single target
         on what enemy it hits.
-    </p>
+    </div>
 
 
 
@@ -408,7 +406,7 @@
         <li>
             Savage Blow is similar to Critical Hits, though the damage multiplier is different. The game's code tells us
             that the multiplier can be customized, though every unit with is as of JP 10.6 uses a 3× multiplier.
-            SavageBlow also does not bypass the Metal trait.
+            Savage Blow also does not bypass the Metal trait.
         </li>
         <li>
             Shockwave mechanics were covered earlier. The attack must hit something before the chance is rolled.
