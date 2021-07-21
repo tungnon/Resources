@@ -1,0 +1,24 @@
+/*
+    light css
+*/
+
+th {
+    color: red;
+}
+
+.table-of-contents {
+    border-color: black;
+}
+
+.combo-table td {
+    background: #A4C2F4;
+}
+
+.pale-row td {
+    background: #C9DAF8;
+    color: #AFAFAF;
+}
+
+.callout {
+    border-color: #e9ecef;
+}

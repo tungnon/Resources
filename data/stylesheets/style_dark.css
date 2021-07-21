@@ -1,0 +1,49 @@
+/*
+    dark css
+*/
+
+body,
+.modal-content {
+    background-color: #2F2F2F;
+    color: white;
+}
+
+.modal-content * {
+    border-color: #626262;
+}
+
+.alert-primary {
+    background-color: #9FB2CF;
+    color: #3872C3;
+    border: 1px solid;
+}
+
+table, th, td {
+    border-color: #626262;
+}
+
+th {
+    color: #E62147;
+}
+
+.table-of-contents {
+    border-color: #626262;
+}
+
+a, #mainContent a:hover {
+    color: orange;
+}
+
+.combo-table td {
+    background: #7492C4;
+    color: black;
+}
+
+.pale-row td {
+    background: #99AAC8;
+    color: #7F7F7F;
+}
+
+.callout {
+    border-color: #626262;
+}
