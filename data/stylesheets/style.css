@@ -5,6 +5,14 @@
 
         margin: 0 auto 0 auto;
     }
+
+    img {
+        max-width: 500px;
+    }
+
+    .graph {
+        max-width: 500px;
+    }
 }
 @media screen and (max-width: 600px) {
     img {
@@ -28,7 +36,11 @@
 }
 
 img {
-    max-width: 500px;
+    max-width: 600px;
+}
+
+.graph {
+    max-width: 1000px;
 }
 
 body * {
