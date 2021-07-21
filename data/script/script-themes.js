@@ -69,14 +69,20 @@ function getCurrentTheme() {
 }
 
 function switchTheme(themeCookie, invert) {
+    let stylesheet_path = /top.html/.test(window.location.href) ?
+        "stylesheets" :
+        "../stylesheets";
+
     if ((themeCookie === "dark" && invert) || themeCookie === "light" && !invert) {
         setCookie("styleCookie", "light");
-        document.getElementById("themeStyle").setAttribute("href", "style_light.css");
+        document.getElementById("themeStyle")
+            .setAttribute("href", `${stylesheet_path}/style_light.css`);
         updateNavbarTheme("light");
     }
     else {
         setCookie("styleCookie", "dark");
-        document.getElementById("themeStyle").setAttribute("href", "style_dark.css");
+        document.getElementById("themeStyle")
+            .setAttribute("href", `${stylesheet_path}/style_dark.css`);
         updateNavbarTheme("dark");
     }
 
