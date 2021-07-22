@@ -1,3 +1,12 @@
+@media screen and (max-width: 1600px) {
+    img {
+        max-width: 600px;
+    }
+
+    .graph {
+        max-width: 1000px;
+    }
+}
 @media screen and (max-width: 1200px) {
     #mainContent {
         padding-left: 30px;
@@ -6,22 +15,37 @@
         margin: 0 auto 0 auto;
     }
 
-    img {
-        max-width: 500px;
-    }
-
+    img,
     .graph {
         max-width: 500px;
     }
+
+    .callout img {
+        max-width: 400px;
+    }
 }
 @media screen and (max-width: 600px) {
-    img {
+    img,
+    .graph {
         max-width: 400px;
+    }
+
+    .callout img {
+        max-width: 350px;
     }
 }
 @media screen and (max-width: 450px) {
     img {
-        max-width: 300px;
+        max-width: 275px;
+    }
+
+    .callout img,
+    .graph {
+        max-width: 250px;
+    }
+
+    .graph {
+        max-width: 250px;
     }
 }
 @media screen and (max-width: 300px) {
@@ -30,17 +54,14 @@
         padding-right: 15px;
     }
 
-    img {
+    img,
+    .graph {
         max-width: 200px;
     }
-}
 
-img {
-    max-width: 600px;
-}
-
-.graph {
-    max-width: 1000px;
+    .callout img {
+        max-width: 160px;
+    }
 }
 
 body * {
