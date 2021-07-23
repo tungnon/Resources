@@ -73,7 +73,7 @@ function switchTheme(themeCookie, invert) {
         "stylesheets" :
         "../stylesheets";
 
-    if ((themeCookie === "dark" && invert) || themeCookie === "light" && !invert) {
+    if ((themeCookie === "dark" && invert) || (themeCookie === "light" && !invert)) {
         setCookie("styleCookie", "light");
         document.getElementById("themeStyle")
             .setAttribute("href", `${stylesheet_path}/style_light.css`);
