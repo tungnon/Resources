@@ -133,6 +133,16 @@ a {
     margin: 20px 0 20px 0;
 }
 
+.black-cell {
+    background: black;
+    border-color: black;
+}
+
+#lq-odds td:not(:first-child, .black-cell) {
+    background: #B4A7D6;
+    color: black;
+}
+
 .callout {
     padding: 1.25rem;
     margin-top: 1.25rem;

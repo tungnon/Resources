@@ -78,16 +78,14 @@ function switchTheme(themeCookie, invert) {
         document.getElementById("themeStyle")
             .setAttribute("href", `${stylesheet_path}/style_light.css`);
         updateNavbarTheme("light");
+        document.getElementById("btn-theme").innerHTML = `Click to toggle dark theme`;
     }
     else {
         setCookie("styleCookie", "dark");
         document.getElementById("themeStyle")
             .setAttribute("href", `${stylesheet_path}/style_dark.css`);
         updateNavbarTheme("dark");
-    }
-
-    if (invert) {
-        document.getElementById("btn-theme").innerHTML = `Click to toggle ${themeCookie} theme`;
+        document.getElementById("btn-theme").innerHTML = `Click to toggle light theme`;
     }
 }
 

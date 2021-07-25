@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Legend Quest Info & Details</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="../stylesheets/style.css">
+    <link id="themeStyle" rel="stylesheet" type="text/css" href="../stylesheets/style_light.css">
+    <script src="../script/script.js" type="text/javascript"></script>
+    <script src="../script/script-themes.js" type="text/javascript"></script>
+</head>
+<body onload="checkThemeOnLoad()">
+
+<nav id="nav-placeholder" class="navbar navbar-expand-lg navbar-light bg-light"></nav>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+    /* Get and show navbar */
+    $(function(){
+        $("#nav-placeholder").load("../static/nav.html");
+    });
+</script>
+
+<div class="container" id="mainContent">
+    <h1>Legend Quest Info & Details</h1>
+    <hr>
+
+    <button class="btn btn-danger" id="btn-theme" onclick="checkThemeOnButtonClick()">
+        Click to toggle dark theme
+    </button>
+
+    <h5>Contents</h5>
+    <button class="btn btn-sm btn-primary" onclick="show_hide_contents()">Show / Hide contents</button><br><br>
+    <div class="table-of-contents">
+        <ul>
+            <li><a href="#what-is-legend-quest">What is Legend Quest?</a>
+                <ul>
+                    <li><a href="#reasons-to-play">Is there any reason to play Legend Quest?</a></li>
+                    <li><a href="#how-to-unlock">How do I unlock Legend Quest?</a></li>
+                    <li><a href="#how-many-stages">How many stages are there in Legend Quest?</a></li>
+                    <li><a href="#where-to-play">Where can I play Legend Quest?</a></li>
+                </ul>
+            </li>
+            <li><a href="#cost-to-play">What do the stages cost to play?</a></li>
+            <li><a href="#stage-randomizer">How does the stage randomizer work?</a></li>
+            <li><a href="#lineup-randomizer">How does the lineup randomizer work?</a></li>
+            <li><a href="#restrictions">Does Legend Quest have any restrictions?</a></li>
+            <li><a href="#drops">What are the drops from each stage?</a></li>
+            <li><a href="#tips">Tips</a></li>
+            <li class="list-spacer">&nbsp;</li>
+
+            <li><a href="#credits">Credits</a></li>
+        </ul>
+    </div>
+
+
+
+    <h3 id="what-is-legend-quest">What is Legend Quest?</h3>
+    <hr>
+    <p>
+        Legend Quest is a new map challenge similar to Heavenly Tower that is implemented in v8.6. It essentially pits
+        you against random Stories of Legend stages, with a random lineup.
+    </p>
+
+
+
+    <h5 id="reasons-to-play">Is there any reason to play Legend Quest?</h5>
+    <ol>
+        <li>Challenge, to prove yourself as a pro Battle Cats player.</li>
+        <li>
+            Various rewards from each stage, including Legend Catseyes that are only obtainable in this challenge.
+            <span class="text-danger">This is no longer true, right?</span>
+        </li>
+    </ol>
+
+
+
+    <h5 id="how-to-unlock">How do I unlock Legend Quest?</h5>
+    <p>
+        There are 3 general requirements to unlock Legend Quest completely:
+    </p>
+    <ol>
+        <li>Legend Quest is accessible after you beat Empire of Cats chapter 1.</li>
+        <li>
+            To open Stage x, you need to beat SoL chapter x+1. For example, to play Stage 1 in LQ, you need to beat SoL
+            chapter 2. To play Stage 18 in LQ, you need to beat SoL chapter 19, and so on.
+        </li>
+        <li>To play Stage 11 and on, you need to reach User Rank 1600.</li>
+    </ol>
+
+
+
+    <h5 id="how-many-stages">How many stages are there in Legend Quest?</h5>
+    <p>There is a total of 48 stages.</p>
+
+
+
+    <h5 id="where-to-play">Where can I play Legend Quest?</h5>
+    <p>
+        Open the Legend Stages menu, and naviagte to the Special Stages section (the red ones). If it's scheduled,
+        Legend Quest should appear at the very top.
+    </p>
+
+
+
+    <h3 id="cost-to-play">What do the stages cost to play?</h3>
+    <hr>
+    <p>
+        There are two things: Energy and Stars. Stars are acquired from clearing any SoL map, including the star
+        difficulties. The more maps you clear, the more stars you have. Stars consumed in Legend Quest won’t affect
+        your SoL progress. The stars will reset on the next Legend Quest appearance.
+    </p>
+    <div class="callout callout-warning">
+        Regarding the recent change of stars becoming crowns (or "levels" if you prefer), it is currently unknown how
+        Legend Quest is affected exactly.
+    </div>
+    <p>Energy consumption:</p>
+    <ul>
+        <li>Stage 1-20 costs 50 energy</li>
+        <li>Stage 21-40 costs 100 energy</li>
+        <li>Stage 41-48 costs 150 energy</li>
+    </ul>
+    <p>Star consumption:</p>
+    <ul>
+        <li>Stage 1-40 costs 1~4 star</li>
+        <li>Stage 41-48 costs 2~5 star</li>
+    </ul>
+    <div class="callout callout-info">
+        Every time you retry a stage, the star consumption is increased by 1. This continues until it stops
+        after the third incrementation.
+    </div>
+
+
+
+    <h3 id="stage-randomizer">How does the stage randomizer work?</h3>
+    <hr>
+    <p>
+        The stages in Legend Quest take a random SoL stage. But there is a rule to this randomizer. Every Stage No. x in
+        Legend Quest will take a random stage from SoL chapter x or x+1.
+    </p>
+    <p>
+        In other words:
+    </p>
+    <ul>
+        <li>Stage 1 takes a random stage from SoL chapters 1 and 2</li>
+        <li>Stage 5 takes a random stage from SoL chapters 5 and 6</li>
+        <li>Stage 18 takes a random stage from SoL chapters 18 and 19, and so on…</li>
+    </ul>
+    <p>
+        The final stage (48) in Legend Quest is always from SoL chapter 49.
+    </p>
+    <p>
+        Stages in Legend Quest are only randomized once, and won’t change until the event ends. The stage you fight is
+        always on 1-star difficulty.<br>
+        Enemy Lookout automatically reveals all enemies in the stage. Use that to plan your lineup.
+    </p>
+
+
+
+    <h3 id="lineup-randomizer">How does the lineup randomizer work?</h3>
+    <hr>
+    <p>
+        The system won’t completely build a lineup for you. Instead, it will swap some of your cats on your lineup with
+        randomly picked cats. The number of cats swapped is also random. In some cases you could get one cat swapped, on
+        some other cases you could get your whole lineup changed entirely.
+    </p>
+    <p>There are some extra rules though:</p>
+    <ul>
+        <li>The system only picks cat you have unlocked.</li>
+        <li>
+            The system won’t change forms. If you leave Jizo at his first form, the randomizer won’t change him to
+            his second form or third form.
+        </li>
+        <li>The system ignores blank slots. It won’t fill them with any other cat units.</li>
+        <li>
+            The more you try a stage, the less likely it is your lineup gets swapped. After 5+ tries, you have an high
+            chance that your lineup won’t get swapped at all.
+        </li>
+    </ul>
+
+    <h5>Exact probabilities</h5>
+    <table id="lq-odds">
+        <thead>
+            <tr>
+                <th rowspan="2">Total attempts</th>
+                <th colspan="11">Number of cats swapped / chance (%)</th>
+            </tr>
+            <tr>
+                <th>10</th>
+                <th>9</th>
+                <th>8</th>
+                <th>7</th>
+                <th>6</th>
+                <th>5</th>
+                <th>4</th>
+                <th>3</th>
+                <th>2</th>
+                <th>1</th>
+                <th>0</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td class="black-cell"></td>
+                <td>30</td>
+                <td>32</td>
+                <td>14</td>
+                <td>6</td>
+                <td>6</td>
+                <td>4</td>
+                <td>4</td>
+                <td>2</td>
+                <td>2</td>
+                <td class="black-cell"></td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td class="black-cell"></td>
+                <td class="black-cell"></td>
+                <td class="black-cell"></td>
+                <td>27</td>
+                <td>37</td>
+                <td>16</td>
+                <td>6</td>
+                <td>6</td>
+                <td>4</td>
+                <td>4</td>
+                <td class="black-cell"></td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td class="black-cell"></td>
+                <td class="black-cell"></td>
+                <td class="black-cell"></td>
+                <td class="black-cell"></td>
+                <td class="black-cell"></td>
+                <td>25</td>
+                <td>45</td>
+                <td>18</td>
+                <td>6</td>
+                <td>6</td>
+                <td class="black-cell"></td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td class="black-cell"></td>
+                <td class="black-cell"></td>
+                <td class="black-cell"></td>
+                <td class="black-cell"></td>
+                <td class="black-cell"></td>
+                <td class="black-cell"></td>
+                <td class="black-cell"></td>
+                <td>40</td>
+                <td>50</td>
+                <td>10</td>
+                <td class="black-cell"></td>
+            </tr>
+            <tr>
+                <td>5+</td>
+                <td class="black-cell"></td>
+                <td class="black-cell"></td>
+                <td class="black-cell"></td>
+                <td class="black-cell"></td>
+                <td class="black-cell"></td>
+                <td class="black-cell"></td>
+                <td class="black-cell"></td>
+                <td class="black-cell"></td>
+                <td>32</td>
+                <td>45</td>
+                <td>23</td>
+            </tr>
+        </tbody>
+    </table>
+
+
+
+    <h3 id="restrictions">Does Legend Quest have any restrictions?</h3>
+    <hr>
+    <p>
+        There are two:
+    </p>
+    <ul>
+        <li>No Continues</li>
+        <li>
+            The 10 seconds rule does not apply. If you quit before 10s, you still lose energy, stars, and power ups used
+            in the battle.
+        </li>
+    </ul>
+
+
+
+    <h3 id="drops">What are the drops from each stage?</h3>
+    <hr>
+    <p>All drops are guaranteed, but are only available once per appearance.</p>
+    <ul>
+        <li>Stage 1-10: Random Power Up x1</li>
+        <li>Stage 11: Random Catseyes x3</li>
+        <li>Stage 12: Random Power Up x1</li>
+        <li>Stage 13: Cat Ticket x1</li>
+        <li>Stage 14: Random Power Up x1</li>
+        <li>Stage 15: Legend Catseyes x1</li>
+        <li>Stage 16: Random Power Up x1</li>
+        <li>Stage 17: Cat Ticket x1</li>
+        <li>Stage 18: Random Power Up x1</li>
+        <li>Stage 19: Cat Ticket x1</li>
+        <li>Stage 20: Rare Ticket x1</li>
+        <li>Stage 21: Random Catseyes x3</li>
+        <li>Stage 22: Random Power Up x1</li>
+        <li>Stage 23: Cat Ticket x1</li>
+        <li>Stage 24: Random Power Up x1</li>
+        <li>Stage 25: Legend Catseyes x1</li>
+        <li>Stage 26: Cat Ticket x1</li>
+        <li>Stage 27: Random Power Up x1</li>
+        <li>Stage 28: Cat Ticket x1</li>
+        <li>Stage 29: Random Power Up x2</li>
+        <li>Stage 30: Rare Ticket x1</li>
+        <li>Stage 31: Random Catseyes x3</li>
+        <li>Stage 32: Random Power Up x2</li>
+        <li>Stage 33: Cat Ticket x1</li>
+        <li>Stage 34: Random Power Up x2</li>
+        <li>Stage 35: Legend Catseyes x1</li>
+        <li>Stage 36: Cat Ticket x1</li>
+        <li>Stage 37: Random Power Up x2</li>
+        <li>Stage 38: Cat Ticket x1</li>
+        <li>Stage 39: Random Power Up x2</li>
+        <li>Stage 40: Legend Catseyes x1</li>
+        <li>Stage 41: Random Catseyes x3</li>
+        <li>Stage 42: Random Power Up x2</li>
+        <li>Stage 43: Cat Ticket x1</li>
+        <li>Stage 44: Random Power Up x3</li>
+        <li>Stage 45: Legend Catseyes x1</li>
+        <li>Stage 46: Random Power Up x3</li>
+        <li>Stage 47: Random Catseyes x3</li>
+        <li>Stage 48: Legend Catseyes x3</li>
+    </ul>
+    <p>
+        Random Catseyes includes Legend Catseyes. There are up to 23 Legend Catseyes you can get in total, but only 8 of
+        them are guaranteed. Like Heavenly Tower, the drop rewards reset on every appearance.
+    </p>
+
+
+
+    <h3 id="tips">Tips</h3>
+    <hr>
+    <p>
+        For more gameplay-oriented tips, make sure to check out
+        <a href="improving-your-lq-winrate.html">this document</a>.
+    </p>
+    <ul>
+        <li>
+            Complete SoL chapters as many as possible. Don’t expect you will beat Stage 25+ in one try, and star
+            consumption easily shoots up as you retry the stages. Having more stars means more retries are available.
+        </li>
+        <li>
+            Upgrade every cat unit you have, especially the ones with attacker/generalist traits. It would suck if you
+            got Drama Cats as random cat but it’s still at level 5.
+        </li>
+        <li>
+            Study SoL stages and your units throughout. Knowing stage schematics allows you to know how to beat the
+            stages with random cats. Understanding units' stats and role lets you quickly see which random unit can help
+            you and which can’t.
+        </li>
+        <li>
+            Since the randomized stage won’t change, you can build a specific lineup that counters the stage heavily for
+            the next retry. If possible, bring multiple true counters. If the stage has Razorback, get Bombercat, Oda,
+            and Gunslinger. This way, if one of them gets swapped out, you still have the others to back you up.
+        </li>
+        <li>
+            Have fun! No matter how skilled or how knowledgeable you are, it’s still mostly about luck. Don’t get
+            stressed out with the bad cards you draw. Just laugh at it and continue fighting until you get burned out.
+        </li>
+    </ul>
+
+
+
+    <h3 id="credits">Credits</h3>
+    <hr>
+    <span><b>jones_goth</b>#8162 (original document redaction)</span><br>
+    <span><b>Waran-Ess</b>#9801 (minor edits and web conversion)</span><br>
+
+    <br><br><br><br><br>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8" crossorigin="anonymous">
+</script>
+</body>
+</html>
