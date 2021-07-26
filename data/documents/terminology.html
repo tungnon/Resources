@@ -335,13 +335,13 @@
         <span class="text-danger">(how many?)</span> f that occurs when a unit takes a specified threshold of damage.
         Temporarily grants invincibility and removes the unit from the battlefield, allowing fast units to run past it.
         Every unit has a number greater or equal to 1, 1 being the minimum as every unit gets knocked back upon death.
-        Their distribution is linear, meaning that every KB occurs at the same interval (5,000HP and 5 KBs results in 1
+        Their distribution is linear, meaning that every KB occurs at the same interval (5,000 HP and 5 KBs results in 1
         KB every 1,000 damage taken)
     </p>
 
     <h5 id="endurance">Endurance</h5>
     <p>
-        Damage taken by a specific unit at a specific level before KB occurs (5000 HP and 5 KB results in 1000
+        Damage taken by a specific unit at a specific level before KB occurs (5,000 HP and 5 KB results in 1,000
         Endurance)
     </p>
     <p><b>Also known as:</b> resilience, knockback resistance</p>
@@ -382,9 +382,9 @@
     <h5 id="effective-dps">Effective DPS</h5>
     <p>
         DPS with respect to abilities. Effective DPS can be influenced by Trait targeting abilities (e.g. Massive
-        Damage, Strong Against, etc.) or general abilities (e.g. Crit, Savage Blow, Wave, Surge). Effective DPS can also
-        be influenced by accuracy (amount of attacks that actually hit their target), although accuracy can only be
-        estimated and never reliably measured.
+        Damage, Strong Against, etc.) or general abilities (e.g. Critical Hit, Savage Blow, Wave, Surge). Effective DPS
+        can also be influenced by accuracy (amount of attacks that actually hit their target), although accuracy can
+        only be estimated and never reliably measured.
     </p>
 
 
@@ -410,7 +410,7 @@
     <h5 id="maximum-range">Maximum Range</h5>
     <p>
         Maximum distance at which an attack can hit. Usually equal to <a href="#standing-range">standing range</a>.
-        If a unit has LD or Omnistrike this often exceeds standing range (e.g. Aphrodite, Cat God), but is never lower
+        If a unit has LD or Omni-strike this often exceeds standing range (e.g. Aphrodite, Cat God), but is never lower
         (e.g. Hacker Cat, Ragnarok).
     </p>
     <p><b>Also known as:</b> reach</p>
@@ -437,7 +437,7 @@
     <p>
         The distance at which a unit stops to attack the enemy base. Usually this is equal to
         <a href="#standing-range">Standing Range</a>. For LD units, this is equal to
-        <a href="#minimum-range">minimum range</a>, for Omnistrike Units, this is equal to
+        <a href="#minimum-range">minimum range</a>, for Omni-strike Units, this is equal to
         <a href="#maximum-range">maximum range</a>.
     </p>
 
@@ -552,8 +552,8 @@
         Units moving up a tiny distance farther than they should because of the way movement speed is calculated. Is
         more noticeable on fast units, as they cover larger intervals of distance in one frame, and only detect
         collisions after moving, enabling them to clip up to half their movement speed into the enemy in DU. Can cause
-        odd interactions between units with very similar but not equal ranges hitting each other when they shouldn't,
-        e.g. Li’l Nyandam and Camelle Variants.
+        odd interactions between units with very similar but not equal ranges hitting each other when they shouldn't
+        in theory, e.g. Li’l Nyandam and Camelle Variants.
     </p>
 
     <h5 id="boss">Boss</h5>
@@ -735,7 +735,7 @@
 
     <h5 id="double-cash">Double Cash</h5>
     <p>
-        Grants double the kill reward upon killing an enemy (has to be the killing blow).
+        Grants double the money reward upon killing an enemy (has to be the killing blow).
         Exclusive to cat units for obvious reasons.
     </p>
     <p><b>Also known as:</b> bounty, double bounty</p>
@@ -793,7 +793,7 @@
         piercing range and <span class="text-danger">250</span> DU being inner range, with the Surge's spawn
         point as reference. The surge's spawn point is chosen randomly from its spawning area, which is handled
         similarly to LD, having both a minimum range and a maximum range which limits it. The surge spawns after
-        <span class="text-danger">15f</span> of the attack hitting, lingering extra <span class="text-danger">20f</span>
+        <span class="text-danger">15f</span> of the attack hitting, lingering an extra <span class="text-danger">20f</span>
         for each surge level. Surge can transport other ability procs as well
         (copying the result of the original attack instead of rerolling the chances for each individual surge level).
         Surge immune units ignore both damage and procs from the surge, but not the attack that triggered it.
@@ -812,7 +812,7 @@
         phases in between foreswing and backswing. Timings can be vastly different. If the animation is interrupted by
         displacement before the last hit lands, in other words before the backswing starts, attack cooldown will not
         start and the attack animation will start from the beginning, repeating every hit. Every individual hit is
-        independent, meaning it can have its own damage value (e.g. Awakened Bahamut with 3 attacks: 85,000, 3400, 5100)
+        independent, meaning it can have its own damage value (e.g. Awakened Bahamut with 3 attacks: 85,000, 3,400, 5,100)
         and abilities (e.g. Crazed Moneko, only last hit crits). The maximum number of multihits is 3.
     </p>
     <p>
