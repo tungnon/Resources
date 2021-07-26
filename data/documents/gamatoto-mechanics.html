@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gamatoto Mechanics</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="../stylesheets/style.css">
+    <link id="themeStyle" rel="stylesheet" type="text/css" href="../stylesheets/style_light.css">
+    <script src="../script/script.js" type="text/javascript"></script>
+    <script src="../script/script-themes.js" type="text/javascript"></script>
+</head>
+<body onload="checkThemeOnLoad()">
+
+<nav id="nav-placeholder" class="navbar navbar-expand-lg navbar-light bg-light"></nav>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+    /* Get and show navbar */
+    $(function(){
+        $("#nav-placeholder").load("../static/nav.html");
+    });
+</script>
+
+<div class="container" id="mainContent">
+    <h1>Gamatoto Mechanics</h1>
+    <hr>
+
+    <button class="btn btn-danger" id="btn-theme" onclick="checkThemeOnButtonClick()">
+        Click to toggle dark theme
+    </button>
+
+    <h5>Contents</h5>
+    <button class="btn btn-sm btn-primary" onclick="show_hide_contents()">Show / Hide contents</button><br><br>
+    <div class="table-of-contents">
+        <ul>
+            <li><a href="#">Link</a></li>
+        </ul>
+    </div>
+
+
+
+    <h3 id="key-results-summary">Key Results Summary</h3>
+    <hr>
+    <ul>
+        <li>
+            Expedition length doesn’t matter for item drops, except in Catseye Cave (and XP Harvest, Collab Areas)
+            where shorter expeditions are better.
+        </li>
+        <li>For recruiting Helpers, 1h expeditions are best, and you should have 5 Engineers.</li>
+        <li>
+            Exactly which area is best for a certain drop depends on your Gamatoto Level, as different areas are
+            affected differently by it.
+        </li>
+        <li>
+            To maximise the drops of a specific item, see
+            <a href="#best-area-for-each-item">Best Area For Each Item</a>.
+        </li>
+        <li>Higher Gamatoto Level reduces XP drops, but increases Cat Food and battle item drops.</li>
+        <li>More/better Helpers increase XP and item drops, but not Cat Food drops.</li>
+        <li>
+            Use the <a href="https://docs.google.com/spreadsheets/d/1_4UTvktg9yiVPHjCZaiqSu2XBtRFPQReOF66sMRm9pA">
+            Gamatoto Calculator</a> to experiment for yourself, if you want more than the general rules in this document.
+        </li>
+    </ul>
+
+
+
+    <h3 id="foreword-and-disclaimers">Foreword and Disclaimers</h3>
+    <hr>
+    <p>
+        Gamatoto is a very old part of Battle Cats that has, until recently, been woefully unexplained. Attempts have
+        been made with varying success and accuracy in the past, but no known treatment of the topic before this has
+        made as comprehensive a study as this. This represents about six months of on-and-off work by some of the best
+        analysts in the Battle Cats community.
+    </p>
+    <p>
+        We can’t be 100% sure any of the mechanics here are perfectly accurate; datamining is often not a source of
+        absolute facts, but instead a matter of guessing what the numbers mean and validating them with comparisons to
+        data. Most of the results here are backed up as being statistically consistent with a test sample of some 700+
+        expeditions, so we are pretty confident overall. This is the best explanation we currently have, but further
+        research may change this in future.
+    </p>
+    <div class="callout callout-danger">
+        A document of this size invariably contains errors and the original writers do not claim otherwise in this case.
+        Let them know if something is off.
+    </div>
+    <p>
+        And finally, before we begin, an observation made in the early stages of studying this topic:
+    </p>
+    <div class="alert alert-danger">
+        <h5>Missing image!</h5>
+    </div>
+    <p>
+        Don’t say you weren't warned.
+    </p>
+
+
+
+    <h3 id="the-basics">The Basics</h3>
+    <hr>
+
+    <h5 id="gamatoto-report">GAMATOTO Report</h5>
+    <div class="alert alert-danger">
+        <h5>Missing image!</h5>
+    </div>
+    <p>
+        The outcomes of a Gamatoto Expedition are described in the GAMATOTO Report Screen shown above.
+        We begin with some observations about it.
+    </p>
+    <ol>
+        <li>Each line is either yellow or white depending on if a drop was obtained or not.</li>
+        <li>The number of lines you get depends on the expedition's length.</li>
+    </ol>
+    <div class="alert alert-success">
+        <h5>Missing table!</h5>
+    </div>
+    <ol start="3">
+        <li>
+            You can get different amounts of the same drop on different lines
+            (e.g., Cat Food×1, Cat Food×2 ; XP+1115, XP+1050)
+        </li>
+    </ol>
+    <p>
+        Other things like what the different white lines say, which Helpers' names comes up, and the time it shows for
+        each line, are random choices shown for style and do not have any useful meaning.
+    </p>
+
+    <h5 id="lines-and-number-of-drops">Lines and Number of Drops</h5>
+    <p>
+        Each line in the GAMATOTO Report is an independent chance to get any of the potential drops in the area. First,
+        the game rolls to check which item you can get on that line. The base chance to choose each item depends on the
+        area. See a table of these chances in <a href="#item-choice-base-rates">Item Choice Base Rates</a>.
+        For example, we can look at Traitor’s Trench:
+    </p>
+    <div class="alert alert-success">
+        <h5>Missing table!</h5>
+    </div>
+    <p>
+        These probabilities always sum to 100%, as every line is assigned one of these item drops. However, there is a
+        second check to determine if you actually get the item. The base chance to get an item is 32%, and it is
+        increased by your Helpers (as described in <a href="#advanced-details">Advanced Details</a>). When this check
+        succeeds, you get a Yellow Line and the item chosen in the previous step. If instead this check fails, you get a
+        randomly generated White Line and no item.
+    </p>
+    <ol>
+        <li>Randomly choose which item to try for (rates depend on area)</li>
+        <li>Randomly choose if you get the item or not
+            <ol type="a">
+                <li>32% chance of getting the item</li>
+                <li>68% chance of White Line instead</li>
+            </ol>
+        </li>
+    </ol>
+    <p>
+        With this, we can multiply the chance that the item is chosen with the chance of actually succeeding in getting
+        it, which gives us the chance that any individual line will drop a particular item.
+    </p>
+    <div class="alert alert-success">
+        <h5>Missing table!</h5>
+    </div>
+    <p>
+        To then calculate the average number of drops across a whole expedition, we multiply these Drop Per Line chances
+        by the number of lines you get (6, 18 or 36 depending on the length of the expedition).
+    </p>
+    <div class="alert alert-success">
+        <h5>Missing table!</h5>
+    </div>
+    <p>
+        That is, the GAMATOTO Report for an average 6 hour expedition to Traitor’s Trench will have about 24 White Text
+        Lines, 10 XP drops, 2 Cat Food drops, and no Catseyes, for a total of 36.
+    </p>
+
+    <h5 id="drop-amounts-and-caps">Drop Amounts and Caps</h5>
+    <p>
+        So when you get a drop of an item, how many do you get?
+    </p>
+    <p>
+        This also depends on the item and area. Each item has a minimum and a maximum drop amount, and all values in
+        that range are equally likely.
+    </p>
+    <p>
+        The rules for drop numbers are:
+    </p>
+    <ul>
+        <li>Cat Food always drops either 1 or 2 per line.</li>
+        <li>
+            Regular XP drops have a large range (e.g. 950-1150 per line) that increases as you go to higher level areas.
+            These are tabulated in <a href="#appendix-b">Appendix B</a>.
+        </li>
+        <li>Bulk XP drops in XP Harvest Areas (e.g. XP +10,000) always drop only 1 per line.</li>
+        <li>Catseyes always drop 1 per line.</li>
+        <li>Battle Items drop 1 per line, except in Evangelion Areas where they drop 2 per line.</li>
+    </ul>
+    <p>
+        Using this information, taking a 3 hour expedition in Traitor’s Trench with the above data as an example, we
+        find the average amount of each item dropped per expedition (multiplying the average number of successful drops
+        / yellow lines by the average amount of each drop) to be:
+    </p>
+    <div class="alert alert-success">
+        <h5>Missing table!</h5>
+    </div>
+    <p>
+        However, each item type in each area also potentially has a cap. If your total drops of the item exceed the cap,
+        the excess will be lost.
+    </p>
+    <p>
+        The rules for caps are:
+    </p>
+    <ul>
+        <li>Cat Food always has a cap of <b>9</b> per expedition.</li>
+        <li>Regular XP drops are <b>unlimited</b>.</li>
+        <li>
+            Bulk XP drops in XP Harvest Areas are <b>unlimited</b>, except the highest amount in the area which has a
+            cap of <b>1</b>.
+        </li>
+        <li>
+            Catseyes are <b>unlimited</b>, except in Catseye Cave (and Caverns) where they have a cap of
+            <b>1</b> each.
+        </li>
+        <li>
+            Battle Items are unlimited, except in Collab Areas where they have a cap of <b>1</b>, or for Evangelion
+            Areas <b>2</b> each.
+        </li>
+    </ul>
+    <p>
+        For example, if you get 5 drops of Cat Food ×2 in a single expedition, this exceeds the cap of 9, and so you
+        only get 9 Cat Food from the expedition.
+    </p>
+
+    <div class="callout callout-info">
+        <h5 id="inari-and-collab-helpers">Inari and Collab Helpers</h5>
+        <p>
+            Having Inari from the Cat Shrine present <b>doubles</b> the drop amount of items (except for Cat Food) for a
+            single expedition. That is, the chance of each line dropping an item stays the same, but you get twice as
+            many as usual (e.g. 2 Catseyes per line) when successful. Certain collabs (Merc, Shoumetsu, Miku) also have
+            bonus helpers who act as a permanent Inari (you can’t have both at once), having the same effect on your
+            drops.
+        </p>
+        <p>
+            These also double the caps on the relevant items. (Catseye Cave can now drop <b>2</b> of each Catseye!)
+        </p>
+    </div>
+
+    <h5 id="engineers-and-helpers">Engineers and Helpers</h5>
+    <p>
+        At the end of an expedition, Gamatoto has a chance to find a helper. The rates differ between Early Game and
+        Regular expedition areas, defined here as:
+    </p>
+    <div class="alert alert-success">
+        <h5>Missing table!</h5>
+    </div>
+    <p>
+        The chance to find a Helper in an area depends on which of these categories you are in, the length of the
+        expedition, and whether or not you have a full team of 5 Engineers.
+    </p>
+    <p>
+        First, the area you are in determines the Base Helper Chance:
+    </p>
+    <ul>
+        <li>For Early Game areas, the Base Helper Chance is <b>7.5%</b>.</li>
+        <li>For Regular areas, the Base Helper Chance is <b>9%</b>.</li>
+    </ul>
+    <p>
+        Next, the expedition length determines how many Attempts Gamatoto has at finding a helper:
+    </p>
+    <ul>
+        <li>1 hour expeditions have <b>2</b> Attempts.</li>
+        <li>3 hour expeditions have <b>5</b> Attempts.</li>
+        <li>6 hour expeditions have <b>9</b> Attempts.</li>
+    </ul>
+    <p>
+        The chance of each Attempt succeeding is the Base Helper Chance above. If it succeeds, then you get a helper.
+        If it fails, you move onto the next attempt and repeat. If you run out of attempts with no Helper drops, you get
+        no helpers for that expedition.
+    </p>
+    <p>
+        If an attempt succeeds, the chance of it being each type of helper is as follows:
+    </p>
+    <div class="alert alert-success">
+        <h5>Missing table!</h5>
+    </div>
+    <p>
+        *If you have 5 Engineers present already, you cannot get more, so the current Attempt "fails" and you move on to
+        the next Attempt.
+    </p>
+    <p>
+        **Note that when Legendary Helpers are unlocked, you get them instead of Gold Helpers at the same rate. In other
+        words, all drops that would otherwise be Gold Helpers become Legendary instead.
+    </p>
+    <p>
+        Putting all of this together, we can calculate the chance of any given expedition giving each rarity of helper:
+    </p>
+    <div class="alert alert-danger">
+        <h5>Missing image!</h5>
+    </div>
+    <p>
+        From this, we can see that doing more <b>shorter expeditions</b> will yield more helpers on average than doing
+        fewer longer ones. For example, six 1h expeditions in a regular area with full engineers will give six 0.14%
+        chances at a Gold helper (average 0.84 dropped total) while one 6h expedition will yield just one 0.62% chance
+        (average 0.62 dropped total) making the shorter expeditions about 35% better.
+    </p>
+    <p>
+        In fact, even if you are inattentive and in a 6 hour span only manage to send out <b>four or five 1h
+        expeditions</b>, this will still yield an average of 0.66 to 0.70 gold helpers, which is still slightly better
+        than the 6h case.
+    </p>
+
+    <h5 id="levelling-up-gamatoto">Levelling Up Gamatoto</h5>
+    <p>
+        Gamatoto begins his life at Level 1, and with every expedition, gains Experience Points which allow him to level
+        up. This changes the chances of choosing each item for a line and is explained in
+        <a href="#effect-of-gamatoto-level">Effect of Gamatoto Level</a>. It also unlocks new areas and costumes.
+    </p>
+    <p>
+        Higher level Gamatoto areas drop more Gamatoto Experience, tabulated in <a href="#appendix-c">Appendix C</a>,
+        and longer expeditions also increase the amount as follows:
+    </p>
+    <div class="alert alert-success">
+        <h5>Missing table!</h5>
+    </div>
+    <p>
+        That is, if you wish to maximise the rate at which Gamatoto gains Experience to level up, doing multiple 1 hour
+        expeditions is slightly better than 3 or 6 hour expeditions.
+    </p>
+    <p>
+        Additionally, sometimes (20% chance) Gamatoto will randomly gain a bonus 50% Experience (×1.5) for expeditions.
+    </p>
+    <p>
+        The cumulative experience Gamatoto needs to reach a given level is as follows:
+    </p>
+    <div class="alert alert-success">
+        <h5>Missing table!</h5>
+    </div>
+
+
+
+    <h3 id="advanced-details">Advanced Details</h3>
+    <hr>
+
+    <h5 id="effect-of-gamatoto-level">Effect of Gamatoto Level</h5>
+    <p>
+        Levelling up Gamatoto <b>increases</b> the Item Choice Rate of Cat Food, Catseyes, Battle Items and Bulk XP
+        Drops (XP Harvest 10k XP, etc), while <b>decreasing</b> that of regular XP drops.
+    </p>
+    <p>
+        Each item in each area has a "Choice Rate Modifier" which indicates how much the Choice Rate of that item
+        changes for a given Gamatoto Level. To be specific:
+    </p>
+    <div class="callout callout-primary">
+        <i>
+            <b>Final Choice Rate</b> = Base Choice Rate + <span class="text-danger">Choice Rate Modifier</span> ×
+            <span class="text-info">Level Factor</span>
+        </i>
+    </div>
+    <p>
+        where <i>Base Choice Rate</i> is the value discussed in the <a href="#the-basics">Basics</a> section (and found
+        in <a href="#appendix-a">Appendix A</a>), the Choice Rate Modifier is found in
+        <a href="#appendix-d">Appendix D</a>, and the Level Factor is a number that increases as Gamatoto Levels up,
+        which is given by:
+    </p>
+    <div class="callout callout-primary">
+        <i class="text-info">Level Factor = 0.02% × (Gamatoto Level - 1)</i> for Gamatoto Level 1 to 99<br>
+        and<br>
+        <i class="text-info">Level Factor = 2% + (0.02% × Gamatoto Level)</i> for Gamatoto Level 100+
+    </div>
+    <p>
+        To be clear, it is 0% at Level 1, and increases by 0.02% per level until reaching 1.96% at Level 99. At Level
+        100, it suddenly becomes much larger and jumps to 4%, then continues increasing by 0.02% per level.
+    </p>
+    <p>
+        For example, going back to the case of Traitor’s Trench from <a href="#lines-and-number-of-drops">before</a>,
+        for a Level 100 Gamatoto:
+    </p>
+    <div class="alert alert-success">
+        <h5>Missing table!</h5>
+    </div>
+    <p>
+        Note that the total chance of getting an item at all is still bound to the 32% success rate — you still get the
+        same number of White and Yellow lines — increasing Gamatoto’s Level only turns some amount of your drops that
+        would have previously been XP into Cat Food or other items in the area.
+    </p>
+    <p>
+        Converting these modified rates into average drops per expedition, we then find:
+    </p>
+    <div class="alert alert-success">
+        <h5>Missing table!</h5>
+    </div>
+    <p>
+        And then the average amounts of each item from those drops in a 3h Expedition:
+    </p>
+    <div class="alert alert-success">
+        <h5>Missing table!</h5>
+    </div>
+    <p>
+        We see that because the Choice Rate modifier for Catseyes is so high compared to the base Choice Rate,
+        increasing Gamatoto Level to 100 effectively doubles the number you will get from expeditions in this area
+        compared to Level 1 Gamatoto. Although it has a less pronounced effect on the other items, since the modifier is
+        a smaller fraction of the base rate, giving you about 20% more cat food and 6% less XP. All in all, a good
+        tradeoff!
+    </p>
+
+    <h5 id="effect-of-helpers">Effect of Helpers</h5>
+    <p>
+        Each Helper you recruit has a Helper Score depending on their rarity/colour:
+    </p>
+    <div class="alert alert-success">
+        <h5>Missing table!</h5>
+    </div>
+    <p>
+        The amount your helpers affect your Gamatoto Expeditions is dependent on the sum of your Helpers’ Scores. This
+        is a number between 0 (no helpers) and 70 (ten Legendary Helpers). Each point of Helper Score adds <b>0.27%</b>
+        to the <span class="text-danger">base Success Rate (32%)</span> of obtaining an item after it is selected on a
+        line.
+    </p>
+    <div class="callout callout-primary">
+        <i>
+            <b>Final Success Rate</b> = = <span class="text-danger">32%</span> +
+            <span class="text-info">(Helper Score × 0.27%)</span>
+        </i>
+    </div>
+    <p>
+        For example, with 10 Gold Helpers, your Helper Score is <span class="text-info"> 10×6 = 60</span>, and your
+        Final Success Rate is <span class="text-danger">32%</span> + (<span class="text-info">60</span> × 0.27%) =
+        <b>48.2%</b>.
+    </p>
+    <p>
+        This means that you get <b>fewer White Lines</b> and <b>more Yellow Lines</b>. Unlike the effect of increasing
+        Gamatoto’s Level, Helpers actually give you more drops in total, not just shift the ratios of one drop to
+        another.
+    </p>
+    <p>
+        However, there is an exception to this: Cat Food.
+    </p>
+
+    <h5 id="effect-of-helpers-on-cat-food">Effect of Helpers on Cat Food</h5>
+    <p>
+        The success rate for Cat Food technically increases by 0.27% per point of Helper Score too, but a second effect
+        also occurs. Each point of Helper Score’s 0.27% extra chance for a Cat Food drop is cancelled out by adding a
+        chance for Cat Food drops to turn into XP drops. In effect, this means that the Cat Food success rate stays at
+        32%, but an extra source of XP is added to the drop table, like this:
+    </p>
+    <div class="alert alert-success">
+        <h5>Missing table!</h5>
+    </div>
+    <p>
+        That is, now the total Chance of an XP Drop Per Line is 40% from direct XP drops + 2.43% from additional Cat
+        Food being turned into XP, so 42.43%.
+    </p>
+    <p>
+        Turning this into expected drops per expedition type:
+    </p>
+    <div class="alert alert-success">
+        <h5>Missing table!</h5>
+    </div>
+    <p>
+        and then the average amount of each item per 3h expedition.
+    </p>
+    <div class="alert alert-success">
+        <h5>Missing table!</h5>
+    </div>
+    <p>
+        We see that the main effect here is to increase the XP drop, due to both increasing the success chance for it,
+        and converting some Cat Food into extra XP, though Catseyes are also respectably boosted.
+    </p>
+    <p>
+        We conclude this section by noting that with both a higher Gamatoto Level, and a higher Helper Score, the net
+        effect will be to increase everything. With Level 100 Gamatoto and 10 Gold Helpers, the combination of the
+        effects of <a href="#effect-of-gamatoto-level">Gamatoto Level</a> and <a href="#effect-of-helpers">Helpers</a>
+        will be:
+    </p>
+    <div class="alert alert-success">
+        <h5>Missing table!</h5>
+    </div>
+    <p>
+        The Catseye drop is enhanced by both Level and Helper bonuses to be triple its base value, the Cat Food is only
+        enhanced by Level, and the XP is enhanced by Helpers but decreased by Level (though still increases overall).
+    </p>
+
+    <h5 id="cap-corrections">Cap Corrections</h5>
+    <p>
+        In the <a href="#the-basics">Basics</a> section and then later in
+        <a href="#effect-of-gamatoto-level">Effect of Gamatoto Level</a> and
+        <a href="#effect-of-helpers">Effect of Helpers</a>, we obtained final average amounts per expedition by
+        multiplying the average number of successful lines by the average drop per line. However, as explained above,
+        some items have a Cap on the maximum number you can obtain from a single expedition. While the above
+        calculations are correct in the case of no cap (XP, Catseyes in regular areas...), they are inaccurate in the case
+        of capped amounts (Cat Food, Catseyes in Catseye Cave...) as they do not factor it in.
+    </p>
+    <p>
+        Take for example, an <b>Imaginary Gamatoto Area</b> which only drops <b>Imaginary Catseyes</b>. Each line has a
+        50% chance to drop one. In a 1 hour expedition (6 lines), you would then expect (50% × 6) or
+        <b>3 Imaginary Catseyes</b> if there was <b>no cap</b>.
+    </p>
+    <p>
+        However, if there is a Cap of 1, then clearly this is not possible. To then calculate the average, we have to
+        consider the probability of <i>n</i> lines yielding a Catseye using the
+        <a href="https://en.wikipedia.org/wiki/Binomial_distribution" target="_blank">binomial distribution</a>.
+    </p>
+    <div class="alert alert-success">
+        <h5>Missing table!</h5>
+    </div>
+    <p>
+        The <i>Expectation Value</i> (average) number of Imaginary Catseyes is then equal to the sum over each
+        possibility (<i>n</i> = 0 to 6) of the chance of that possibility multiplied by the number of Catseyes you get
+        in that event, which comes out to 3, the same as just doing (50% × 6) as expected.
+    </p>
+    <p>
+        Now, consider the same area, but with a Cap of 1 on Imaginary Catseyes
+    </p>
+
+
+
+
+
+
+
+    <h3 id="credits">Credits</h3>
+    <hr>
+    <span><b>ThanksFëanor</b>#8162 (writing, analysis, datamining and testing)</span><br>
+    <span><b>obafgkm</b>#7789 (proofreading, datamining and testing)</span><br>
+    <span><b>ITstumbler</b>#1797 (datamining and testing)</span><br>
+    <span><b>Waran-Ess</b>#9801 (web conversion)</span><br>
+
+    <br><br><br><br><br>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8" crossorigin="anonymous">
+</script>
+</body>
+</html>
