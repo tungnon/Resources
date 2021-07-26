@@ -1,9 +1,7 @@
-function show_hide_contents() {
-    let contents = document.getElementsByClassName('table-of-contents')[0];
-
-    if (window.getComputedStyle(contents).display === 'none') {
-        contents.style.display = 'block';
+function show_hide_element(element) {
+    if (window.getComputedStyle(element).display === 'none') {
+        element.style.display = 'block';
     } else {
-        contents.style.display = 'none';
+        element.style.display = 'none';
     }
 }

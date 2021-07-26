@@ -43,3 +43,8 @@ a, #mainContent a:hover {
 .callout {
     border-color: #626262;
 }
+
+.table-title-cell {
+    background-color: #5e5b5b;
+    color: white;
+}

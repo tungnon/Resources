@@ -30,7 +30,10 @@
     </button>
 
     <h5>Contents</h5>
-    <button class="btn btn-sm btn-primary" onclick="show_hide_contents()">Show / Hide contents</button><br><br>
+    <button class="btn btn-sm btn-primary"
+            onclick="show_hide_element(document.getElementsByClassName('table-of-contents')[0])">
+        Show / Hide contents
+    </button><br><br>
     <div class="table-of-contents">
         <ul>
             <li><a href="#disclaimer">Disclaimer</a></li>

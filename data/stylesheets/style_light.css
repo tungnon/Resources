@@ -18,3 +18,8 @@ th {
 .callout {
     border-color: #e9ecef;
 }
+
+.table-title-cell {
+    background-color: #64955e;
+    color: black;
+}

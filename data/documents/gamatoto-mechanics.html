@@ -31,7 +31,10 @@
     </button>
 
     <h5>Contents</h5>
-    <button class="btn btn-sm btn-primary" onclick="show_hide_contents()">Show / Hide contents</button><br><br>
+    <button class="btn btn-sm btn-primary"
+            onclick="show_hide_element(document.getElementsByClassName('table-of-contents')[0])">
+        Show / Hide contents
+    </button><br><br>
     <div class="table-of-contents">
         <ul>
             <li><a href="#">Link</a></li>
@@ -114,24 +117,24 @@
     </ol>
     <table>
         <thead>
-            <tr>
-                <th>Expedition Length</th>
-                <th>Number of Lines</th>
-            </tr>
+        <tr>
+            <th>Expedition Length</th>
+            <th>Number of Lines</th>
+        </tr>
         </thead>
         <tbody>
-            <tr>
-                <td>1 hour</td>
-                <td>6</td>
-            </tr>
-            <tr>
-                <td>3 hours</td>
-                <td>18</td>
-            </tr>
-            <tr>
-                <td>6 hours</td>
-                <td>36</td>
-            </tr>
+        <tr>
+            <td>1 hour</td>
+            <td>6</td>
+        </tr>
+        <tr>
+            <td>3 hours</td>
+            <td>18</td>
+        </tr>
+        <tr>
+            <td>6 hours</td>
+            <td>36</td>
+        </tr>
         </tbody>
     </table>
     <ol start="3">
@@ -154,27 +157,27 @@
     </p>
     <table>
         <thead>
-            <tr>
-                <th>Traitor's Trench</th>
-            </tr>
-            <tr>
-               <th>Item</th>
-               <th>Choice %</th>
-            </tr>
+        <tr>
+            <th class="table-title-cell" colspan="2">Traitor's Trench</th>
+        </tr>
+        <tr>
+            <th>Item</th>
+            <th>Choice %</th>
+        </tr>
         </thead>
         <tbody>
-            <tr>
-                <td>XP</td>
-                <td>83%</td>
-            </tr>
-            <tr>
-                <td>Cat Food</td>
-                <td>15%</td>
-            </tr>
-            <tr>
-                <td>Super Rare Catseye</td>
-                <td>2%</td>
-            </tr>
+        <tr>
+            <td>XP</td>
+            <td>83%</td>
+        </tr>
+        <tr>
+            <td>Cat Food</td>
+            <td>15%</td>
+        </tr>
+        <tr>
+            <td>Super Rare Catseye</td>
+            <td>2%</td>
+        </tr>
         </tbody>
     </table>
     <p>
@@ -199,39 +202,39 @@
     </p>
     <table>
         <thead>
-            <tr>
-                <th>Traitor's Trench</th>
-            </tr>
-            <tr>
-                <th>Item</th>
-                <th>Choice %</th>
-                <th>Success Rate</th>
-                <th>Chance For Drop Per Line</th>
-            </tr>
+        <tr>
+            <th class="table-title-cell" colspan="4">Traitor's Trench</th>
+        </tr>
+        <tr>
+            <th>Item</th>
+            <th>Choice %</th>
+            <th>Success Rate</th>
+            <th>Chance For Drop Per Line</th>
+        </tr>
         </thead>
         <tbody>
-            <tr>
-                <td>XP</td>
-                <td>83%</td>
-                <td>32%</td>
-                <td>26.56%</td>
-            </tr>
-            <tr>
-                <td>Cat Food</td>
-                <td>15%</td>
-                <td>32%</td>
-                <td>4.80%</td>
-            </tr>
-            <tr>
-                <td>Super Rare Catseye</td>
-                <td>2%</td>
-                <td>32%</td>
-                <td>0.64%</td>
-            </tr>
-            <tr>
-                <td colspan="3">White Text Line</td>
-                <td>68%</td>
-            </tr>
+        <tr>
+            <td>XP</td>
+            <td>83%</td>
+            <td>32%</td>
+            <td>26.56%</td>
+        </tr>
+        <tr>
+            <td>Cat Food</td>
+            <td>15%</td>
+            <td>32%</td>
+            <td>4.80%</td>
+        </tr>
+        <tr>
+            <td>Super Rare Catseye</td>
+            <td>2%</td>
+            <td>32%</td>
+            <td>0.64%</td>
+        </tr>
+        <tr>
+            <td colspan="3">White Text Line</td>
+            <td>68%</td>
+        </tr>
         </tbody>
     </table>
     <p>
@@ -240,46 +243,46 @@
     </p>
     <table>
         <thead>
-            <tr>
-                <th>Traitor's Trench</th>
-            </tr>
-            <tr>
-                <th>Item</th>
-                <th>Chance Per Line</th>
-                <th>Average Drops 1h Expedition</th>
-                <th>Average Drops 3h Expedition</th>
-                <th>Average Drops 6h Expedition</th>
-            </tr>
+        <tr>
+            <th class="table-title-cell" colspan="5">Traitor's Trench</th>
+        </tr>
+        <tr>
+            <th>Item</th>
+            <th>Chance Per Line</th>
+            <th>Average Drops 1h Expedition</th>
+            <th>Average Drops 3h Expedition</th>
+            <th>Average Drops 6h Expedition</th>
+        </tr>
         </thead>
         <tbody>
-            <tr>
-                <td>XP</td>
-                <td>26.56%</td>
-                <td>1.59</td>
-                <td>4.78</td>
-                <td>9.56</td>
-            </tr>
-            <tr>
-                <td>Cat Food</td>
-                <td>4.80%</td>
-                <td>0.29</td>
-                <td>0.86</td>
-                <td>1.73</td>
-            </tr>
-            <tr>
-                <td>Super Rare Catseye</td>
-                <td>0.64%</td>
-                <td>0.038</td>
-                <td>0.12</td>
-                <td>0.23</td>
-            </tr>
-            <tr>
-                <td>White Text Line</td>
-                <td>68%</td>
-                <td>4.08</td>
-                <td>12.24</td>
-                <td>24.48</td>
-            </tr>
+        <tr>
+            <td>XP</td>
+            <td>26.56%</td>
+            <td>1.59</td>
+            <td>4.78</td>
+            <td>9.56</td>
+        </tr>
+        <tr>
+            <td>Cat Food</td>
+            <td>4.80%</td>
+            <td>0.29</td>
+            <td>0.86</td>
+            <td>1.73</td>
+        </tr>
+        <tr>
+            <td>Super Rare Catseye</td>
+            <td>0.64%</td>
+            <td>0.038</td>
+            <td>0.12</td>
+            <td>0.23</td>
+        </tr>
+        <tr>
+            <td>White Text Line</td>
+            <td>68%</td>
+            <td>4.08</td>
+            <td>12.24</td>
+            <td>24.48</td>
+        </tr>
         </tbody>
     </table>
     <p>
@@ -315,39 +318,39 @@
     </p>
     <table>
         <thead>
-            <tr>
-                <th>Traitor's Trench <u>3h Expedition</u></th>
-            </tr>
-            <tr>
-                <th>Item</th>
-                <th>Average Yellow Lines</th>
-                <th>Range</th>
-                <th>Avergae Drop Per Line</th>
-                <th>Average Drop Over Expedition</th>
-            </tr>
+        <tr>
+            <th class="table-title-cell" colspan="5">Traitor's Trench <u>3h Expedition</u></th>
+        </tr>
+        <tr>
+            <th>Item</th>
+            <th>Average Yellow Lines</th>
+            <th>Range</th>
+            <th>Avergae Drop Per Line</th>
+            <th>Average Drop Over Expedition</th>
+        </tr>
         </thead>
         <tbody>
-            <tr>
-                <td>XP</td>
-                <td>4.78</td>
-                <td>950 - 1150</td>
-                <td>1050</td>
-                <td>5020</td>
-            </tr>
-            <tr>
-                <td>Cat Food</td>
-                <td>0.86</td>
-                <td>1 - 2</td>
-                <td>1.5</td>
-                <td>1.30</td>
-            </tr>
-            <tr>
-                <td>Super Rare Catseye</td>
-                <td>0.12</td>
-                <td>1</td>
-                <td>1</td>
-                <td>0.12</td>
-            </tr>
+        <tr>
+            <td>XP</td>
+            <td>4.78</td>
+            <td>950 - 1150</td>
+            <td>1050</td>
+            <td>5020</td>
+        </tr>
+        <tr>
+            <td>Cat Food</td>
+            <td>0.86</td>
+            <td>1 - 2</td>
+            <td>1.5</td>
+            <td>1.30</td>
+        </tr>
+        <tr>
+            <td>Super Rare Catseye</td>
+            <td>0.12</td>
+            <td>1</td>
+            <td>1</td>
+            <td>0.12</td>
+        </tr>
         </tbody>
     </table>
     <p>
@@ -442,38 +445,38 @@
     </p>
     <table>
         <thead>
-            <tr>
-                <th>Type</th>
-                <th>Early Game</th>
-                <th>Regular</th>
-            </tr>
+        <tr>
+            <th>Type</th>
+            <th>Early Game</th>
+            <th>Regular</th>
+        </tr>
         </thead>
         <tbody>
-            <tr>
-                <td>Engineer*</td>
-                <td>86.67%</td>
-                <td>86.67%</td>
-            </tr>
-            <tr>
-                <td>White</td>
-                <td>9.73%</td>
-                <td>7.73%</td>
-            </tr>
-            <tr>
-                <td>Bronze</td>
-                <td>2.13%</td>
-                <td>3.20%</td>
-            </tr>
-            <tr>
-                <td>Silver</td>
-                <td>1.07%</td>
-                <td>1.60%</td>
-            </tr>
-            <tr>
-                <td>Gold**</td>
-                <td>0.4%</td>
-                <td>0.8%</td>
-            </tr>
+        <tr>
+            <td>Engineer*</td>
+            <td>86.67%</td>
+            <td>86.67%</td>
+        </tr>
+        <tr>
+            <td>White</td>
+            <td>9.73%</td>
+            <td>7.73%</td>
+        </tr>
+        <tr>
+            <td>Bronze</td>
+            <td>2.13%</td>
+            <td>3.20%</td>
+        </tr>
+        <tr>
+            <td>Silver</td>
+            <td>1.07%</td>
+            <td>1.60%</td>
+        </tr>
+        <tr>
+            <td>Gold**</td>
+            <td>0.4%</td>
+            <td>0.8%</td>
+        </tr>
         </tbody>
     </table>
     <p>
@@ -547,9 +550,484 @@
     <p>
         The cumulative experience Gamatoto needs to reach a given level is as follows:
     </p>
-    <div class="alert alert-success">
-        <h5>Missing table!</h5>
-    </div>
+    <button class="btn btn-sm btn-primary" data-bs-toggle="collapse" data-bs-target="#gamatoto-xp"
+            aria-expanded="false" aria-controls="gamatoto-xp">
+        Show / Hide table
+    </button>
+    <table class="collapse" id="gamatoto-xp">
+        <thead>
+            <tr>
+                <th>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Level&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
+                <th>XP To Next</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;600&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>2,400</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>10,900</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>16,900</td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>23,000</td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td>44,100</td>
+            </tr>
+            <tr>
+                <td>7</td>
+                <td>65,300</td>
+            </tr>
+            <tr>
+                <td>8</td>
+                <td>86,500</td>
+            </tr>
+            <tr>
+                <td>9</td>
+                <td>107,700</td>
+            </tr>
+            <tr>
+                <td>10</td>
+                <td>168,200</td>
+            </tr>
+            <tr>
+                <td>11</td>
+                <td>228,700</td>
+            </tr>
+            <tr>
+                <td>12</td>
+                <td>289,200</td>
+            </tr>
+            <tr>
+                <td>13</td>
+                <td>349,700</td>
+            </tr>
+            <tr>
+                <td>14</td>
+                <td>444,000</td>
+            </tr>
+            <tr>
+                <td>15</td>
+                <td>538,400</td>
+            </tr>
+            <tr>
+                <td>16</td>
+                <td>632,800</td>
+            </tr>
+            <tr>
+                <td>17</td>
+                <td>727,200</td>
+            </tr>
+            <tr>
+                <td>18</td>
+                <td>821,600</td>
+            </tr>
+            <tr>
+                <td>19</td>
+                <td>1,003,100</td>
+            </tr>
+            <tr>
+                <td>20</td>
+                <td>1,184,600</td>
+            </tr>
+            <tr>
+                <td>21</td>
+                <td>1,366,100</td>
+            </tr>
+            <tr>
+                <td>22</td>
+                <td>1,547,600</td>
+            </tr>
+            <tr>
+                <td>23</td>
+                <td>1,729,100</td>
+            </tr>
+            <tr>
+                <td>24</td>
+                <td>1,917,600</td>
+            </tr>
+            <tr>
+                <td>25</td>
+                <td>2,106,200</td>
+            </tr>
+            <tr>
+                <td>26</td>
+                <td>2,294,700</td>
+            </tr>
+            <tr>
+                <td>27</td>
+                <td>2,483,300</td>
+            </tr>
+            <tr>
+                <td>28</td>
+                <td>2,671,800</td>
+            </tr>
+            <tr>
+                <td>29</td>
+                <td>2,860,400</td>
+            </tr>
+            <tr>
+                <td>30</td>
+                <td>3,102,400</td>
+            </tr>
+            <tr>
+                <td>31</td>
+                <td>3,344,400</td>
+            </tr>
+            <tr>
+                <td>32</td>
+                <td>3,586,400</td>
+            </tr>
+            <tr>
+                <td>33</td>
+                <td>3,828,400</td>
+            </tr>
+            <tr>
+                <td>34</td>
+                <td>4,070,400</td>
+            </tr>
+            <tr>
+                <td>35</td>
+                <td>4,312,400</td>
+            </tr>
+            <tr>
+                <td>36</td>
+                <td>4,590,700</td>
+            </tr>
+            <tr>
+                <td>37</td>
+                <td>4,869,000</td>
+            </tr>
+            <tr>
+                <td>38</td>
+                <td>5,147,300</td>
+            </tr>
+            <tr>
+                <td>39</td>
+                <td>5,425,600</td>
+            </tr>
+            <tr>
+                <td>40</td>
+                <td>5,703,900</td>
+            </tr>
+            <tr>
+                <td>41</td>
+                <td>5,982,200</td>
+            </tr>
+            <tr>
+                <td>42</td>
+                <td>6,260,500</td>
+            </tr>
+            <tr>
+                <td>43</td>
+                <td>6,575,100</td>
+            </tr>
+            <tr>
+                <td>44</td>
+                <td>6,889,700</td>
+            </tr>
+            <tr>
+                <td>45</td>
+                <td>7,204,300</td>
+            </tr>
+            <tr>
+                <td>46</td>
+                <td>7,518,900</td>
+            </tr>
+            <tr>
+                <td>47</td>
+                <td>7,833,500</td>
+            </tr>
+            <tr>
+                <td>48</td>
+                <td>8,148,100</td>
+            </tr>
+            <tr>
+                <td>49</td>
+                <td>8,462,700</td>
+            </tr>
+            <tr>
+                <td>50</td>
+                <td>8,822,700</td>
+            </tr>
+            <tr>
+                <td>51</td>
+                <td>9,182,600</td>
+            </tr>
+            <tr>
+                <td>52</td>
+                <td>9,509,300</td>
+            </tr>
+            <tr>
+                <td>53</td>
+                <td>9,836,000</td>
+            </tr>
+            <tr>
+                <td>54</td>
+                <td>10,162,800</td>
+            </tr>
+            <tr>
+                <td>55</td>
+                <td>10,489,500</td>
+            </tr>
+            <tr>
+                <td>56</td>
+                <td>10,816,200</td>
+            </tr>
+            <tr>
+                <td>57</td>
+                <td>11,142,900</td>
+            </tr>
+            <tr>
+                <td>58</td>
+                <td>11,528,500</td>
+            </tr>
+            <tr>
+                <td>59</td>
+                <td>11,914,200</td>
+            </tr>
+            <tr>
+                <td>60</td>
+                <td>12,299,900</td>
+            </tr>
+            <tr>
+                <td>61</td>
+                <td>12,685,600</td>
+            </tr>
+            <tr>
+                <td>62</td>
+                <td>13,071,300</td>
+            </tr>
+            <tr>
+                <td>63</td>
+                <td>13,457,000</td>
+            </tr>
+            <tr>
+                <td>64</td>
+                <td>13,842,700</td>
+            </tr>
+            <tr>
+                <td>65</td>
+                <td>14,228,400</td>
+            </tr>
+            <tr>
+                <td>66</td>
+                <td>14,614,000</td>
+            </tr>
+            <tr>
+                <td>67</td>
+                <td>15,088,320</td>
+            </tr>
+            <tr>
+                <td>68</td>
+                <td>15,562,640</td>
+            </tr>
+            <tr>
+                <td>69</td>
+                <td>16,036,960</td>
+            </tr>
+            <tr>
+                <td>70</td>
+                <td>16,511,280</td>
+            </tr>
+            <tr>
+                <td>71</td>
+                <td>16,985,600</td>
+            </tr>
+            <tr>
+                <td>72</td>
+                <td>17,569,380</td>
+            </tr>
+            <tr>
+                <td>73</td>
+                <td>18,153,160</td>
+            </tr>
+            <tr>
+                <td>74</td>
+                <td>18,736,940</td>
+            </tr>
+            <tr>
+                <td>75</td>
+                <td>19,320,720</td>
+            </tr>
+            <tr>
+                <td>76</td>
+                <td>19,904,500</td>
+            </tr>
+            <tr>
+                <td>77</td>
+                <td>20,539,750</td>
+            </tr>
+            <tr>
+                <td>78</td>
+                <td>21,175,000</td>
+            </tr>
+            <tr>
+                <td>79</td>
+                <td>21,810,250</td>
+            </tr>
+            <tr>
+                <td>80</td>
+                <td>22,445,500</td>
+            </tr>
+            <tr>
+                <td>81</td>
+                <td>23,080,750</td>
+            </tr>
+            <tr>
+                <td>82</td>
+                <td>23,716,000</td>
+            </tr>
+            <tr>
+                <td>83</td>
+                <td>24,630,760</td>
+            </tr>
+            <tr>
+                <td>84</td>
+                <td>25,545,520</td>
+            </tr>
+            <tr>
+                <td>85</td>
+                <td>26,460,280</td>
+            </tr>
+            <tr>
+                <td>86</td>
+                <td>27,375,040</td>
+            </tr>
+            <tr>
+                <td>87</td>
+                <td>28,289,800</td>
+            </tr>
+            <tr>
+                <td>88</td>
+                <td>29,277,967</td>
+            </tr>
+            <tr>
+                <td>89</td>
+                <td>30,266,133</td>
+            </tr>
+            <tr>
+                <td>90</td>
+                <td>31,254,300</td>
+            </tr>
+            <tr>
+                <td>91</td>
+                <td>32,242,467</td>
+            </tr>
+            <tr>
+                <td>92</td>
+                <td>33,230,633</td>
+            </tr>
+            <tr>
+                <td>93</td>
+                <td>34,218,800</td>
+            </tr>
+            <tr>
+                <td>94</td>
+                <td>35,376,367</td>
+            </tr>
+            <tr>
+                <td>95</td>
+                <td>36,533,933</td>
+            </tr>
+            <tr>
+                <td>96</td>
+                <td>37,691,500</td>
+            </tr>
+            <tr>
+                <td>97</td>
+                <td>38,849,067</td>
+            </tr>
+            <tr>
+                <td>98</td>
+                <td>40,006,633</td>
+            </tr>
+            <tr>
+                <td>99</td>
+                <td>41,164,200</td>
+            </tr>
+            <tr>
+                <td>100</td>
+                <td>43,000,000</td>
+            </tr>
+            <tr>
+                <td>101</td>
+                <td>44,835,800</td>
+            </tr>
+            <tr>
+                <td>102</td>
+                <td>46,671,600</td>
+            </tr>
+            <tr>
+                <td>103</td>
+                <td>48,507,400</td>
+            </tr>
+            <tr>
+                <td>104</td>
+                <td>50,343,200</td>
+            </tr>
+            <tr>
+                <td>105</td>
+                <td>52,179,000</td>
+            </tr>
+            <tr>
+                <td>106</td>
+                <td>54,014,800</td>
+            </tr>
+            <tr>
+                <td>107</td>
+                <td>55,850,600</td>
+            </tr>
+            <tr>
+                <td>108</td>
+                <td>57,784,600</td>
+            </tr>
+            <tr>
+                <td>109</td>
+                <td>59,718,600</td>
+            </tr>
+            <tr>
+                <td>110</td>
+                <td>61,652,600</td>
+            </tr>
+            <tr>
+                <td>111</td>
+                <td>63,586,600</td>
+            </tr>
+            <tr>
+                <td>112</td>
+                <td>65,520,600</td>
+            </tr>
+            <tr>
+                <td>113</td>
+                <td>67,454,600</td>
+            </tr>
+            <tr>
+                <td>114</td>
+                <td>69,388,600</td>
+            </tr>
+            <tr>
+                <td>115</td>
+                <td>71,322,600</td>
+            </tr>
+            <tr>
+                <td>116</td>
+                <td>MAX (v10.7)</td>
+            </tr>
+        </tbody>
+    </table>
 
 
 
@@ -590,9 +1068,47 @@
         For example, going back to the case of Traitor’s Trench from <a href="#lines-and-number-of-drops">before</a>,
         for a Level 100 Gamatoto:
     </p>
-    <div class="alert alert-success">
-        <h5>Missing table!</h5>
-    </div>
+    <table>
+        <thead>
+            <tr>
+                <th class="table-title-cell" colspan="5">
+                    Traitor's Trench At <span class="text-info">Level 100 Gamatoto (Level Factor 4%)</span>
+                </th>
+            </tr>
+            <tr>
+                <th>Item</th>
+                <th>Choice Modifier</th>
+                <th>Choice % + modifier × Level Factor</th>
+                <th>Success Rate</th>
+                <th>Chance For Drop Per Line</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>XP</td>
+                <td>-1.36</td>
+                <td>83% – 1.36 × 4% = 77.56%</td>
+                <td rowspan="3">32%</td>
+                <td>26.56% ➙ 24.82%</td>
+            </tr>
+            <tr>
+                <td>Cat Food</td>
+                <td>+0.0</td>
+                <td>15% + 0.0 × 4% = 18.2%</td>
+                <td>4.80%➙ 5.82%</td>
+            </tr>
+            <tr>
+                <td>Super Rare Catseye</td>
+                <td>+0.56</td>
+                <td>2% + 0.56 × 4% = 4.24%</td>
+                <td>0.64% ➙ 1.36%</td>
+            </tr>
+            <tr>
+                <td colspan="4">White Text Line</td>
+                <td>68%</td>
+            </tr>
+        </tbody>
+    </table>
     <p>
         Note that the total chance of getting an item at all is still bound to the 32% success rate — you still get the
         same number of White and Yellow lines — increasing Gamatoto’s Level only turns some amount of your drops that
