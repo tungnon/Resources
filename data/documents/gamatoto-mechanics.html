@@ -1138,9 +1138,36 @@
     <p>
         Each Helper you recruit has a Helper Score depending on their rarity/colour:
     </p>
-    <div class="alert alert-success">
-        <h5>Missing table!</h5>
-    </div>
+    <table>
+        <thead>
+            <tr>
+                <th>Rarity</th>
+                <th>Helper Score</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>White</td>
+                <td>1</td>
+            </tr>
+            <tr>
+                <td>Bronze</td>
+                <td>2</td>
+            </tr>
+            <tr>
+                <td>Silver</td>
+                <td>4</td>
+            </tr>
+            <tr>
+                <td>Gold</td>
+                <td>6</td>
+            </tr>
+            <tr>
+                <td>&nbsp;&nbsp;&nbsp;&nbsp;Legendary&nbsp;&nbsp;&nbsp;&nbsp;</td>
+                <td>7</td>
+            </tr>
+        </tbody>
+    </table>
     <p>
         The amount your helpers affect your Gamatoto Expeditions is dependent on the sum of your Helpers’ Scores. This
         is a number between 0 (no helpers) and 70 (ten Legendary Helpers). Each point of Helper Score adds <b>0.27%</b>
@@ -1231,16 +1258,71 @@
         consider the probability of <i>n</i> lines yielding a Catseye using the
         <a href="https://en.wikipedia.org/wiki/Binomial_distribution" target="_blank">binomial distribution</a>.
     </p>
-    <div class="alert alert-success">
-        <h5>Missing table!</h5>
-    </div>
+    <table>
+        <thead>
+            <tr>
+                <th>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
+                <th>Chance</th>
+                <th>Catseyes Gained</th>
+                <th>Catseyes × Chance</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>0</td>
+                <td>(1 - 0.5)<sup>6</sup> = 1.6%</td>
+                <td>0</td>
+                <td>0</td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>6 × (1 - 0.5)<sup>5</sup> × (0.5)<sup>1</sup> = 9.4%</td>
+                <td>1</td>
+                <td>0.094</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>15 × (1 - 0.5)<sup>4</sup> × (0.5)<sup>2</sup> = 23.4%</td>
+                <td>2</td>
+                <td>0.47</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>20 × (1 - 0.5)<sup>3</sup> × (0.5)<sup>3</sup> = 31.3%</td>
+                <td>3</td>
+                <td>0.94</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>15 × (1 - 0.5)<sup>2</sup> × (0.5)<sup>4</sup> = 23.4%</td>
+                <td>4</td>
+                <td>0.94</td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>6 × (1 - 0.5)<sup>1</sup> × (0.5)<sup>5</sup> = 9.4%</td>
+                <td>5</td>
+                <td>0.47</td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td>(0.5)<sup>6</sup> = 1.6%</td>
+                <td>6</td>
+                <td>0.094</td>
+            </tr>
+            <tr>
+                <td class="table-title-cell" colspan="3">Sum</td>
+                <th>3.00</th>
+            </tr>
+        </tbody>
+    </table>
     <p>
         The <i>Expectation Value</i> (average) number of Imaginary Catseyes is then equal to the sum over each
         possibility (<i>n</i> = 0 to 6) of the chance of that possibility multiplied by the number of Catseyes you get
         in that event, which comes out to 3, the same as just doing (50% × 6) as expected.
     </p>
     <p>
-        Now, consider the same area, but with a Cap of 1 on Imaginary Catseyes
+        Now, consider the same area, but with a Cap of 1 on Imaginary Catseyes:
     </p>
     <div class="alert alert-success">
         <h5>Missing table!</h5>
@@ -1291,7 +1373,7 @@
     <p>
         For example, for Super Rare Catseyes, the following graph illustrates the main points:
     </p>
-    <div class="alert alert-success">
+    <div class="alert alert-danger">
         <h5>Missing image!</h5>
     </div>
     <p>
@@ -1332,27 +1414,27 @@
 
     <h5 id="cat-food">Cat Food</h5>
     <div class="alert alert-success">
-        <h5>Missing image!</h5>
+        <h5>Missing table!</h5>
     </div>
 
     <h5 id="special-catseyes">Special Catseyes</h5>
     <div class="alert alert-success">
-        <h5>Missing image!</h5>
+        <h5>Missing table!</h5>
     </div>
 
     <h5 id="rare-catseyes">Rare Catseyes</h5>
     <div class="alert alert-success">
-        <h5>Missing image!</h5>
+        <h5>Missing table!</h5>
     </div>
 
     <h5 id="super-rare-catseyes">Super Rare Catseyes</h5>
     <div class="alert alert-success">
-        <h5>Missing image!</h5>
+        <h5>Missing table!</h5>
     </div>
 
     <h5 id="uber-rare-catseyes">Uber Rare Catseyes</h5>
     <div class="alert alert-success">
-        <h5>Missing image!</h5>
+        <h5>Missing table!</h5>
     </div>
 
     <h5 id="multiple-catseye-types">Multiple Catseye Types</h5>
@@ -1417,9 +1499,32 @@
         We can relate the value of one type of Catamins to another by how much Cat Food they cost to purchase in the
         store, even though you shouldn’t actually be wasting Cat Food on them.
     </p>
-    <div class="alert alert-success">
-        <h5>Missing table!</h5>
-    </div>
+    <table>
+        <thead>
+            <tr>
+                <th>Catamin Type</th>
+                <th>Cat Food Value (for 3)</th>
+                <th>Cat Food / Hour</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>A</td>
+                <td>30</td>
+                <td>10</td>
+            </tr>
+            <tr>
+                <td>B</td>
+                <td>80</td>
+                <td>8.9</td>
+            </tr>
+            <tr>
+                <td>C</td>
+                <td>150</td>
+                <td>8.3</td>
+            </tr>
+        </tbody>
+    </table>
     <p>
         If a Catamin A is used to essentially claim a free 1h expedition, a Catamin B is used for a 3h expedition, and a
         Catamin C for a 6h expedition, which gives the highest return per Cat Food value? The more expensive Catamins
@@ -1448,9 +1553,28 @@
         None of these differences are too huge, and you shouldn’t be spending CF on Catamins anyway really, but a wise
         strategy for spending Catamins in the places they do better than the others might be:
     </p>
-    <div class="alert alert-success">
-        <h5>Missing table!</h5>
-    </div>
+    <table>
+        <thead>
+            <tr>
+                <th>Catamin Type</th>
+                <th>Best Way To Use</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>A</td>
+                <td>Grinding for Helpers</td>
+            </tr>
+            <tr>
+                <td>B</td>
+                <td>Save for Catseye Cave</td>
+            </tr>
+            <tr>
+                <td>C</td>
+                <td>Regular Drops, Power-Leveling Gamatoto</td>
+            </tr>
+        </tbody>
+    </table>
 
 
 
@@ -1466,9 +1590,32 @@
     <p>
         The rates of items from this bag are as follows:
     </p>
-    <div class="alert alert-success">
-        <h5>Missing table!</h5>
-    </div>
+    <table>
+        <thead>
+            <tr>
+                <th>Item</th>
+                <th>Rate</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Cat Food ×1</td>
+                <td>42%</td>
+            </tr>
+            <tr>
+                <td>Special, Rare, or Super Rare Catseye ×1</td>
+                <td>6% each</td>
+            </tr>
+            <tr>
+                <td>Uber Rare Catseye ×1</td>
+                <td>5%</td>
+            </tr>
+            <tr>
+                <td>Building Material (excluding Ammonite) ×1</td>
+                <td>5% each</td>
+            </tr>
+        </tbody>
+    </table>
 
     <h5 id="shrine-donations">Shrine Donations</h5>
     <p>
@@ -1497,11 +1644,34 @@
         It is <b>not</b> usually recommended to donate XP to Shrine unless you already have most of your important cats
         at Level 30, at which point you may wish to use the 3M tier for Catseyes.
     </p>
-    <div class="alert alert-success">
-        <h5>Missing table!</h5>
-    </div>
+    <table>
+        <thead>
+            <tr>
+                <th>Donation Tier</th>
+                <th>Use When:</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>100k</td>
+                <td>Never</td>
+            </tr>
+            <tr>
+                <td>1M</td>
+                <td>You own Lasvoss and want to True Form him</td>
+            </tr>
+            <tr>
+                <td>3M</td>
+                <td>All good cats are Lv 30+ and you need more Catseyes for late game</td>
+            </tr>
+            <tr>
+                <td>5M</td>
+                <td>Only if you need Legend Catseyes the most and have spare XP</td>
+            </tr>
+        </tbody>
+    </table>
 
-    <h5 id="shrine-fortunes"></h5>
+    <h5 id="shrine-fortunes">Shrine Fortunes</h5>
     <p>
         Fortune Slips cost 5 XP and give you one of 6 Luck Ratings (Uber Luck, Super Luck, Li’l Luck, No Luck, Bad Luck,
         Disaster). Higher luck ratings only affect the chance of getting Inari and Big Bag from your fortune, and do not
@@ -1511,17 +1681,63 @@
         As with the GAMATOTO Report itself, the white lines in your Fortune are meaningless, and the Yellow Lines
         describe the actual effect.
     </p>
-    <div class="alert alert-success">
-        <h5>Missing table!</h5>
-    </div>
+    <table>
+        <thead>
+            <tr>
+                <th>Yellow Line</th>
+                <th>Meaning</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>"God’s servant brings good tidings."</td>
+                <td>Inari</td>
+            </tr>
+            <tr>
+                <td>"Your blessings shall multiply!"</td>
+                <td>Big Bag</td>
+            </tr>
+            <tr>
+                <td>"Good fortune will surely come..."</td>
+                <td>No Effect</td>
+            </tr>
+        </tbody>
+    </table>
     <p>
         Inari’s <a href="#inari-and-collab-helpers">effect</a> is to double amounts of all non-Cat Food drops for one
         expedition (so doing 6h is advisable to maximise this effect).<br>
         The Big Bag changes your next Ad Bag to have the following drop table:
     </p>
-    <div class="alert alert-success">
-        <h5>Missing table!</h5>
-    </div>
+    <table>
+        <thead>
+            <tr>
+                <th>Item</th>
+                <th>Big Bag Rate</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Cat Food ×1</td>
+                <td>11.2%</td>
+            </tr>
+            <tr>
+                <td>Random Catseye ×1 (Special, Rare, Super, Uber or Legend)</td>
+                <td>11.1% each</td>
+            </tr>
+            <tr>
+                <td>Treasure Radar ×1</td>
+                <td>11.1%</td>
+            </tr>
+            <tr>
+                <td>Rich Cat ×1</td>
+                <td>11.1%</td>
+            </tr>
+            <tr>
+                <td>Leadership ×1</td>
+                <td>11.1%</td>
+            </tr>
+        </tbody>
+    </table>
 
 
 
