@@ -1,5 +1,7 @@
 body,
-.modal-content {
+.modal-content,
+.offcanvas-body,
+.offcanvas-header {
     background-color: #2F2F2F;
     color: white;
 }

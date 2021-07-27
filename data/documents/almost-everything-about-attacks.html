@@ -11,7 +11,8 @@
     <script src="../script/script.js" type="text/javascript"></script>
     <script src="../script/script-themes.js" type="text/javascript"></script>
 </head>
-<body onload="checkThemeOnLoad()">
+<body onload="checkThemeOnLoad()"
+      data-bs-spy="scroll" data-bs-target="#scrollspy-nav" data-bs-offset="0" tabindex="0">
 
 <nav id="nav-placeholder" class="navbar navbar-expand-lg navbar-light bg-light"></nav>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -20,6 +21,42 @@
         $("#nav-placeholder").load("../static/nav.html");
     });
 </script>
+
+<div class="offcanvas offcanvas-end" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvasScrolling"
+     aria-labelledby="offcanvasScrollingLabel">
+    <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasScrollingLabel">Navigation panel</h5>
+        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+        <nav id="scrollspy-nav" class="navbar navbar-light bg-light flex-column align-items-stretch p-3">
+            <a class="navbar-brand" href="#">Contents</a>
+            <nav class="nav nav-pills flex-column">
+                <a class="nav-link" href="#disclaimer">Disclaimer</a>
+                <hr>
+                <a class="nav-link" href="#introduction">Introduction</a>
+                <a class="nav-link" href="#attack-cycle">Attack Cycle</a>
+                <a class="nav-link" href="#types-of-attack">Types of Attack</a>
+                <a class="nav-link" href="#damage">Damage, Damage-Altering Abilities and DPS</a>
+                <nav class="nav nav-pills flex-column">
+                    <a class="nav-link ms-3 my-1" href="#other-abilities">Other abilities</a>
+                    <a class="nav-link ms-3 my-1" href="#dps">DPS (Damage Per Second)</a>
+                </nav>
+                <a class="nav-link" href="#range-and-speed">Attack Range and Movement Speed</a>
+                <nav class="nav nav-pills flex-column">
+                    <a class="nav-link ms-3 my-1" href="#range">Range</a>
+                    <a class="nav-link ms-3 my-1" href="#speed">Movement Speed</a>
+                </nav>
+                <a class="nav-link" href="#knockback-mechanics">Knockback Mechanics and Endurance</a>
+                <a class="nav-link" href="#assessing-cats-theory-vs-practice">Assessing Cats: Theory vs Practice</a>
+                <a class="nav-link" href="#tradeoffs-in-stats">Tradeoffs in Stats</a>
+                <a class="nav-link" href="#afterword">Afterword</a>
+                <hr>
+                <a class="nav-link" href="#credits">Credits</a>
+            </nav>
+        </nav>
+    </div>
+</div>
 
 <div class="container" id="mainContent">
     <h1>Almost Everything About Attacks</h1>
@@ -63,6 +100,37 @@
             <li><a href="#credits">Credits</a></li>
         </ul>
     </div>
+
+    <script>
+        $(document).scroll(function () {
+            //stick nav to top of page
+            let y = $(this).scrollTop();
+            let navWrap = $('#navWrap').offset().top;
+            if (y > navWrap) {
+                $('#navWrap2').addClass('sticky');
+            } else {
+                $('#navWrap2').removeClass('sticky');
+            }
+        });
+    </script>
+
+    <br>
+    <div id="navWrap">
+        <nav id="navWrap2">
+            <button
+                    id="nav-button" class="btn btn-primary btn-sm" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling">
+                Toggle navigation panel
+            </button>
+        </nav>
+    </div>
+    <br>
+    <button id="offbutt" class="btn btn-sm btn-secondary"
+            onclick="show_hide_element(document.getElementById('nav-button'))">
+        Show/Hide navigation button
+    </button>
+    <br>
+
 
 
     <div class="callout callout-danger">

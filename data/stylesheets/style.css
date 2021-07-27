@@ -143,6 +143,13 @@ a {
     color: black;
 }
 
+.sticky {
+    position: fixed;
+    top: 0;
+    right: 0;
+    margin: 8px;
+}
+
 .callout {
     padding: 1.25rem;
     margin-top: 1.25rem;

@@ -90,19 +90,25 @@ function switchTheme(themeCookie, invert) {
 }
 
 function updateNavbarTheme(theme) {
-    let navbar = document.getElementsByTagName("nav")[0]
+    let navbar = document.getElementsByTagName("nav")[0];
+    let navbar_sidepanel = document.getElementById("scrollspy-nav");
+    const navs = [navbar, navbar_sidepanel];
 
-    if (theme === "dark") {
-        navbar.classList.remove("navbar-light");
-        navbar.classList.remove("bg-light");
-        navbar.classList.add("navbar-dark");
-        navbar.classList.add("bg-dark");
+    function changeClass(nav) {
+        if (theme === "dark") {
+            nav.classList.remove("navbar-light");
+            nav.classList.remove("bg-light");
+            nav.classList.add("navbar-dark");
+            nav.classList.add("bg-dark");
+        }
+
+        else if (theme === "light") {
+            nav.classList.remove("navbar-dark");
+            nav.classList.remove("bg-dark");
+            nav.classList.add("navbar-light");
+            nav.classList.add("bg-light");
+        }
     }
 
-    else if (theme === "light") {
-        navbar.classList.remove("navbar-dark");
-        navbar.classList.remove("bg-dark");
-        navbar.classList.add("navbar-light");
-        navbar.classList.add("bg-light");
-    }
+    navs.forEach(changeClass);
 }
