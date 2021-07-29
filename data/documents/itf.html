@@ -16,7 +16,8 @@
     <script src="../script/script.js" type="text/javascript"></script>
     <script src="../script/script-themes.js" type="text/javascript"></script>
 </head>
-<body onload="checkThemeOnLoad()">
+<body onload="checkThemeOnLoad()"
+      data-bs-spy="scroll" data-bs-target="#scrollspy-nav" data-bs-offset="0" tabindex="0">
 
 <nav id="nav-placeholder" class="navbar navbar-expand-lg navbar-light bg-light"></nav>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -33,6 +34,41 @@
         trigger: 'focus'
     })
 </script>
+
+<div class="offcanvas offcanvas-end" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1"
+     id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
+    <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasScrollingLabel">Navigation panel</h5>
+        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+        <nav id="scrollspy-nav" class="navbar navbar-light bg-light flex-column align-items-stretch p-3">
+            <a class="navbar-brand" href="#">Contents</a>
+            <nav class="nav nav-pills flex-column">
+                <a class="nav-link" href="#disclaimers">Disclaimers</a>
+                <hr>
+                <a class="nav-link" href="#treasures">Treasures and why they matter</a>
+                <a class="nav-link" href="#when-to-start-itf">When to start ItF?</a>
+                <a class="nav-link" href="#map-layout">Map layout, timed score rewards and outbreaks</a>
+                <a class="nav-link" href="#difficulty-and-strategy">Difficulty and Strategy</a>
+                <a class="nav-link" href="#finding-reliable-help">Finding reliable help</a>
+                <a class="nav-link" href="#normal-cat-true-forms">Normal Cat True Forms</a>
+                <a class="nav-link" href="#bahamut-cat">Bahamut Cat</a>
+                <a class="nav-link" href="#gacha">Gacha</a>
+                <a class="nav-link" href="#crazed-cats">Crazed Cats</a>
+                <nav class="nav nav-pills flex-column">
+                    <a class="nav-link ms-3 my-1" href="#crazed-cats-upgrading-priority">Crazed Cats Upgrading Priority</a>
+                </nav>
+                <a class="nav-link" href="#farming-and-managing-xp">Farming and managing XP</a>
+                <a class="nav-link" href="#user-rank">User rank, Catfruit and Gacha True Forms</a>
+                <a class="nav-link" href="#sol-and-ururun">Stories of Legend, Ururun and Event Stages</a>
+                <hr>
+                <a class="nav-link" href="#useful-links">Useful links</a>
+                <a class="nav-link" href="#credits">Credits</a>
+            </nav>
+        </nav>
+    </div>
+</div>
 
 <div class="container" id="mainContent">
     <h1>A Beginner's Guide to Into the Future</h1>
@@ -76,6 +112,36 @@
             <li><a href="#credits">Credits</a></li>
         </ul>
     </div>
+
+    <script>
+        $(document).scroll(function () {
+            //stick nav to top of page
+            let y = $(this).scrollTop();
+            let navWrap = $('#navWrap').offset().top;
+            if (y > navWrap) {
+                $('#navWrap2').addClass('sticky');
+            } else {
+                $('#navWrap2').removeClass('sticky');
+            }
+        });
+    </script>
+
+    <br>
+    <div id="navWrap">
+        <nav id="navWrap2">
+            <button
+                    id="nav-button" class="btn btn-primary btn-sm" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling">
+                Toggle navigation panel
+            </button>
+        </nav>
+    </div>
+    <br>
+    <button id="offbutt" class="btn btn-sm btn-secondary"
+            onclick="show_hide_element(document.getElementById('nav-button'))">
+        Show/Hide navigation button
+    </button>
+    <br>
 
 
 
