@@ -183,6 +183,10 @@ a {
     border-left-color: #a016ff;
 }
 
+.text-purple {
+    color: #a016ff
+}
+
 :is(.callout, .alert) :is(h2, h3, h4, h5) {
     padding-top: 0;
 }
