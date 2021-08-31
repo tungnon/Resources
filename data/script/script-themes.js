@@ -92,7 +92,7 @@ function switchTheme(themeCookie, invert) {
 function updateNavbarTheme(theme) {
     let navbar = document.getElementsByTagName("nav")[0];
     let navbar_sidepanel = document.getElementById("scrollspy-nav");
-    const navs = [navbar, navbar_sidepanel];
+    const navs = navbar_sidepanel == null ? [navbar] : [navbar, navbar_sidepanel];
 
     function changeClass(nav) {
         if (theme === "dark") {
