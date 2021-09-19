@@ -190,3 +190,45 @@ a {
 :is(.callout, .alert) :is(h2, h3, h4, h5) {
     padding-top: 0;
 }
+
+.lineup {  
+    border: 1px solid #978865;
+    display: flex;
+    width: 420px;
+    flex-flow: wrap;
+    padding: 6px;
+    background-color: #e7d099;
+    align-content: space-between;
+    justify-content: space-between;
+}
+
+.lineup br {
+    width: 100%;
+}
+
+.lineup .imageholder {
+    position: relative;
+    width: 80px;
+    padding: 3px;
+}
+
+.lineup img{
+    max-width:100%;
+    outline: 3px solid black;
+    outline-offset: -3px;
+}
+
+.lineup .imageholder .bottom-left{
+    padding: 0px;
+    position: absolute;
+    bottom: -3px;
+    right: 7.2px;
+    paint-order: stroke fill;
+    -webkit-text-stroke: 2.3px rgb(0, 0, 0); 
+    text-shadow: 1px 1px rgb(0, 0, 0);
+    transform: scale(1, 0.85);
+    font-weight:1000;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: rgb(255, 255, 157);
+    font-size: 25px;
+}
