@@ -5,10 +5,7 @@ You can find most of them online [here](https://thanksfeanor.pythonanywhere.com/
 
 
 ### Current roadmap
-The project is already well under way, with plans to convert the following documents in the next few weeks:
-- Gamatoto Mechanics (credit: ThanksFëanor)
-
-It is likely others will come after these, though nothing has been confirmed as of now (2021/07/12).
+The project is considered complete.
 
 
 #### Contact
