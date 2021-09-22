@@ -4,48 +4,43 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>A Guide to Advent Stages</title>
-	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
 	<link rel="stylesheet" type="text/css" href="../stylesheets/style.css">
-	<script src="../script/script.js" type="text/javascript"></script>
+    <link id="themeStyle" rel="stylesheet" type="text/css" href="../stylesheets/style_light.css">
+    <script src="../script/script.js" type="text/javascript"></script>
+    <script src="../script/script-themes.js" type="text/javascript"></script>
 </head>
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-	<div class="container-fluid">
-		<a class="navbar-brand" href="../top.html">Documents and resources</a>
-		<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-			<span class="navbar-toggler-icon"></span>
-		</button>
-		<div class="collapse navbar-collapse" id="navbarNavDropdown">
-			<ul class="navbar-nav">
-				<li class="nav-item">
-					<a class="nav-link" href="#">Placeholder</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="#">Placeholder</a>
-				</li>
-				<li class="nav-item dropdown">
-					<a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-						Placeholder
-					</a>
-					<ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-						<li><a class="dropdown-item" href="#">Placeholder</a></li>
-						<li><a class="dropdown-item" href="#">Placeholder</a></li>
-						<li><a class="dropdown-item" href="#">Placeholder</a></li>
-					</ul>
-				</li>
-			</ul>
-		</div>
-	</div>
-</nav>
+
+<body onload="checkThemeOnLoad()"
+      data-bs-spy="scroll" data-bs-target="#scrollspy-nav" data-bs-offset="0" tabindex="0">
+
+<nav id="nav-placeholder" class="navbar navbar-expand-lg navbar-light bg-light"></nav>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+    $(function(){
+        $("#nav-placeholder").load("../static/nav.html");
+    });
+</script>
+
 <div class="container" id="mainContent">
 	<h1>A Guide to Advents</h1>
-	<div class="_separator"></div>
-	<h5>Contents</h5>
-	<button class="btn btn-sm btn-primary" onclick="show_hide_contents()">Show / Hide contents</button><br><br>
+	<hr>
 
-	<!-- #region Contents -->
+    <button class="btn btn-danger" id="btn-theme" onclick="checkThemeOnButtonClick()">
+        Click to toggle dark theme
+    </button>
+
+	<h5>Contents</h5>
+    <button class="btn btn-sm btn-primary"
+            onclick="show_hide_element(document.getElementsByClassName('table-of-contents')[0])">
+        Show / Hide contents
+    </button><br><br>
 	<div class="table-of-contents">
 		<ul>
 			<li><a href="#introduction">Introduction</a></li>
+            <li class="list-spacer">&nbsp;</li>
+
 			<li><a href="#queen-b">Queen B</a>
 				<ul>
 					<li><a href = "#honey-trap">Honey Trap</a></li>
@@ -58,6 +53,8 @@
 					<li><a href = "#ill-be-bug">I'll Be Bug</a></li>
 				</ul>
 			</li>
+            <li class="list-spacer">&nbsp;</li>
+
 			<li><a href="#daboo">Daboo of the Dead</a>
 				<ul>
 					<li><a href = "#parade-of-the-dead">Parade of the Dead</a></li>
@@ -70,6 +67,8 @@
 					<li><a href = "#saintly-sister">Saintly Sister</a></li>
 				</ul>
 			</li>
+            <li class="list-spacer">&nbsp;</li>
+
 			<li><a href="#wahwah">King Wahwah</a>
 				<ul>
 					<li><a href = "#king-wahwahs-revenge">King Wahwah's Revenge</a></li>
@@ -82,6 +81,8 @@
 					<li><a href = "#dogsville">Dogsville</a></li>
 				</ul>
 			</li>
+            <li class="list-spacer">&nbsp;</li>
+
 			<li><a href="#clionel">Cruel Angel Clionel</a>
 				<ul>
 					<li><a href = "#no-plan-a">No Plan A</a></li>
@@ -94,6 +95,8 @@
 					<li><a href = "#last-of-the-dead">Last of The Dead</a></li>
 				</ul>
 			</li>
+            <li class="list-spacer">&nbsp;</li>
+
 			<li><a href="#bakoo">Bakoo</a>
 				<ul>
 					<li><a href = "#bombergirl">Bombergirl</a></li>
@@ -105,7 +108,9 @@
 				<ul>
 					<li><a href = "#baby-fake">Baby Fake</a></li>
 				</ul>
-			</li>	
+			</li>
+            <li class="list-spacer">&nbsp;</li>
+
 			<li><a href="#hannya">Hannya</a>
 				<ul>
 					<li><a href = "#realm-of-carnage">Realm of Carnage</a></li>
@@ -117,355 +122,630 @@
 				<ul>
 					<li><a href = "#the-pure-land">The Pure Land</a></li>
 				</ul>
-			</li>	
+			</li>
+            <li class="list-spacer">&nbsp;</li>
+
 			<li><a href="#tyrant">Evil Emperor Cat</a>
 				<ul>
 					<li><a href = "#prelude-to-ruin">Prelude to Ruin</a></li>
 				</ul>
 			</li>
+            <li class="list-spacer">&nbsp;</li>
+
 			<li><a href="#kappy">Kappy</a>
 				<ul>
 					<li><a href = "#flow-like-the-stream">Flow Like The Stream</a></li>
 					<li><a href = "#guided-by-currents">Guided by Currents</a></li>
 					<li><a href = "#water-conservancy">Water Conservancy</a></li>
 				</ul>
-			</li>	
+			</li>
+            <li class="list-spacer">&nbsp;</li>
+
 			<li><a href="#puffsley">Puffsley's Comet</a>
 				<ul>
 					<li><a href = "#puffer-planet">Puffer Planet</a></li>
 				</ul>
 			</li>
+            <li class="list-spacer">&nbsp;</li>
+
 			<li><a href="#credits">Credits</a></li>
 		</ul>
 	</div>
-	<!-- endregion -->
-	<!-- #region Intro -->
+
+
+
 	<h3 id="introduction">Introduction</h3>
-		<div class="_separator"></div>
-		<h5>What are Advent Stages?</h5>
-		<p>Advent stages are stages that run twice a month and drop useful units. These are considerably tough compared to other stages around their level of progression, and feature special boss enemies, exclusive to these stages.</p>
+	<hr>
 
-		<h5>Why should I beat Advent Stages?</h5>
-		<p>Advents drop some of the best cats in the game, with very unique roles that are almost irreplaceable at what they do. Examples of these include Slime, Bullet Train, and Green Shell, among many others.</p>
-		
-		<h5>When should I start doing Advent Stages?</h5>
-		<p>There isn’t exactly a ‘correct’ time to start doing advent stages, but it’s normally recommended to start them in mid-SoL; after you have important Gacha rare / super rare True Forms and Awakened Bahamut.</p>
-		
-		<h5>What order should I do Advent Stages in?</h5>
-		<p>Look at advent stages as and when they come, and see if you’re prepared enough to beat them. If you can’t tell, then ask someone in help channels or the subreddit. There is no well-defined order to do advents in. A lot of them are heavily dependent on a certain gacha cat, and not having that could delay how late into the game you can beat it. Specific uber rare cats also completely nullify the challenge of some advents, so keep an eye out for those too. That being said, the general order of advent difficulty is:</p>
-		
-		<p>Bakoo < Queen B < Hannya < Clionel = Daboo = Wahwah < Doremi < Papuu < Okame = Emperor < Wanwan = Queen Mother V = Puffsley < Z-Onel = Kappy </p>
-		
-		<h5>How do I do Advent Stages?</h5>
-		<p>Well that’s why this guide exists. Let’s get right into it. But first,</p>
+    <h5>What are Advent Stages?</h5>
+    <p>
+        Advent stages are stages that run twice a month and drop useful units. These are considerably tough compared to
+        other stages around their level of progression, and feature special boss enemies, exclusive to these stages.
+    </p>
 
-		<h5>A disclaimer on Unit Levels.</h5>
-		<p>Going through these guides, you might find that the guidemaker's levels do not exactly match yours. It's common to see them use an overlevelled Eraser or Manic Lion and yours isn't quite that high. If the guide uses a Level 34 Awakened Bahamut or a Level 32 Psychocat, it's pretty well understood that Level 30 should be sufficient. I tried to balance levels a bit on my own end while making this, but you might run into some oddballs anyway. 5~10 levels here and there can be typically compensated for by some other means. That being said, guidemakers tend to be super-conservative in this regard, so your levels will most likely be higher than what's on the guide.</p>
+    <h5>Why should I beat Advent Stages?</h5>
+    <p>
+        Advents drop some of the best cats in the game, with very unique roles that are almost irreplaceable at what
+        they do. Examples of these include Slime, Bullet Train, and Green Shell, among many others.
+    </p>
+		
+    <h5>When should I start doing Advent Stages?</h5>
+    <p>
+        There isn’t exactly a ‘correct’ time to start doing advent stages, but it’s normally recommended to start them
+        in mid-SoL; after you have important Gacha rare / super rare True Forms and Awakened Bahamut.
+    </p>
+		
+    <h5>What order should I do Advent Stages in?</h5>
+    <p>
+        Look at advent stages as and when they come, and see if you’re prepared enough to beat them. If you can’t tell,
+        then ask someone in help channels or the subreddit. There is no well-defined order to do advents in. A lot of
+        them are heavily dependent on a certain gacha cat, and not having that could delay how late into the game you
+        can beat it. Specific uber rare cats also completely nullify the challenge of some advents, so keep an eye out
+        for those too. That being said, the general order of advent difficulty is:
+    </p>
+		
+    <p>
+        Bakoo < Queen B < Hannya < Clionel = Daboo = Wahwah < Doremi < Papuu < Okame = Emperor < Wanwan = Queen Mother V
+        = Puffsley < Z-Onel = Kappy
+    </p>
 
-	<!-- endregion -->
-	<!-- #region Queen B -->
-	<h3 id = "queen-b"><u>Queen B</u></h3>
-	<div class="_separator"></div>
-		<h4 id = "honey-trap">Queen's Coronation > Honey Trap</h4>
-		<h5>Boss</h5>
-			<p>Queen B stands at 999 range with 888~1332 LD. She inflicts Guaranteed permaslow and has a 3.3s attack frequency, with 12k damage per attack. You need at least 9 speed to enter her blindspot [unless you're luring]. She is Alien / Floating.</p>
-	
-		<h5>Stage Design</h5>
-			<p>The stage contains Queen B paired with The Sloth. Peons include occasional Brollow waves and Kroxos.</p>
-	
-		<h5>Must-Have Units</h5>
-			<p><b>Awakened Bahamut</b> - Awakened Bahamut is perfect for this stage. With high speed and solid DPS, he'll be your primary source of damage. A crucial part of all rush strats.</p>
-	
-			<p><b>Sadako</b> - Serves as a wall that stops Brollows from killing your higher range units. Great unit to bring even if you're not rushing.</p>
-	
-		<h5>Great-To-Have Units</h5>
-			<p><b>Butterly / Fish-Man</b> - Can one-shot Brollows, and deals good damage to Queen B. High speed lets her enter Queen B's blindspot easily. Also decent for chipping other enemies.</p>
-	
-			<p><b>Can Can, preferably with Speed Up</b> - Damage output is good for cleaning up all kinds of peons, and contributes in rush strat as well.</p>
-	
-			<p><b>Castaway / Seafarer / Necromancer</b> - Can freeze Queen B, making it easy for other units to enter her blindspot.</p>
-	
-			<p><b>Magica / Thaumaturge</b> - Might weaken The Sloth, allowing your Bahamut to survive a hit from it. With that it's possible to rush Queen B in just one Bahamut chain.</p>
-	
-		<h5>Useful Uber Rare Cats</h5>
-		<ul>
-			<li><b>Anti-Floating / Anti-Traitless / Generalist Rushers:</b> Meow-sketeer / Valiant D'arktanyan, Li'l Valkyrie / Li'l Valkyrie Dark, Divine Kalisa, etc.</li>
-			<li><b>Certain Slow-Immunes:</b> High-Lord Babel, Strike Unit R.E.I., Rock Revengers / One-Hit Wonders.
-			<li><b>Generalist Tankers:</b> Divine Kai, Hades the Deathdealer, Cats in the Cradle</li>
-		</ul>
-	
-		<h5>Lineups and Strategies</h5>
-		<p><u>Note:</u> it's possible to beat Queen B without rushing, if relying on boosted units / True Forms / Ubercarry; but that is not mentioned here. It can also require timing which may take some practice, and rush approach is usually considered better.</p>
-		<p><b><u>General Rush Strat</u></b></p>
-	
-			<script type="text/javascript">
-				document.write(lineup(['30-1-36', '30-1-33', '30-1-199', '30-1-100', '30-2-25', '20-2-92', '30-1-198', '30-1-52', '30-2-149', '30-2-32']))
-			</script>
-	
-			<p><a href = "https://youtu.be/QOftGeH201k" target="_blank">Video</a> - courtesy Waran-Ess</p>
-	
-			<p>Maiden's Defense combo is optional, you can use other appropriate units for the filler slot. This lineup also uses Cameraman for damaging Queen B / Brollows / Kroxos.</p>
-	
-			<p>Lure Queen B to the base, then start stacking Cameraman / Sadako / Butterfly / Can Can / etc. on her. After the first Knockback, deploy Bahamut. This mostly leads to a consistent chain. Freeze from Necromancer / Necro-Dancer and Castaway / Seafarer makes a clean entry for your other units. Weakening The Sloth with Magica can allow your Bahamut to tank a hit from it, but this isn't absolutely necessary. </p>
+    <h5>How do I do Advent Stages?</h5>
+    <p>Well that’s why this guide exists. Let’s get right into it. But first...</p>
 
-		<h4 id = "honey-drip">Queen's Condemnation > Honey Drip</h4>
-		<h5>Stage Restriction</h5>
-			<p>Cost <= 3900. The consequence of this is that you cannot use Awakened Bahamut [or normal-price Ubers]</p>
-	
-		<h5>Must-Have Units</h5>
-			<p><b>Catellite</b> - Since the approach here is to outlast the Brollow waves, having Catellite for stalling is a high priority.</p>
-	
-			<p><b>Sadako / Octopus</b> - Serves as a wall that stops Brollows from killing your higher range units. Great unit to bring especially since you're not rushing.</p>
+    <div class="callout callout-danger">
+        <h5>A disclaimer on Unit Levels</h5>
+        <p>
+            Going through these guides, you might find that the guidemaker's levels do not exactly match yours. It's
+            common to see them use an overlevelled Eraser or Manic Lion and yours isn't quite that high. If the guide
+            uses a Level 34 Awakened Bahamut or a Level 32 Psychocat, it's pretty well understood that Level 30 should
+            be sufficient. I tried to balance levels a bit on my own end while making this, but you might run into some
+            oddballs anyway. 5~10 levels here and there can be typically compensated for by some other means. That being
+            said, guidemakers tend to be rather conservative in this regard, so your levels will most likely be higher
+            than those in the guide.
+        </p>
+    </div>
 
-			<p><b>Fish-Man</b> - Can one-shot Brollows, and deals good damage to Queen B. Great for chipping almost every enemy on this stage. Thanks to high speed, it can make it into Queen B's blindspot without needing too much timing.</p>
-	
-		<h5>Great-To-Have Units</h5>
-			
-			<p><b>Can Can, preferably with Speed Up</b> - Damage output is good for cleaning up all kinds of peons, although performance without speed up isn't very remarkable.</p>
-	
-			<p><b>Maglev</b> - Kills a single peon, and gives double bounty. Good to stop Queen B from pushing just after The Sloth attacks, and reduces pressure during Brollow waves.</p>
-	
-			<p><b>Vendor</b> - Can knockback The Sloth, helping you to recover ground.</p>
-	
-		<h5>Useful Uber Rare Cats</h5>
-		<ul>
-			<li><b>Ubers with <=3900 Cost and Decent Speed:</b> Gigavolta, Divine Twinstars, etc.</li>
-		</ul>
-	
-		<h5>Lineups and Strategies</h5>
-		<p><b><u>BioBone Strat</u></b></p>
-			<script type="text/javascript">
-				document.write(lineup(['30-2-19', '30-2-11', '30-2-52', '20-1-4', '30-1-145', '30-2-376', '30-2-33', '30-2-36', '30-2-32', '30-1-284']))
-			</script>
-	
-			<p><a href = "https://youtu.be/pQdLl-3lTuk" target="_blank">Video</a></p>
-	
-			<p>The Speed combo is optional, and doesn't do a whole lot, so I removed it in the video. Use Vendor instead if you want to, or a 2-Slot health / defense / speed combo. The purpose of most units is the same as the previous stage, except this approach relies very heavily on Catellite and Fish-man.</p>
-	
-			<p>Stall Queen B on the enemy base with Catellite and Fish-man, till the first Brollow wave. Lure the Brollows to the base, and send basically everything at them. Once this is done, The Sloth should be behind Queen B; and your units will knock back Queen B. At this point try and get Worker Cat to ~level 6, and play defensively. Catellite spam is great, send Fish-man as he recharges. Octopus and Can Can can be sent less frequently. Reserve Maglev to retain your ground when The Sloth attacks / for Brollow waves. After the first two-three waves the Brollows die down, and you can beat down the bosses. </p>
 
-		<h4 id = "royal-jelly-hell">Queen's Condemnation > Royal Jelly Hell</h4>
-			<h5>Stage Design</h5>
-				<p>The stage contains Queen B paired Cyberhorns, Dark Otters, and Wall Doge - with all peons spawning at a relatively slow rate. Arguably easier than the two stages that come before it.</p>
-		
-			<h5>Must-Have Units</h5>
-				<p><b>Awakened Bahamut</b> - Awakened Bahamut is important to kill Cyberhorn before Queen B gets to your base.</p>
-		
-				<p><b>Corrupted Psychocat / Seafarer</b> - Crowd Control units are important for stalling Cyberhorn. Note that true formed Psychocat makes a significant difference, and Freeze Up Seafarer is great here too. Alternatively, Can Can with Target Alien talent works too. Either of these three will be good, but bringing more is always welcome.</p>
 
-				<p><b>Chill Cat</b> - For busting down Cyberhorn quickly.</p>
+	<h2 id="queen-b">Queen B</h2>
+	<hr>
 
-				<p><b>Bomber Cat</b> - To stop Dark Otter so your other units can kill it.</p>
+    <h4 id="honey-trap">Queen's Coronation > Honey Trap</h4>
+
+    <h5>Boss</h5>
+    <p>
+        Queen B stands at 999 range with 888~1332 LD. She inflicts Guaranteed permaslow and has a 3.3s attack frequency,
+        with 12k damage per attack. You need at least 9 speed to enter her blindspot [unless you're luring]. She is
+        Alien / Floating.
+    </p>
+	
+    <h5>Stage Design</h5>
+    <p>The stage contains Queen B paired with The Sloth. Peons include occasional Brollow waves and Kroxos.</p>
+	
+    <h5>Must-Have Units</h5>
+    <ul>
+        <li>
+            <b>Awakened Bahamut</b> - Awakened Bahamut is perfect for this stage. With high speed and solid DPS, he'll
+            be your primary source of damage. A crucial part of all rush strats.
+        </li>
+        <li>
+            <b>Sadako</b> - Serves as a wall that stops Brollows from killing your higher range units. Great unit to
+            bring
+            even if you're not rushing.
+        </li>
+    </ul>
+	
+    <h5>Great-To-Have Units</h5>
+    <ul>
+        <li>
+            <b>Butterly / Fish-Man</b> - Can one-shot Brollows, and deals good damage to Queen B. High speed lets her
+            enter Queen B's blindspot easily. Also decent for chipping other enemies.
+        </li>
+        <li>
+            <b>Can Can, preferably with Speed Up</b> - Damage output is good for cleaning up all kinds of peons, and
+            contributes in rush strat as well.
+        </li>
+        <li>
+            <b>Castaway / Seafarer / Necromancer</b> - Can freeze Queen B, making it easy for other units to enter her
+            blind spot.
+        </li>
+        <li>
+            <b>Magica / Thaumaturge</b> - Might weaken The Sloth, allowing your Bahamut to survive a hit from it. With
+            that
+            it's possible to rush Queen B in just one Bahamut chain.
+        </li>
+    </ul>
+
+    <h5>Useful Uber Rare Cats</h5>
+    <ul>
+        <li>
+            <b>Anti-Floating / Anti-Traitless / Generalist Rushers:</b> Meow-sketeer / Valiant D'arktanyan,
+            Li'l Valkyrie / Li'l Valkyrie Dark, Divine Kalisa, etc.
+        </li>
+        <li><b>Certain Slow-Immunes:</b> High-Lord Babel, Strike Unit R.E.I., Rock Revengers / One-Hit Wonders.</li>
+        <li><b>Generalist Tankers:</b> Divine Kai, Hades the Deathdealer, Cats in the Cradle</li>
+    </ul>
+	
+    <h5>Lineups and Strategies</h5>
+    <div class="callout callout-info">
+        Note that it is possible to beat Queen B without rushing, if relying on boosted units / True Forms / Ubercarry;
+        but that is not mentioned here. It can also require timing which may take some practice, and the rush approach
+        is usually considered better.
+    </div>
+
+    <p><b><u>General Rush Strat</u></b></p>
+    <script type="text/javascript">
+        document.write(lineup(['30-1-36', '30-1-33', '30-1-199', '30-1-100', '30-2-25', '20-2-92', '30-1-198', '30-1-52', '30-2-149', '30-2-32']))
+    </script>
+    <p><a href="https://youtu.be/QOftGeH201k" target="_blank">Video</a> - courtesy Waran-Ess</p>
+    <p>
+        Maiden's Defense combo is optional, you can use other appropriate units for the filler slot. This lineup also
+        uses Cameraman for damaging Queen B / Brollows / Kroxos.
+    </p>
+    <p>
+        Lure Queen B to the base, then start stacking Cameraman / Sadako / Butterfly / Can Can / etc. on her. After the
+        first Knockback, deploy Bahamut. This mostly leads to a consistent chain. Freeze from Necromancer / Necro-Dancer
+        and Castaway / Seafarer makes a clean entry for your other units. Weakening The Sloth with Magica can allow your
+        Bahamut to tank a hit from it, but this isn't absolutely necessary.
+    </p>
+
+
+    <h4 id = "honey-drip">Queen's Condemnation > Honey Drip</h4>
+
+    <h5>Stage Restriction</h5>
+    <p>Cost <= 3900. The consequence of this is that you cannot use Awakened Bahamut [or normal-price Ubers]</p>
+
+    <h5>Must-Have Units</h5>
+    <ul>
+        <li>
+            <b>Catellite</b> - Since the approach here is to outlast the Brollow waves, having Catellite for stalling is
+            a high priority.
+        </li>
+        <li>
+            <b>Sadako / Octopus</b> - Serves as a wall that stops Brollows from killing your higher range units. Great
+            unit to bring especially since you're not rushing.
+        </li>
+        <li>
+            <b>Fish-Man</b> - Can one-shot Brollows, and deals good damage to Queen B. Great for chipping almost every
+            enemy on this stage. Thanks to high speed, it can make it into Queen B's blindspot without needing too much
+            timing.
+        </li>
+    </ul>
+	
+    <h5>Great-To-Have Units</h5>
+    <ul>
+        <li>
+            <b>Can Can, preferably with Speed Up</b> - Damage output is good for cleaning up all kinds of peons,
+            although performance without speed up isn't very remarkable.
+        </li>
+        <li>
+            <b>Maglev</b> - Kills a single peon, and gives double bounty. Good to stop Queen B from pushing just after
+            The Sloth attacks, and reduces pressure during Brollow waves.
+        </li>
+        <li>
+            <b>Vendor</b> - Can knockback The Sloth, helping you to recover ground.
+        </li>
+    </ul>
+
+    <h5>Useful Uber Rare Cats</h5>
+    <ul>
+        <li><b>Ubers with <=3900 Cost and Decent Speed:</b> Gigavolta, Divine Twinstars, etc.</li>
+    </ul>
+
+    <h5>Lineups and Strategies</h5>
+    <p><b><u>BioBone Strat</u></b></p>
+    <script type="text/javascript">
+        document.write(lineup(['30-2-19', '30-2-11', '30-2-52', '20-1-4', '30-1-145', '30-2-376', '30-2-33', '30-2-36', '30-2-32', '30-1-284']))
+    </script>
+    <p><a href="https://youtu.be/pQdLl-3lTuk" target="_blank">Video</a></p>
+    <p>
+        The Speed combo is optional, and doesn't do a whole lot, so I removed it in the video. Use Vendor instead if you
+        want to, or a 2-Slot health / defense / speed combo. The purpose of most units is the same as the previous
+        stage, except this approach relies very heavily on Catellite and Fish-man.
+    </p>
+	
+    <p>
+        Stall Queen B on the enemy base with Catellite and Fish-man, till the first Brollow wave. Lure the Brollows to
+        the base, and send basically everything at them. Once this is done, The Sloth should be behind Queen B; and your
+        units will knock back Queen B. At this point try and get Worker Cat to ~level 6, and play defensively. Catellite
+        spam is great, send Fish-man as he recharges. Octopus and Can Can can be sent less frequently. Reserve Maglev to
+        retain your ground when The Sloth attacks / for Brollow waves. After the first two-three waves the Brollows die
+        down, and you can beat down the bosses.
+    </p>
+
+
+    <h4 id="royal-jelly-hell">Queen's Condemnation > Royal Jelly Hell</h4>
+
+    <h5>Stage Design</h5>
+    <p>
+        The stage contains Queen B paired Cyberhorns, Dark Otters, and Wall Doge - with all peons spawning at a
+        relatively slow rate. Arguably easier than the two stages that come before it.
+    </p>
 		
-			<h5>Great-To-Have Units</h5>
-				<p><b>Fish-Man</b> - For rushing Queen B, preferably before having to fight the second Cyberhorn.</p>
-		
-				<p><b>Power Saw</b> - Same use as Chill, except does slightly better damage for it's cost. Cooldown is high though, so only put it in a filler slot.</p>
-		
-			<h5>Useful Uber Rare Cats</h5>
-			<ul>
-				<li><b>Anti-Alien / Generalist Rushers:</b> Meow-sketeer / Valiant D'arktanyan, Li'l Valkyrie / Li'l Valkyrie Dark, Divine Kalisa, etc.
-				<li><b>Melee Units with High DPS:</b> Immortal Yukimura, Greater Balrog, Cats in the Cradle, etc.</li>
-			</ul>
-		
-			<h5>Lineups and Strategies</h5>
-			<p><b><u>General Rush Strat</u></b></p>
-		
-				<script type="text/javascript">
-					document.write(lineup(['30-2-19', '30-2-52', '30-2-11', '30-2-25', '30-2-199', '32-2-197', '30-2-32', '37-2-38', '32-2-36', '30-2-127']))
-				</script>
-		
-				<p><a href = "https://youtu.be/npo-lPCd7_I?t=234" target="_blank">Video</a> - courtesy yohane</p>
-		
-				<p>Uses BioBone to get more value out of Chill, among other units. You can also try out Crazed Wall if you have extra slots.</p>
-		
-				<p>Send one Fish-Man immediately [this isn't done in the video, but other guides do it and it's a good idea]. This will stall Queen B for a while, and buy you some time to build a stack on cyberhorn later [he'll also kill the first Wall Doge, which makes stacking a bit easier]. Lure Cyberhorn to base, then send everything you have on him. By the time Queen B arrives, Cyberhorn should be dead. Try to Cannon Cancel her attack [this isn't easy, so don't fret if you can't do it]. Try to get a few units into her blindspot, and attempt rush similar to the original stage. Bahamut should also enter her blindspot once his slow expires, which will help too.</p>
-	<!-- endregion -->
-	<!-- #region Queen V -->
-	<h3 id = "queen-v"><u>Queen Mother V</u></h3>
-	<div class="_separator"></div>
-	<h4 id = "ill-be-bug">The Old Queen > I'll Be Bug</h4>
+    <h5>Must-Have Units</h5>
+    <ul>
+        <li>
+            <b>Awakened Bahamut</b> - Awakened Bahamut is important to kill Cyberhorn before Queen B gets to your base.
+        </li>
+        <li>
+            <b>Corrupted Psychocat / Seafarer</b> - Crowd Control units are important for stalling Cyberhorn. Note that
+            true formed Psychocat makes a significant difference, and Freeze Up Seafarer is great here too.
+            Alternatively, Can Can with Target Alien talent works too. Either of these three will be good, but bringing
+            more is always welcome.
+        </li>
+        <li>
+            <b>Chill Cat</b> - For busting down Cyberhorn quickly.
+        </li>
+        <li>
+            <b>Bomber Cat</b> - To stop Dark Otter so your other units can kill it.
+        </li>
+    </ul>
+
+    <h5>Great-To-Have Units</h5>
+    <ul>
+        <li>
+            <b>Fish-Man</b> - For rushing Queen B, preferably before having to fight the second Cyberhorn.
+        </li>
+        <li>
+            <b>Power Saw</b> - Same use as Chill, except does slightly better damage for it's cost. Cooldown is high
+            though, so only put it in a filler slot.
+        </li>
+    </ul>
+
+    <h5>Useful Uber Rare Cats</h5>
+    <ul>
+        <li>
+            <b>Anti-Alien / Generalist Rushers:</b> Meow-sketeer / Valiant D'arktanyan, Li'l Valkyrie /
+            Li'l Valkyrie Dark, Divine Kalisa, etc.
+        </li>
+        <li><b>Melee Units with High DPS:</b> Immortal Yukimura, Greater Balrog, Cats in the Cradle, etc.</li>
+    </ul>
+
+    <h5>Lineups and Strategies</h5>
+    <p><b><u>General Rush Strat</u></b></p>
+    <script type="text/javascript">
+        document.write(lineup(['30-2-19', '30-2-52', '30-2-11', '30-2-25', '30-2-199', '32-2-197', '30-2-32', '37-2-38', '32-2-36', '30-2-127']))
+    </script>
+    <p><a href="https://youtu.be/npo-lPCd7_I?t=234" target="_blank">Video</a> - courtesy yohane</p>
+    <p>
+        Uses BioBone to get more value out of Chill, among other units. You can also try out Crazed Wall if you have
+        extra slots.
+    </p>
+    <p>
+        Send one Fish-Man immediately [this isn't done in the video, but other guides do it and it's a good idea]. This
+        will stall Queen B for a while, and buy you some time to build a stack on cyberhorn later [he'll also kill the
+        first Wall Doge, which makes stacking a bit easier]. Lure Cyberhorn to base, then send everything you have on
+        him. By the time Queen B arrives, Cyberhorn should be dead. Try to Cannon Cancel her attack [this isn't easy,
+        so don't fret if you can't do it]. Try to get a few units into her blindspot, and attempt rush similar to the
+        original stage. Bahamut should also enter her blindspot once his slow expires, which will help too.
+    </p>
+
+
+
+	<h2 id="queen-v">Queen Mother V</h2>
+	<hr>
+
+
+	<h4 id="ill-be-bug">The Old Queen > I'll Be Bug</h4>
+
 	<h5>Boss</h5>
-		<p>Queen Mother V, has the same range and attack frequency as Queen B, but inflicts Curse instead of Slow.</p>
+    <p>Queen Mother V, has the same range and attack frequency as Queen B, but inflicts Curse instead of Slow.</p>
 
 	<h5>Stage Design</h5>
-		<p>Features 2 200% Magnification Professor A spawning at a long interval, with waves of peons in between; consisting of Ginger Snache, Relic Doge, and One Horn. Getting hit by curse makes your anti-reds substantially worse against Professor A. So, some seriously good timing is required here.</p>
+    <p>
+        Features 2 200% Magnification Professor A spawning at a long interval, with waves of peons in between;
+        consisting of Ginger Snache, Relic Doge, and One Horn. Getting hit by curse makes your anti-reds substantially
+        worse against Professor A. So, some seriously good timing is required here.
+    </p>
 
 	<h5>Must-Have Units</h5>
-		<p><b>Manic Island</b> - Comes in use for chipping Professor A, killing peons, everything. Any level lower than 40 will struggle to survive enough, unless you have strong up combos.</p>
-
-		<p><b>Roe</b> - Your primary tank. You’ll use this to hold back the enemies while your other units keep coming and dying</p>
-
-		<p><b>Awakened Bahamut</b> - For attacking Professor A, preferably landing multiple hits while doing so.</p>
-
-		<p><b>Bullet Train</b> - For killing Ginger Snache and Relic Doge, can also be used to chip Professor A if needed. Great as you don’t really need to time it to work.</p>
+    <ul>
+        <li>
+            <b>Manic Island</b> - Comes in use for chipping Professor A, killing peons, everything. Any level lower than
+            40
+            will struggle to survive for long enough, unless you have strong up combos.
+        </li>
+        <li>
+            <b>Roe</b> - Your primary tank. You’ll use this to hold back the enemies while your other units keep coming
+            and dying.
+        </li>
+        <li>
+            <b>Awakened Bahamut</b> - For attacking Professor A, preferably landing multiple hits while doing so.
+        </li>
+        <li>
+            <b>Bullet Train</b> - For killing Ginger Snache and Relic Doge, can also be used to chip Professor A if
+            needed. Great as you don’t really need to time it to work.
+        </li>
+    </ul>
 
 	<h5>Great-To-Have Units</h5>
-		<p><b>NEO Cutter</b> - Does the same damage as an Awakened Bahamut hit to red enemies once strengthened, although it doesn’t always land in a hit. 41s cooldown is half that of Bahamut, which means you get more opportunities when you bring both.</p>
-
-		<p><b>Can Can</b> - Great for killing One Horn, stalling it with slow, and killing Relic Doge.</p>
-
-		<p><b>Island</b> - Works as a second M.Island. Especially good if you’re bringing Strong Up Combos.</p>
-
-		<p><b>Cyberpunk (Max Slow Up Talent)</b> - Good for stalling / slow chipping if you manage to have 2 Prof. A on the field, at which point most of your units won't be able to hit them. Stands outside Relic V range if any other enemies are at front.</p>
+    <ul>
+        <li>
+            <b>NEO Cutter</b> - Does the same damage as an Awakened Bahamut hit to red enemies once strengthened,
+            although it doesn’t always land in a hit. 41s cooldown is half that of Bahamut, which means you get more
+            opportunities when you bring both.
+        </li>
+        <li>
+            <b>Can Can</b> - Great for killing One Horn, stalling it with slow, and killing Relic Doge.
+        </li>
+        <li>
+            <b>Island</b> - Works as a second M.Island. Especially good if you’re bringing Strong Up Combos.
+        </li>
+        <li>
+            <b>Cyberpunk (Max Slow Up Talent)</b> - Good for stalling / slow chipping if you manage to have 2 Prof. A on
+            the field, at which point most of your units won't be able to hit them. Stands outside Relic V range if any
+            other enemies are at front.
+        </li>
+    </ul>
 
 	<h5>Useful Uber Rare Cats</h5>
 	<ul>
-		<li><b>Bulky Anti-Reds:</b>
-			<a href = 'https://youtu.be/OOmbUijs1eE' target = '_blank'>Pai Pai</a>,
-			<a href = 'https://youtu.be/G1hMJQG-Vvk' target = '_blank'>Talented Mer-Queen Ruri</a>, 
-			<a href = 'https://youtu.be/CDJvmmpH7mM' target = '_blank'>Cat Machine</a>, 
-			<a href = 'https://youtu.be/x9E3XxqsF90' target = '_blank'>Divine Kuu</a></li>
-		<li><b>Anti-Red LD Snipers:</b>  
-			<a href = 'https://youtu.be/qQLktk6k1v4' target = '_blank'>Eva-02</a>,
-			<a href = 'https://youtu.be/RDTpcH0oAhk' target = '_blank'>Sharpshooter Saki</a></li>
+		<li>
+            <b>Bulky Anti-Reds:</b>
+			<a href='https://youtu.be/OOmbUijs1eE' target='_blank'>Pai Pai</a>,
+			<a href='https://youtu.be/G1hMJQG-Vvk' target='_blank'>Talented Mer-Queen Ruri</a>,
+			<a href='https://youtu.be/CDJvmmpH7mM' target='_blank'>Cat Machine</a>,
+			<a href='https://youtu.be/x9E3XxqsF90' target='_blank'>Divine Kuu</a>
+        </li>
+		<li>
+            <b>Anti-Red LD Snipers:</b>
+			<a href='https://youtu.be/qQLktk6k1v4' target='_blank'>Eva-02</a>,
+			<a href='https://youtu.be/RDTpcH0oAhk' target='_blank'>Sharpshooter Saki</a>
+        </li>
 		<li><b>Solid Generalist LD Snipers:</b> Dark Kasli, Kyosaka Nanaho</li>
 		<li><b>Boosted Solid Tankers / Rushers:</b> Cats in the Cradle, Immortal Yukimura</li>
 	</ul>
 
 	<h5>Lineups and Strategies</h5>
 	<p><b><u>Cutter Strat</u></b></p>
-
-		<script type="text/javascript">
-			document.write(lineup(['30-2-19', '30-2-11', '30-2-52', '30-2-445', '30-1-211', '40-2-284', '40-2-25', '40-2-32', '40-2-61', '40-2-97']))
-		</script>
-
-		<p><a href = "https://youtu.be/gvrG6fo3jE0" target="_blank">Video</a></p>
-
-		<p>BioBone is great on this stage. With Research Up M, Roe’s deployment time becomes exactly twice of Queen Mother V’s attack cycle. This means that once one Roe gets in her blindspot, future Roes will also get in, if you time them the moment they recharge. If you aren’t very good at timing, BioBone is for you. Power Cutter and Li’l Brave Cat have an Attack Up Sm Combo, which is great to have [for a cheap slot count].</p>
-
-		<p>Use Cutter and Bullet Train in the startoff as shown to get some cheap damage on Professor A. Lure Queen V close to your base (but not hitting), wait out for a while to build up money, and then send Bahamut. Once you get 2 KBs, the first One Horn should be in front. Beyond this point, the strat is relatively flexible. Try to get knockbacks on Professor A with Power Cutter / Bahamut when you can. Time your units to make sure they’re roughly at the same position as Roe when Queen V attacks. This will make your timings consistent. Once the first Professor A dies, your win is practically guaranteed.</p>
+    <script type="text/javascript">
+        document.write(lineup(['30-2-19', '30-2-11', '30-2-52', '30-2-445', '30-1-211', '40-2-284', '40-2-25', '40-2-32', '40-2-61', '40-2-97']))
+    </script>
+    <p><a href="https://youtu.be/gvrG6fo3jE0" target="_blank">Video</a></p>
+    <p>
+        BioBone is great on this stage. With Research Up M, Roe’s deployment time becomes exactly twice of Queen Mother
+        V’s attack cycle. This means that once one Roe gets in her blindspot, future Roes will also get in, if you time
+        them the moment they recharge. If you aren’t very good at timing, BioBone is for you. Power Cutter and Li’l
+        Brave Cat have an Attack Up Sm Combo, which is great to have [for a cheap slot count].
+    </p>
+    <p>
+        Use Cutter and Bullet Train in the startoff as shown to get some cheap damage on Professor A. Lure Queen V close
+        to your base (but not hitting), wait out for a while to build up money, and then send Bahamut. Once you get 2
+        KBs, the first One Horn should be in front. Beyond this point, the strat is relatively flexible. Try to get
+        knockbacks on Professor A with Power Cutter / Bahamut when you can. Time your units to make sure they’re roughly
+        at the same position as Roe when Queen V attacks. This will make your timings consistent. Once the first
+        Professor A dies, your win is practically guaranteed.
+    </p>
 
 	<p><b><u>General BioBone Strat</u></b></p>
-		<script type="text/javascript">
-			document.write(lineup(['30-2-19', '30-2-11', '30-2-52', '30-2-18', '30-2-150', '30-2-97', '40-2-61', '30-2-25', '30-2-35', '40-2-284']))
-		</script>
-		<p><a href = "https://youtu.be/FOC-Q2STdXk" target="_blank">Video</a> - courtesy Yohane</p>
+    <script type="text/javascript">
+        document.write(lineup(['30-2-19', '30-2-11', '30-2-52', '30-2-18', '30-2-150', '30-2-97', '40-2-61', '30-2-25', '30-2-35', '40-2-284']))
+    </script>
+    <p><a href = "https://youtu.be/FOC-Q2STdXk" target="_blank">Video</a> - courtesy Yohane</p>
+    <p>
+        [Uses Rich Cat] This strat is like the previous one, with Research Up M and Strong Up Sm. It focuses on landing
+        2 Bahamut hits just after Prof A.s first KB. After that, it stalls till the second Prof. A comes. Rather than
+        using Bahamut to rush down the first Prof. A, it’s kept reserved for the 2x Relic Doge Wave.
+    </p>
 
-		<p>[Uses Rich Cat] This strat is like the previous one, with Research Up M and Strong Up Sm. It focuses on landing 2 Bahamut hits just after Prof A.s first KB. After that, it stalls till the second Prof. A comes. Rather than using Bahamut to rush down the first Prof. A, it’s kept reserved for the 2x Relic Doge Wave.</p>
-	
 	<p><b><u>Strong Up Combos Strat</u></b></p>
-		<script type="text/javascript">
-			document.write(lineup(['30-2-100', '30-2-104', '30-2-109', '30-2-4', '30-2-7', '30-2-61', '40-2-97', '36-2-284', '40-2-32', '30-2-25']))
-		</script>
-		<p><a href = "https://youtu.be/W2d0fLGwRXw" target="_blank">Video</a> - courtesy Anthony</p>
-
-		<p>This strategy stacks Combos (Strong Up Sm + M / Defense Up Sm) to increase the value you get out of Manic Island. Since it lacks BioBone, it requires good timing from the player. You can bring regular Island too if it’s levelled enough. You could try this out if you have the monthly cats needed for the combos. See Yohane’s dual island version <a href = "https://youtu.be/wZ1oZ0O1iJ0" target = "_blank">here</a>.</p>
-	<!-- endregion -->
-	<!-- #region Daboo -->
-	<h3 id = "daboo"><u>Daboo of the Dead</u></h3>
-		<div class="_separator"></div>
-			<h4 id = "parade-of-the-dead">Dead on Debut > Parade of the Dead</h4>
-			<h5>Boss</h5>
-				<p>Daboo of the Dead is an omnistrike pusher boss, with a standing range of 300 and a maximum range of 800. He has an enormous 2 Million HP with just three knockbacks. On top of that, he has immunity to most status effects, making him a big slowly pushing wall. He deals 30000 damage every 13s, which can one-shot meatshields and a lot of other units. Worst of all, he inflicts a crippling 10s long Slow to anything he hits, making it more difficult to get to him.</p>
-		
-			<h5>Stage Design</h5>
-				<p>Daboo spawns almost immediately on a timer, followed by a Zroco. Enemies cycle involving Angelic and Zombie peons, including Heavenly Hippoe, Angelic Gory, Zory, and Zir Zeal. After 2-3 waves of both traits the peons die down, giving you a clear shot on Daboo.</p>
-		
-			<h5>Must-Have Units</h5>
-				<p><b>Awakened Bahamut</b> - Awakened Bahamut is very important to rush down the Angel peons, otherwise they can be a massive nuisance to kill.</p>
-		
-				<p><b>Shigong</b> - Survives two Daboo hits, is Slow immune. Great for dealing with Zombie peons as well.</p>
-		
-			<h5>Great-To-Have Units</h5>
-				<p><b>Can Can</b> - Solid DPS, good bulk, double bounty with talents helps too.</p>
-		
-				<p><b>Ramen</b> - Solid at stalling Angels, allowing your other units to kill them.</p>
-		
-			<h5>Useful Uber Rare Cats</h5>
-			<ul>
-				<li><b>Anti-Zombies:</b> Subterra Sentinels, BCS Tigerclaw.</li>
-				<li><b>Tankers:</b> Divine Kai, Almighty Hades, Mighty Aegis Garu, etc..</li>
-				<li><b>One-Hit Wonders:</b> Exceptionally great here thanks to solid range, great bulk, great DPS, and Slow Immunity on top of it all.</li>
-				<li><b>Rushers / Melee:</b> Immortal Yukimura, Greater Balrog, Cats in the Cradle, etc.</li>
-			</ul>
-		
-			<h5>Lineups and Strategies</h5>
-			<p><b><u>BioBone Strat</u></b></p>
-		
-				<script type="text/javascript">
-					document.write(lineup(['30-2-19', '30-2-11', '30-2-52', '30-2-307', '30-2-25', '20-2-91', '30-2-199', '39-2-148', '39-2-523', '30-2-32']))
-				</script>
-		    <p>+ Sniper</p>
-				<p><a href = "https://youtu.be/Q6RAgsM-Fu4" target="_blank">Video</a> - courtesy Lucas IV</p>
-		
-				<p>BioBone makes Ramen and Shigong considerably better at their job, and also helps other units. Having Sniper goes a long way. The lineup looks a bit different in the video but it is effectively the same as what you see here.</p>
-		
-				<p>Sniper can be kept on for the entire duration of the run. Send off a Manic Mohawk to bait a Daboo hit. Send meatshields and attackers at a gradual rate to build up money. When the Heavenly Hippos arrive, send Can Can and pretty much whatever else you have. Awakened Bahamut can be kept reserved for Heavenly Hippoe waves. Use Holy Blast to interrupt Daboo attacks if you have it, otherwise regular cannon works too. Try and keep a decent amount of money in your wallet, and fight out the peon waves. A few minutes later the peons will die down and you should have an easy win.</p>
+    <script type="text/javascript">
+        document.write(lineup(['30-2-100', '30-2-104', '30-2-109', '30-2-4', '30-2-7', '30-2-61', '40-2-97', '36-2-284', '40-2-32', '30-2-25']))
+    </script>
+    <p><a href = "https://youtu.be/W2d0fLGwRXw" target="_blank">Video</a> - courtesy Anthony</p>
+    <p>
+        This strategy stacks Combos (Strong Up Sm + M / Defense Up Sm) to increase the value you get out of Manic
+        Island. Since it lacks BioBone, it requires good timing from the player. You can bring regular Island too if
+        it’s levelled enough. You could try this out if you have the monthly cats needed for the combos. See Yohane’s
+        dual island version <a href="https://youtu.be/wZ1oZ0O1iJ0" target="_blank">here</a>.
+    </p>
 
 
-			<h4 id = "prisoners-progress">Dead by Encore > Prisoner's Progress</h4>
-			<h5>Stage Restriction</h5>
-				<p>Allowed Costs: >= 1200. Disallowed Costs: &lt; 1200. Since the regular strat relies heavily on Ramen and Shigong, this makes a massive change to your approach. Rather than relying on meatshields to hold the front line, you'll need Titans or Ubers.</p>
-		
-			<h5>Useful Uber Rare Cats</h5>
-			<ul>
-				<li><b>Anti-Zombies:</b> One-Hit Wonders, Subterra Sentinels, BCS Tigerclaw.</li>
-				<li><b>Tankers:</b> Divine Kai, Almighty Hades, Mighty Aegis Garu, etc..</li>
-				<li><b>Rushers / Melee:</b> Immortal Yukimura, Greater Balrog, Cats in the Cradle, etc.</li>
-			</ul>
-		
-			<h5>Lineups and Strategies</h5>
-			<p><u>Note:</u> Due to the nature of this stage, Ubercarry is heavily recommended. Most non-ubercarry strats are impractical. If you're interested in beating it uberless for whatever reason, boosted Jamieras and Islands are the way to go. If you don't have those, then Dark Lazer gets the job done as well.</p>
 
-			<p><b><u>Talented Dark Lazer Strat</u></b></p>
-			<script type="text/javascript">
-				document.write(lineup(['30-2-210', '30-2-149', '30-1-51', '30-1-6', '20-1-97', '40-2-13', '40-2-151', '40-2-61', '30-2-25']))
-			</script>
-			<p>[+ Rich Cat, Sniper]</p>
-			<p><a href = "https://youtu.be/jLjmRNTaz_E" target="_blank">Video</a></p>
-	
-			<p>Talented Dark Lazer is mandatory, although you won't be spamming her all the time as you might be used to. Rich Cat is needed to sustain her because this stage is stupid cash tight. Sniper is also needed to get Daboo off of your base, and helps to delay his attacks in general. Pizza works because it's pizza, and Roe is basically the only meatshield / wall that you wave.</p>
-	
-			<p>Try and play conservative. Dark Lazer can drain your money super quickly if you aren't careful. Save up your money for Bahamut during the Angel waves, and your Holy Blast for the Zombie waves [first Zory doesn't count]. As long as you're above 10k cash when no peons are around, you should be fine. When they do spawn send pretty much everything that you have. Balancing between saving ground and saving money is the key to this stage.</p>
+	<h3 id="daboo">Daboo of the Dead</h3>
+    <hr>
 
-			<h4 id = "march-to-death">Dead by Encore > March to Death</h4>
-				<h5>Stage Design</h5>
-					<p>The stage starts off with a few Metal One Horns for cash. About a minute in Daboo spawns, accompanied by some Metal Doge. Metal Doge continue to deploy throughout the stage at a gradual rate. Eventually, a couple Super Metal Hippoes spawn, followed by a Sir Metal Seal after some more time. The combination of Metal enemies and Omni Pushers is very lethal, and this stage is a prime example of that.</p>
+
+    <h4 id = "parade-of-the-dead">Dead on Debut > Parade of the Dead</h4>
+
+    <h5>Boss</h5>
+    <p>
+        Daboo of the Dead is an omnistrike pusher boss, with a standing range of 300 and a maximum range of 800. He has
+        an enormous 2 Million HP with just three knockbacks. On top of that, he has immunity to most status effects,
+        making him a big slowly pushing wall. He deals 30000 damage every 13s, which can one-shot meatshields and a lot
+        of other units. Worst of all, he inflicts a crippling 10s long Slow to anything he hits, making it more
+        difficult to get to him.
+    </p>
+		
+    <h5>Stage Design</h5>
+    <p>
+        Daboo spawns almost immediately on a timer, followed by a Zroco. Enemies cycle involving Angelic and Zombie
+        peons, including Heavenly Hippoe, Angelic Gory, Zory, and Zir Zeal. After 2-3 waves of both traits the peons die
+        down, giving you a clear shot on Daboo.
+    </p>
+		
+    <h5>Must-Have Units</h5>
+    <ul>
+        <li>
+            <b>Awakened Bahamut</b> - Awakened Bahamut is very important to rush down the Angel peons, otherwise they
+            can be a massive nuisance to kill.
+        </li>
+        <li>
+            <b>Shigong</b> - Survives two Daboo hits, is Slow immune. Great for dealing with Zombie peons as well.
+        </li>
+    </ul>
+
+    <h5>Great-To-Have Units</h5>
+    <ul>
+        <li>
+            <b>Can Can</b> - Solid DPS, good bulk, double bounty with talents helps too.
+        </li>
+        <li>
+            <b>Ramen</b> - Solid at stalling Angels, allowing your other units to kill them.
+        </li>
+    </ul>
+
+    <h5>Useful Uber Rare Cats</h5>
+    <ul>
+        <li><b>Anti-Zombies:</b> Subterra Sentinels, BCS Tigerclaw.</li>
+        <li><b>Tankers:</b> Divine Kai, Almighty Hades, Mighty Aegis Garu, etc..</li>
+        <li>
+            <b>One-Hit Wonders:</b> Exceptionally great here thanks to solid range, great bulk, great DPS, and Slow
+            Immunity on top of it all.
+        </li>
+        <li><b>Rushers / Melee:</b> Immortal Yukimura, Greater Balrog, Cats in the Cradle, etc.</li>
+    </ul>
+
+    <h5>Lineups and Strategies</h5>
+    <p><b><u>BioBone Strat</u></b></p>
+    <script type="text/javascript">
+        document.write(lineup(['30-2-19', '30-2-11', '30-2-52', '30-2-307', '30-2-25', '20-2-91', '30-2-199', '39-2-148', '39-2-523', '30-2-32']))
+    </script>
+    <p>+ Sniper</p>
+    <p><a href = "https://youtu.be/Q6RAgsM-Fu4" target="_blank">Video</a> - courtesy Lucas IV</p>
+    <p>
+        BioBone makes Ramen and Shigong considerably better at their job, and also helps other units. Having Sniper goes
+        a long way. The lineup looks a bit different in the video but it is effectively the same as what you see here.
+    </p>
+    <p>
+        Sniper can be kept on for the entire duration of the run. Send off a Manic Mohawk to bait a Daboo hit. Send
+        meatshields and attackers at a gradual rate to build up money. When the Heavenly Hippos arrive, send Can Can and
+        pretty much whatever else you have. Awakened Bahamut can be kept reserved for Heavenly Hippoe waves. Use Holy
+        Blast to interrupt Daboo attacks if you have it, otherwise regular cannon works too. Try and keep a decent
+        amount of money in your wallet, and fight out the peon waves. A few minutes later the peons will die down and
+        you should have an easy win.
+    </p>
+
+
+    <h4 id="prisoners-progress">Dead by Encore > Prisoner's Progress</h4>
+
+    <h5>Stage Restriction</h5>
+    <p>
+        Allowed Costs: >= 1200. Disallowed Costs: &lt; 1200. Since the regular strat relies heavily on Ramen and Shigong,
+        this makes a massive change to your approach. Rather than relying on meatshields to hold the front line, you'll
+        need Titans or Ubers.
+    </p>
+
+    <h5>Useful Uber Rare Cats</h5>
+    <ul>
+        <li><b>Anti-Zombies:</b> One-Hit Wonders, Subterra Sentinels, BCS Tigerclaw.</li>
+        <li><b>Tankers:</b> Divine Kai, Almighty Hades, Mighty Aegis Garu, etc..</li>
+        <li><b>Rushers / Melee:</b> Immortal Yukimura, Greater Balrog, Cats in the Cradle, etc.</li>
+    </ul>
+
+    <h5>Lineups and Strategies</h5>
+    <div class="callout callout-info">
+        Due to the nature of this stage, Ubercarry is heavily recommended. Most non-ubercarry strats are
+        impractical. If you're interested in beating it uberless for whatever reason, boosted Jamieras and Islands are
+        the way to go. If you don't have those, Dark Lazer gets the job done as well.
+    </div>
+
+    <p><b><u>Talented Dark Lazer Strat</u></b></p>
+    <script type="text/javascript">
+        document.write(lineup(['30-2-210', '30-2-149', '30-1-51', '30-1-6', '20-1-97', '40-2-13', '40-2-151', '40-2-61', '30-2-25']))
+    </script>
+    <p>[+ Rich Cat, Sniper]</p>
+    <p><a href="https://youtu.be/jLjmRNTaz_E" target="_blank">Video</a></p>
+    <p>
+        Talented Dark Lazer is mandatory, although you won't be spamming her all the time as you might be used to. Rich
+        Cat is needed to sustain her because this stage is stupid cash tight. Sniper is also needed to get Daboo off of
+        your base, and helps to delay his attacks in general. Pizza works because it's pizza, and Roe is basically the
+        only meatshield / wall that you wave.
+    </p>
+    <p>
+        Try and play conservative. Dark Lazer can drain your money super quickly if you aren't careful. Save up your
+        money for Bahamut during the Angel waves, and your Holy Blast for the Zombie waves [first Zory doesn't count].
+        As long as you're above 10k cash when no peons are around, you should be fine. When they do spawn send pretty
+        much everything that you have. Balancing between saving ground and saving money is the key to this stage.
+    </p>
+
+
+    <h4 id="march-to-death">Dead by Encore > March to Death</h4>
+
+    <h5>Stage Design</h5>
+    <p>
+        The stage starts off with a few Metal One Horns for cash. About a minute in Daboo spawns, accompanied by some
+        Metal Doge. Metal Doge continue to deploy throughout the stage at a gradual rate. Eventually, a couple Super
+        Metal Hippoes spawn, followed by a Sir Metal Seal after some more time. The combination of Metal enemies and
+        Omni Pushers is very lethal, and this stage is a prime example of it.
+    </p>
 			
-				<h5>Must-Have Units</h5>
-					<p><b>Crazed Moneko</b> - Crit Up M combo raises crit rate of your attackers by 2%, which is very helpful.</p>
+    <h5>Must-Have Units</h5>
+    <ul>
+        <li>
+            <b>Crazed Moneko</b> - Crit Up M combo raises crit rate of your attackers by 2%, which is very helpful.
+        </li>
+        <li>
+            <b>Waitress / Soba</b> - Deals solid damage to the Sir Metal Seal, and also to Super Metal Hippoe.
+            Guaranteed crit is also valuable here.
+        </li>
+        <li>
+            <b>Puppetmaster / Mochi</b> - Disposable CC. Enemies will push like hell without them.
+        </li>
+    </ul>
 
-					<p><b>Waitress / Soba</b> - Deals solid damage to the Sir Metal Seal, and also to Super Metal Hippoe. Guaranteed crit is also valuable here.</p>
+    <h5>Great-To-Have Units</h5>
+    <ul>
+        <li>
+            <b>Talented Cameraman</b> - AoE Crit can be humongously helpful for the Super Metal Hippoes. A crit from
+            Cameraman can take off anywhere from 60% [at level 40] to 100% [at level 69] of the SMHs HP.
+        </li>
+        <li>
+            <b>Noodle</b> - Good ranged meatshield, occasionally kills Metal Doge.
+        </li>
+        <li>
+            <b>Catyphoon</b> - Great for clearing up Metal Doge, but the cooldown is rather long.
+        </li>
+    </ul>
 
-					<p><b>Puppetmaster / Mochi</b> - Disposable CC. Enemies will push like hell without them.</p>
-			
-				<h5>Great-To-Have Units</h5>
-					<p><b>Talented Cameraman</b> - AoE Crit can be humongously helpful for the Super Metal Hippoes. A crit from Cameraman can take off anywhere from 60% [at level 40] to 100% [at level 69] of the SMHs HP.</p>
-			
-					<p><b>Noodle</b> - Good ranged meatshield, occasionally kills Metal Doge.</p>
+    <h5>Useful Uber Rare Cats</h5>
+    <ul>
+        <li><b>Critical Hitters:</b> Paladin, Hayabusa, Nanaho, Lufalan Pasalan.
+        <li><b>Anti-Metal Tankers / Proc:</b> Poseidon, Sakura Sonic, Gudetama Machine.
+    </ul>
 
-					<p><b>Catyphoon</b> - Great for clearing up Metal Doge, but the cooldown is rather long.</p>
-			
-				<h5>Useful Uber Rare Cats</h5>
-				<ul>
-					<li><b>Critical Hitters:</b> Paladin, Hayabusa, Nanaho, Lufalan Pasalan.
-					<li><b>Anti-Metal Tankers / Proc:</b> Poseidon, Sakura Sonic, Gudetama Machine.
-				</ul>
-			
-				<h5>Lineups and Strategies</h5>
-				<p><b><u>Cameraman Crit Strat</u></b></p>
-			
-					<script type="text/javascript">
-						document.write(lineup(['30-1-16', '36-1-418', '36-2-99', '37-2-267', '37-1-273', '30-2-92', '75-2-1', '30-2-88', '41-2-149', '25-2-126']))
-					</script>
-					<p>[+ Rich Cat]</p>
-					<p><a href = "https://youtu.be/U0GSX7OuStU" target="_blank">Video</a> - courtesy Lucas IV</p>
-			
-					<p>Crit Up combo is pretty much compulsory to get Cameraman crits. Manic Jamiera can be substituted for Bahamut but both are decent. Holy Blast is ideal for this stage, unless you have a levelled Waterblast for whatever reason. Catasaurus is also a functional critter, but not really recommended here. Alternative approach with talented Riceball is seen <a href = "https://youtu.be/mWjL5ml-zhs" target="_blank">here</a>.</p>
-			
-					<p>Start off with Waitress, then send Crazed Moneko after a bit of a delay. Afterwards spam Manic Eraser and Noodles, along with Catornado. These should take care of the Metal One Horns and bring in some money. Try to get Manic Jamiera / Awakened Bahamut in before the Super Metal Hippoe arrive to deal some damage to Daboo.</p>
+    <h5>Lineups and Strategies</h5>
+    <p><b><u>Cameraman Crit Strat</u></b></p>
+    <script type="text/javascript">
+        document.write(lineup(['30-1-16', '36-1-418', '36-2-99', '37-2-267', '37-1-273', '30-2-92', '75-2-1', '30-2-88', '41-2-149', '25-2-126']))
+    </script>
+    <p>[+ Rich Cat]</p>
+    <p><a href = "https://youtu.be/U0GSX7OuStU" target="_blank">Video</a> - courtesy Lucas IV</p>
+    <p>
+        Crit Up combo is pretty much compulsory to get Cameraman crits. Manic Jamiera can be substituted for Bahamut,
+        but both are decent. Holy Blast is ideal for this stage, unless you have a levelled Waterblast for whatever
+        reason. Catasaurus is also a functional critter, but not really recommended here. Alternative approach with
+        talented Riceball is seen <a href="https://youtu.be/mWjL5ml-zhs" target="_blank">here</a>.
+    </p>
+    <p>
+        Start off with Waitress, then send Crazed Moneko after a bit of a delay. Afterwards spam Manic Eraser and
+        Noodles, along with Catornado. These should take care of the Metal One Horns and bring in some money. Try to get
+        Manic Jamiera / Awakened Bahamut in before the Super Metal Hippoe arrive to deal some damage to Daboo.
+    </p>
+    <p>
+        When the SMH arrive, stop spamming Noodle and Catornado, as they'll only prolong the fight. Waitress and
+        Cameraman will be reliable, and no harm in sending CMoneko along with them. Send Puppetmaster and / or Mochi for
+        Crowd Control, and try and time your faster units. If you're lucky, you'll land a Cameraman crit and make the
+        fight much easier. Try to use a well-timed Holy Blast here to buy you some time.
+    </p>
+    <p>
+        For the Sir Metal Seal phase, you'll probably be fighting real close to your base. This is okay, and it makes
+        timing a bit easier too. Cameraman isn't super reliable here, but if you have the money you can send her anyway.
+        Waitress will be a consistent source of good damage, and you can always try your hand with C. Moneko [and even
+        regular Moneko] here. This is a "Do or Die" sort of situation so you want to send everything you got.
+    </p>
+    <p>
+        Once the SMS is dead, you should have a clear win. Bringing Rich Cat is mandatory for this stage, and Sniper is
+        helpful for the cleanup [but far from needed]. Unfortunately, this stage is <i>very heavily</i> RNG dependent,
+        and can waste a ton of Rich Cats [I speak from experience]. Be prepared to sink some resources here if you're
+        not boosted.
+    </p>
 
-					<p>When the SMH arrive, stop spamming Noodle and Catornado, as they'll only prolong the fight. Waitress and Cameraman will be reliable, and no harm in sending CMoneko along with them. Send Puppetmaster and / or Mochi for Crowd Control, and try and time your faster units. If you're lucky, you'll land a Cameraman crit and make the fight much easier. Try to use a well-timed Holy Blast here to buy you some time.</p>
 
-					<p>For the Sir Metal Seal phase, you'll probably be fighting real close to your base. This is okay, and it makes timing a bit easier too. Cameraman isn't super reliable here, but if you have the money you can send her anyway. Waitress will be a consistent source of good damage, and you can always try your hand with CMoneko [and even regular Moneko] here. This is a "Do or Die" sort of situation so you want to send everything you got.</p>
-
-					<p>Once the SMS is dead, you should have a clear win. Bringing Rich Cat is mandatory for this stage, and Sniper is helpful for the cleanup [but far from needed]. Unfortunately, this stage is <i>very heavily</i> RNG dependent, and can waste a ton of Rich Cats [I speak from experience]. Be prepared to sink some resources here if you're not boosted.</p>
-	<!-- endregion -->
-	<!-- #region Papuu -->
-	<h3 id = "papuu"><u>Heavenly Herald Papuu</u></h3>
+    <!--TODO Fix stuff beyond this point-->
+	<h2 id="papuu">Heavenly Herald Papuu</h2>
 	<div class="_separator"></div>
-	<h4 id = "ill-be-bug">Papuu's Paradise > Saintly Sister</h4>
+	<h4 id = "saintly-sister">Papuu's Paradise > Saintly Sister</h4>
 		<h5>Boss</h5>
 			<p>Heavenly Herald Papuu [Angel] deals 4000 Damage per hit, with 40% extra toxic damage on top of it. With her tremendous omni range, she'll be almost always hitting your base. She strengthens to 3x at 30% HP, becoming much more deadly. She also has immunities to every negative effect except curse and sniper, both of which greatly debilitate her.</p>
 	
@@ -1294,5 +1574,6 @@
 
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"
 	integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8" crossorigin="anonymous"></script>
+</div>
 </body>
 </html>
