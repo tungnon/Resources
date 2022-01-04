@@ -5,8 +5,8 @@ You can find most of them online [here](https://thanksfeanor.pythonanywhere.com/
 
 
 ### Current roadmap
-The project is considered complete.
+The project is considered complete, and is now being maintaind [here](https://github.com/ThanksFeanor/Resources) instead.
 
 
 #### Contact
-If you have a feature suggestion/request, find a problem with the existing pages (e.g. typos) or want to contribute to this project, you can contact a Trusted+ user on the r/battlecats Discord server. Alternatively, you can contact @ThanksFëanor#3087 or @Waran-Ess#9801 directly.
+If you have a feature suggestion/request, find a problem with the existing pages (e.g. typos) or want to contribute to this project, you can contact a Trusted+ user on the r/battlecats Discord server. Alternatively, you can contact @ThanksFëanor#3087 directly.
