@@ -5,7 +5,7 @@ You can find most of them online [here](https://thanksfeanor.pythonanywhere.com/
 
 
 ### Current roadmap
-The project is considered complete, and is now being maintained [here](https://github.com/ThanksFeanor/Resources) instead.
+The project is considered complete.
 
 
 #### Contact
