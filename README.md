@@ -9,4 +9,4 @@ The project is considered complete.
 
 
 #### Contact
-If you have a feature suggestion/request, find a problem with the existing pages (e.g. typos) or want to contribute to this project, you can contact a Trusted+ user on the r/battlecats Discord server. Alternatively, you can contact @ThanksFëanor#3087 or @Waran-Ess#9801 directly.
+If you have a feature suggestion/request, find a problem with the existing pages (e.g. typos) or want to contribute to this project, you can contact a Trusted+ user on the r/battlecats Discord server. Alternatively, you can contact @ThanksFëanor#3087 directly.
