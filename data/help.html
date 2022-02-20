@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How To Help</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet"
+                            integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="/static/stylesheets/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link id="themeStyle" rel="stylesheet" type="text/css" href="stylesheets/style_light.css">
+    <script src="script/script.js" type="text/javascript"></script>
+    <script src="script/script-themes.js" type="text/javascript"></script>
+</head>
+<body onload="checkThemeOnLoad()">
+
+<!--Navigation bar-->
+<nav id="nav-placeholder" class="navbar navbar-expand-lg bg-custom navbar-light border-bottom border-dark">
+</nav>
+<script>
+    $(function(){
+        $("#nav-placeholder").load("/static/nav.html");
+    });
+</script>
+<!--end of Navigation bar-->
+<div class="container" id="mainContent">
+    <h1>Contribute to the Guides Section</h1>
+    <hr>
+
+    <button class="btn btn-danger" id="btn-theme" onclick="checkThemeOnButtonClick()">
+        Click to toggle dark theme
+    </button><br><br>
+
+    <p>If you have suggestions for how to improve any of the guides, or even create a new one, check out our 
+    <a href="https://github.com/ThanksFeanor/Resources">GitHub Repository</a>. Feel free to copy and edit the files then send 
+    a pull request, or DM the modified files to ThanksFëanor (Discord : ThanksFëanor#3087 / email : ThanksFeanor@gmail.com) for them
+    to be hosted on the site.
+    </p>
+    
+    
+
+
+    <br>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8" crossorigin="anonymous">
+</script>
+<script src="/static/nav.js"></script>
+</body>
+</html>
