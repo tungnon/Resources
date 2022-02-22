@@ -11,6 +11,19 @@
     <link id="themeStyle" rel="stylesheet" type="text/css" href="stylesheets/style_light.css">
     <script src="script/script.js" type="text/javascript"></script>
     <script src="script/script-themes.js" type="text/javascript"></script>
+    
+    <script type="text/javascript" language="JavaScript">
+        NumberOfImagesToRotate = 3;
+        
+        FirstPart = '<img src="/static/Propaganda_';
+        LastPart = '.png" height="auto" width="40%" class="responsive">';
+        
+        function printImage() {
+        var r = Math.ceil(Math.random() * NumberOfImagesToRotate);
+        document.write(FirstPart + r + LastPart);
+    }
+    </script>
+    
 </head>
 <body onload="checkThemeOnLoad()">
 
@@ -37,9 +50,20 @@
     to be hosted on the site.
     </p>
     
+    <p>
+    If needed to help convince you, here is a propaganda poster:
+    </p>
     
+    <p style="text-align:center">
+    <a href="https://github.com/ThanksFeanor/Resources">
+    <script type="text/javascript" language="JavaScript">
+    printImage();
+    </script>
+    </a>
+    </p>
 
 
+    
     <br>
 </div>
 
