@@ -69,7 +69,7 @@ function getCurrentTheme() {
 }
 
 function switchTheme(themeCookie, invert) {
-    let stylesheet_path = /top.html/.test(window.location.href) ?
+    let stylesheet_path = /top.html/.test(window.location.href) || /help.html/.test(window.location.href) ?
         "stylesheets" :
         "../stylesheets";
 
